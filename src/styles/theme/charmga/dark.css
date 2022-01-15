@@ -32,3 +32,7 @@
 	--brightness-offset-10: 40%;
 	--brightness-offset-20: 60%;
 }
+
+.accent {
+	color: var(--accent);
+}
