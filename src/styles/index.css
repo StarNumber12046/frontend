@@ -1,7 +1,7 @@
-@import './static.css';
-@import './theme/dark.css';
+@import url('./static.css');
+@import url('./theme/dark.css');
 @media (prefers-color-scheme: light) {
-	@import './themes/light.css';
+	@import url('./themes/light.css');
 }
 
 * {
@@ -40,6 +40,7 @@ a:hover {
 
 	color: var(--primary-400);
 
+	will-change: transition;
 	transition: color var(--style-animation);
 }
 
@@ -51,6 +52,7 @@ b {
 b:hover {
 	font-weight: 800;
 
+	will-change: transition;
 	transition: font-weight var(--style-animation);
 }
 
@@ -61,18 +63,19 @@ h1, .display {
 
 .logo {
 	font-family: var(--display);
-	font-size: var(--logo-size);
-
+	font-size: var(--display-size);
+	
 	color: var(--accent);
 
-	transition: font-size var(--layout-animation), color var(--style-animation);
+	cursor: pointer;
+	
+	will-change: transition;
+	transition: color var(--style-animation);
 }
-.logo:hover{
-	font-size: calc(var(--logo-size) + var(--size-offset-20));
-
+.logo:hover {
 	color: var(--primary-300);
 
-	transition: font-size var(--layout-animation), color var(--style-animation);
+	transition: color var(--style-animation);
 }
 
 h2, .headline {

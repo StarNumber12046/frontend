@@ -1,2 +1,32 @@
-@import url("./theme/ui/layout.css");
-@import url("./theme/ui/fonts.css");
+@import url('http://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('http://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@font-face {
+	font-family: 'JetBrains Mono NF';
+	src: url('https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf');
+}
+
+:root {
+	--min-padding: 6px;
+	--standard-padding: 8px;
+	--max-padding: 12px;
+
+	--window-corner-radius: 0px;
+	--control-corner-radius: 4px;
+	--element-corner-radius: 4px;
+	--section-corner-radius: 8px;
+
+	--default-line-height: 0.7;
+
+	--size-offset-10: 4px;
+	--size-offset-10: 8px;
+
+	--text: 'Roboto'; --text-size: 1rem;
+	--logo: 'Poppins'; --logo-size: 4rem;
+	--display: 'Poppins'; --display-size: 3rem;
+	--headline: 'Rubik'; --headline-size: 2rem;
+	--monospace: 'JetBrains Mono NF'; --monospace-size: 1.3rem;
+
+	--style-animation: 0.2s ease;
+	--layout-animation: 0.3s ease;
+}
