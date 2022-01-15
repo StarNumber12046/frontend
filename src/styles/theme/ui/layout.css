@@ -1,0 +1,18 @@
+:root {
+	--min-padding: 6px;
+	--standard-padding: 8px;
+	--max-padding: 12px;
+
+	--window-corner-radius: 0px;
+	--control-corner-radius: 4px;
+	--element-corner-radius: 4px;
+	--section-corner-radius: 8px;
+
+	--default-line-height: 0.7;
+
+	--size-offset-10: 4px;
+	--size-offset-10: 8px;
+
+	--style-animation: 0.2s ease;
+	--layout-animation: 0.3s ease;
+}

@@ -1,26 +1,26 @@
 @import './static.css';
 @import './theme/dark.css';
-@media (prefers-color-scheme: dark) {
-	@import './themes/dark.css';
+@media (prefers-color-scheme: light) {
+	@import './themes/light.css';
 }
 
 * {
 	min-width: -moz-fit-content;
 	min-width: -webkit-fill-available;
-  min-width: fit-content;
+	min-width: fit-content;
 	min-height: -moz-fit-content;
 	min-height: -webkit-fill-available;
-  min-height: fit-content;
+	min-height: fit-content;
 	
-  border: hidden;
+	border: hidden;
 
 	font-family: var(--text);
 	font-size: var(--text-size);
-  text-decoration: none;
+	text-decoration: none;
 	line-height: 0.9;
 
 	background-color: transparent;
-  color: var(--foreground-10);
+	color: var(--foreground-10);
 }
 
 body {
