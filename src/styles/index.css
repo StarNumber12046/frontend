@@ -1,12 +1,14 @@
 @import './static.css';
-@import './theme/light.css';
 @import './theme/dark.css';
+@media (prefers-color-scheme: dark) {
+	@import './themes/dark.css';
+}
 
 * {
 	min-width: -moz-fit-content;
 	min-width: -webkit-fill-available;
   min-width: fit-content;
-  min-height: -moz-fit-content;
+	min-height: -moz-fit-content;
 	min-height: -webkit-fill-available;
   min-height: fit-content;
 	
