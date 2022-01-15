@@ -6,6 +6,8 @@
 	src: url('https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons&display=swap');
+
 :root {
 	--min-padding: 6px;
 	--standard-padding: 8px;
@@ -16,7 +18,7 @@
 	--element-corner-radius: 4px;
 	--section-corner-radius: 8px;
 
-	--default-line-height: 0.7;
+	--default-line-height: 0.;
 
 	--size-offset-10: 4px;
 	--size-offset-10: 8px;
@@ -25,8 +27,16 @@
 	--logo: 'Poppins'; --logo-size: 4rem;
 	--display: 'Poppins'; --display-size: 3rem;
 	--headline: 'Rubik'; --headline-size: 2rem;
+	--subheadline: 'Roboto'; --subheadline-size: 1.4rem;
 	--monospace: 'JetBrains Mono NF'; --monospace-size: 1.3rem;
+	--icon: 'Material Icons'; --icon-size: 0.6rem;
 
 	--style-animation: 0.2s ease;
 	--layout-animation: 0.3s ease;
+}
+
+icon {
+	font-family: var(--icon);
+	font-size: var(--icon-size);
+	text-decoration: none;
 }

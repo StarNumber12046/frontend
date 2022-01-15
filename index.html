@@ -9,18 +9,32 @@
 		
 		<link id='style' rel='stylesheet' href="./src/styles/index.css" />
 
-		<script id='jquery' src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script id='main' src="./src/javascript/index.js"></script>
+		<script id='jquery' src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+			crossorigin="anonymous"
+		></script>
+		<script id='main' src="./src/javascript/index.js" ></script>
 	</head>
 
 	<body>
-		<div class='main'>
-			<h1 class='display logo'>Fasm.ga</h1>
-			<h2>*** Under Construction ***</h2>
+		<div class='navbarWrapper'>
+			<div>
+				<navbarItem class='subheadline logo' href='/'>Fasm.ga</navbarItem>
+				<navbarItem><icon>add-link</icon> New link</navbarItem>
+				<navbarItem><icon>dashboard</icon> Dashboard</navbarItem>
+				<navbarItem><icon>settings</icon> Settings</navbarItem>
+				<navbarItem><icon>newspaper</icon> News</navbarItem>
+			</div>
+		</div>
 
+		<main>
 			text<br/><br/>
 			<b>bold text</b><br/><br/>
 			<a href='https://fasmga.org/'>link</a>
-		</div>
+
+			<!--
+				TODO: fix problem with buttons and user inputs not rendering correctly
+			-->
+		</main>
 	</body>
 </html>

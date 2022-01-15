@@ -1,7 +1,7 @@
 @import url('./static.css');
-@import url('./theme/dark.css');
+@import url('./theme/charmga/dark.css');
 @media (prefers-color-scheme: light) {
-	@import url('./themes/light.css');
+	@import url('./themes/charmga/light.css');
 }
 
 * {
@@ -13,19 +13,23 @@
 	min-height: fit-content;
 	
 	border: hidden;
-
+	
 	font-family: var(--text);
 	font-size: var(--text-size);
 	text-decoration: none;
-	line-height: 0.9;
-
+	line-height: var(--default-line-height);
+	
 	background-color: transparent;
 	color: var(--foreground-10);
 }
 
+.responsive	{
+	size: 1rem;
+	font-size: 0.9rem;
+}
+
 body {
 	background-color: var(--background-10);
-	font-family: var(--text);
 }
 
 a {
@@ -62,10 +66,10 @@ h1, .display {
 }
 
 .logo {
-	font-family: var(--display);
+	font-family: var(--display) !important;
 	font-size: var(--display-size);
 	
-	color: var(--accent);
+	color: var(--primary-200) !important;
 
 	cursor: pointer;
 	
@@ -73,7 +77,7 @@ h1, .display {
 	transition: color var(--style-animation);
 }
 .logo:hover {
-	color: var(--primary-300);
+	color: var(--accent) !important;
 
 	transition: color var(--style-animation);
 }
@@ -83,9 +87,74 @@ h2, .headline {
 	font-size: var(--headline-size);
 }
 
-div.main {
+h3, .subheadline {
+	font-family: var(--subheadline);
+	font-size: var(--subheadline-size);
+}
+
+code {
+	font-family: var(--monospace);
+	font-size: var(--monospace-size);
+}
+
+button {
+  display: inline-block;
+  vertical-align: top;
+	padding: calc(var(--ui-element) * 2.5);
+	border: 0px;
+	border-radius: 2px;
+	font-size: 18px;
+  transition: font-weight 0.2s;
+}
+
+main {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+
 	transform: translate(-50%, -50%);
+}
+
+panel {
+	width: 40ch;
+
+	margin: var(--max-padding);
+	padding: var(--max-padding);
+
+	border-radius: var(--section-corner-radius);
+
+	background-color: var(--primary-700);
+}
+
+div.navbarWrapper {
+  height: 48px;
+  padding: var(--max-padding);
+}
+
+navbar {
+  display: inline;
+
+  padding: var(--max-padding);
+
+  overflow-x: auto;
+}
+
+navbarItem {
+	margin: var(--standard-padding);
+
+	font-family: var(--monospace);
+
+  color: var(--onprimary);
+
+  transition: color 0.2s, margin 0.3s;
+}
+
+navbarItem:hover {
+	margin: var(--max-padding);
+
+  color: var(--secondary);
+
+	cursor: pointer;
+
+  transition: color 0.2s, margin 0.3s;
 }
