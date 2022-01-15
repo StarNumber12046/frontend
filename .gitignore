@@ -1,0 +1,14 @@
+_*
+*_pvt
+*.private
+pvt/
+private/
+private
+private__*
+*.tkn
+*.[Ss]ession
+*.[Ss]ession-[Ll]ock
+*.khp-private
+*.wgl-private
+token
+.vscode/

@@ -1,0 +1,76 @@
+Fasm.ga Open Source License v1 (FGALv1)
+;; © 2020–2022, The Fasm.ga Project
+;; https://www.fasmga.org/license
+
+;; The following document is an adaptation of the Apache License.
+;; By utilizing, modifying or distributing any of our software in any way,
+;; shape or form as described here, you agree to accept all of the following
+;; terms and conditions.
+
+;; Last updated 2021-12-31, 16:00 UTC
+
+⋯≡ Product Terms and Conditions for use, modifications, reproduction, distribution and contributions ≡⋯
+
+;—————————;—————————;—————————;—————————;—————————;—————————;—————————;—————————;
+
+Definitions:
+	├ "Fasm.ga", "FasmGA", "FGA", "Fasm", "Centaurity", "The Fasm.ga Project",
+	  "Team", "Staff", "we", "us" shall mean the developer team behind the Fasm.ga
+	  Project, including but not limited to the moderation team and the Quality
+	  Assurance team.
+	
+	├ "Service", "Product", "Platform" shall refer to the software solutions
+	  offered, developed and/or distributed by Fasm.ga and its subbrands.
+
+	├ "License", "License document", "Terms and Conditions", "ToS",
+	  "License agreement" shall refer to this license document representing the
+	  legal terms and conditions to be followed when using, reproducing or
+	  any of the products and services created by Fasm.ga that are
+	  affected by it.
+
+	├ "You", "Your" shall refer to the end user accepting and abiding to this
+	  license.
+
+	├ "Source", "Source code", "Code", "Software", "Program" shall mean the source
+	  code of the software, program, service or product taking advantage of this
+	  license. This includes, and is not limited to documentation, wikis and
+	  repositories.
+
+	├ "Fork", "Derivation(s)", "Modification(s)", "Derivative work" shall mean the
+	  ability of the end user to fork, modify and adapt this code to their will,
+	  within the terms prescribed by this license.
+
+	└ "Contribution", "PR" shall refer to your possibility to contribute to the
+	  development process of the software.
+
+;—————————;—————————;—————————;—————————;—————————;—————————;—————————;—————————;
+
+Permissions:
+	├ You are granted the right to modify and/or redistribute the source code.
+
+	├ You are granted the right to take advantage, modify, fork and/or
+	  redistribute Fasm.ga software for personal and commercial use.
+
+	└ You are granted the right to patent modified Fasm.ga code.
+
+Conditions:
+	├ You should include the License and copyright notice in any eventual forks,
+	  modifications, derivative work and contributions.
+	
+	└ You should state your changes to the original code.
+
+Limitations:
+	├ We are not to be held responsible and/or liable for any damage caused by
+	  the source code.
+
+	├ The Software comes with no guarantee or warranties, either express or
+	  implied, including but not limited to entitlement, non–infringement,
+	  merchantability or fitness for a particular purpose, except when
+	  specifically documented otherwise.
+
+	├ You are not to trademark the original source code.
+	
+	└ You should not take credit, nor are granted ownership of the original
+	  source code. You are in the right to be credited as a contributor if you
+	  make any relevant modifications in your fork or if you directly contribute
+	  to the development.
