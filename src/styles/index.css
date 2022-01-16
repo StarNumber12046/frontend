@@ -1,8 +1,4 @@
 @import url('./static.css');
-@import url('./theme/charmga/dark.css');
-@media (prefers-color-scheme: light) {
-	@import url('./themes/charmga/light.css');
-}
 
 * {
 	min-width: -moz-fit-content;
@@ -69,7 +65,7 @@ h1, .display {
 	font-family: var(--display) !important;
 	font-size: var(--display-size);
 	
-	color: var(--primary-200) !important;
+	color: var(--foreground-20) !important;
 
 	cursor: pointer;
 	
@@ -105,6 +101,12 @@ button {
 	border-radius: 2px;
 	font-size: 18px;
   transition: font-weight 0.2s;
+}
+
+icon {
+	font-family: var(--icon);
+	font-size: var(--icon-size);
+	text-decoration: none;
 }
 
 main {
@@ -146,15 +148,14 @@ navbarItem {
 
   color: var(--onprimary);
 
-  transition: color 0.2s, margin 0.3s;
+  transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
-
 navbarItem:hover {
 	margin: var(--max-padding);
-
+	
   color: var(--secondary);
-
+	
 	cursor: pointer;
 
-  transition: color 0.2s, margin 0.3s;
+	transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
