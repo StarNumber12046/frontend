@@ -1,4 +1,4 @@
-/* const DarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-const LightTheme = window.matchMedia("(prefers-color-scheme: light)");
+const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+const lightTheme = window.matchMedia("(prefers-color-scheme: light)");
 
-DarkTheme.matches ? $('#style').attr('href', "./styles/dark.css") : $('#style').attr('href', "./styles/light.css") */
+darkTheme.matches ? $('#colorScheme').attr('href', "./src/styles/theme/charmga/dark.css") : $('#colorScheme').attr('href', "./src/styles/theme/charmga/light.css")
