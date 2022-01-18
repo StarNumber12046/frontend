@@ -1,5 +1,7 @@
 @import url('./static.css');
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+
 * {
 	min-width: -moz-fit-content;
 	min-width: -webkit-fill-available;
@@ -8,14 +10,11 @@
 	min-height: -webkit-fill-available;
 	min-height: fit-content;
 	
-	border: hidden;
-	
 	font-family: var(--text);
 	font-size: var(--text-size);
 	text-decoration: none;
 	line-height: var(--default-line-height);
-	
-	background-color: transparent;
+
 	color: var(--foreground-10);
 }
 
@@ -96,14 +95,24 @@ code {
 button {
   display: inline-block;
   vertical-align: top;
-	padding: calc(var(--ui-element) * 2.5);
-	border: 0px;
-	border-radius: 2px;
+
+	padding: var(--max-padding);
+
+	border: none;
+	border-radius: var(--control-corner-radius);
+
 	font-size: 18px;
-  transition: font-weight 0.2s;
+
+	background-color: transparent;
+
+  transition: font-weight var(--style-animation);
 }
 
 icon {
+	position: relative;
+
+	top: var(--icon-line);
+
 	font-family: var(--icon);
 	font-size: var(--icon-size);
 	text-decoration: none;
@@ -114,7 +123,32 @@ main {
 	top: 50%;
 	left: 50%;
 
+	margin: var(--max-padding);
+	padding: var(--max-padding);
+
 	transform: translate(-50%, -50%);
+}
+
+info {
+	align-items: center;
+  justify-content: center;
+
+  padding: var(--standard-padding);
+
+  border-radius: var(--section-corner-radius);
+	
+  background-color: var(--accent);
+	color: var(--foreground-20);
+  opacity: var(--min-opacity);
+	
+  transition: padding var(--layout-animation), opacity var(--style-animation);
+}
+info:hover {
+	padding: var(--max-padding);
+
+  opacity: var(--max-opacity);
+	
+  transition: padding var(--layout-animation), opacity var(--style-animation);
 }
 
 panel {
@@ -158,4 +192,58 @@ navbarItem:hover {
 	cursor: pointer;
 
 	transition: color var(--style-animation), margin var(--layout-animation) !important;
+}
+
+input[type=text] {
+	display: inline;
+
+  padding: var(--standard-padding);
+
+  border: var(--max-border) solid var(--foreground-20);
+  border-radius: var(--control-corner-radius);
+  outline: none;
+
+  resize: none;
+
+  font-family: var(--monospace);
+
+	background-color: transparent;
+  color: var(--foreground-10);
+
+  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+}
+input[type=text]:hover {
+	border: var(--max-border) solid var(--accent);
+
+  font-weight: semibold;
+
+  color: var(--accent);
+
+  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+}
+
+input[type=submit] {
+	display: inline-block;
+  vertical-align: top;
+
+  padding: var(--max-padding);
+
+  border: none;
+	border-radius: var(--control-corner-radius);
+
+  font-family: var(--icon);
+	font-size: 20px;
+	font-weight: bold;
+
+  background-color: var(--foreground-20);
+  color: var(--background-10);
+
+	cursor: pointer;
+
+  transition: background-color var(--style-animation);
+}
+input[type=submit]:hover {
+  background-color: var(--accent);
+
+  transition: background-color var(--style-animation);
 }

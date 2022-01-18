@@ -17,6 +17,9 @@
 		<link id='colorScheme'
 			rel='stylesheet'
 			href="./src/styles/theme/charmga/dark.css" />
+		<link id='materialIcons'
+		    rel='stylesheet'
+		    href="https://fonts.googleapis.com/icon?family=Material+Icon" />
 		<link id='style'
 			rel='stylesheet'
 			href="./src/styles/index.css" />
@@ -38,7 +41,7 @@
 					Fasm.ga
 				</navbarItem>
 				<navbarItem>
-					<icon>add-link</icon> 
+					<icon>add_link</icon> 
 					New link
 				</navbarItem>
 				<navbarItem>
@@ -57,13 +60,9 @@
 		</div>
 
 		<main>
-			text<br/><br/>
-			<b>bold text</b><br/><br/>
-			<a href='https://fasmga.org/'>link</a>
-
-			<!--
-				TODO: fix problem with buttons and user inputs not rendering correctly
-			-->
+			<h2>New link</h2>
+			<input type='text' placeholder='Input any URL' />
+			<input type='submit' value='arrow_forward' />
 		</main>
 	</body>
 </html>
