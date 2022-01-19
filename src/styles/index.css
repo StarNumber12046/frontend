@@ -18,11 +18,6 @@
 	color: var(--foreground-10);
 }
 
-.responsive	{
-	size: 1rem;
-	font-size: 0.9rem;
-}
-
 body {
 	background-color: var(--background-10);
 }
@@ -89,7 +84,7 @@ h3, .subheadline {
 	font-weight: bold;
 }
 
-code {
+pre, code {
 	font-family: var(--monospace);
 	font-size: var(--monospace-size);
 }
@@ -174,9 +169,15 @@ navbar {
 
   padding: var(--max-padding);
 
+	line-height: 1.5;
+
   overflow-x: auto;
 }
 
+@media only screen and (max-width: 720px) {
+	div.navbarWrapper, navbar { bottom: 0; }
+	navbar { box-shadow: var(--element-shadow); }
+}
 navbarItem {
 	margin: var(--standard-padding);
 
