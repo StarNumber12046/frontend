@@ -167,6 +167,7 @@ div.navbarWrapper {
   height: 48px;
 }
 navbar {
+	position: absolute;
   display: inline;
 
   padding: var(--max-padding);
