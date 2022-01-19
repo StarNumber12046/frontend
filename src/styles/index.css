@@ -160,10 +160,12 @@ panel {
 }
 
 div.navbarWrapper {
-  height: 48px;
-  padding: var(--max-padding);
-}
+  position: absolute;
 
+  padding: var(--max-padding);
+
+  height: 48px;
+}
 navbar {
   display: inline;
 
@@ -173,11 +175,11 @@ navbar {
 
   overflow-x: auto;
 }
-
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 480px) {
 	div.navbarWrapper, navbar { bottom: 0; }
 	navbar { box-shadow: var(--element-shadow); }
 }
+
 navbarItem {
 	margin: var(--standard-padding);
 
@@ -188,13 +190,16 @@ navbarItem {
   transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
 navbarItem:hover {
-	margin: var(--max-padding);
-	
-  color: var(--secondary);
+	color: var(--secondary);
 	
 	cursor: pointer;
 
 	transition: color var(--style-animation), margin var(--layout-animation) !important;
+}
+@media only screen and (min-width: 481px) {
+	navbarItem:hover {
+		margin: var(--max-padding);
+	}
 }
 
 input[type=text] {
