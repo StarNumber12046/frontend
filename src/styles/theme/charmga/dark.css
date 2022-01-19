@@ -4,8 +4,8 @@
 	--background-10: #202B38;
 	--background-20: #172028;
 
-	--foreground-10: #FFC2DD;
-	--foreground-20: #F2F2F2;
+	--foreground-10: #E6F5F2;
+	--foreground-20: #D8E4F3;
 
 	--primary-50: #F2F2F2;
 	--primary-100: #E6F5F2;
@@ -17,17 +17,6 @@
 	--primary-700: #03715D;
 	--primary-800: #025B42;
 	--primary-900: #024A32;
-
-	--secondary-50: #F8F9FB;
-	--secondary-100: #F1F3F7;
-	--secondary-200: #DBE1EC;
-	--secondary-300: #C6CCE0;
-	--secondary-400: #9BAAC9;
-	--secondary-500: #7085B2;
-	--secondary-600: #6578A0;
-	--secondary-700: #546486;
-	--secondary-800: #43506B;
-	--secondary-900: #374157;
 
 	--brightness-offset-10: 40%;
 	--brightness-offset-20: 60%;
