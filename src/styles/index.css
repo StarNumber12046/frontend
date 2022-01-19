@@ -80,11 +80,13 @@ h1, .display {
 h2, .headline {
 	font-family: var(--headline);
 	font-size: var(--headline-size);
+	font-weight: bold;
 }
 
 h3, .subheadline {
 	font-family: var(--subheadline);
 	font-size: var(--subheadline-size);
+	font-weight: bold;
 }
 
 code {
