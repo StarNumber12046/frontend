@@ -1,5 +1,4 @@
 @import url('http://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('http://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @font-face {
 	font-family: 'JetBrains Mono NF';
@@ -30,7 +29,7 @@
 	--text: 'Roboto'; --text-size: 1rem;
 	--logo: 'Poppins'; --logo-size: 4rem;
 	--display: 'Poppins'; --display-size: 3rem;
-	--headline: 'Rubik'; --headline-size: 2rem;
+	--headline: 'JetBrains Mono NF'; --headline-size: 2rem;
 	--subheadline: 'Roboto'; --subheadline-size: 1.4rem;
 	--monospace: 'JetBrains Mono NF'; --monospace-size: 1.3rem;
 	--icon: 'Material Icons'; --icon-size: 1.1em;
