@@ -57,11 +57,11 @@ b:hover {
 .control,
   button, info, navbarItem, input[type=text],
   input[type=submit] {
-	box-shadow: var(--control-shadow);
+	box-shadow: var(--control-shadow) var(--background-20);
 }
 .section,
   navbar, panel {
-	box-shadow: var(--section-shadow);
+	box-shadow: var(--section-shadow) var(--background-20);
 }
 
 h1, .display {
