@@ -50,6 +50,13 @@ b:hover {
 	transition: font-weight var(--style-animation);
 }
 
+.control,
+  button, info, navbar, navbarItem, input[type=text],
+  input[type=submit] {
+	text-shadow: var(--control-shadow);
+	box-shadow: var(--control-shadow);
+}
+
 h1, .display {
 	font-family: var(--display);
 	font-size: var(--display-size);
