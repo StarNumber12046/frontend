@@ -121,6 +121,7 @@ main {
 	left: 50%;
 
 	padding: var(--max-padding);
+	white-space: nowrap;
 
 	max-width: fit-content;
 
