@@ -50,11 +50,18 @@ b:hover {
 	transition: font-weight var(--style-animation);
 }
 
+/* .window,
+  main {
+	
+} */
 .control,
-  button, info, navbar, navbarItem, input[type=text],
+  button, info, navbarItem, input[type=text],
   input[type=submit] {
-	text-shadow: var(--control-shadow);
 	box-shadow: var(--control-shadow);
+}
+.section,
+  navbar, panel {
+	box-shadow: var(--section-shadow);
 }
 
 h1, .display {
@@ -188,7 +195,6 @@ navbar {
 }
 @media only screen and (max-width: 480px) {
 	div.navbarWrapper, navbar { bottom: 0; }
-	navbar { box-shadow: var(--element-shadow); }
 }
 
 navbarItem {
