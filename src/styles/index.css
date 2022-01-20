@@ -120,8 +120,9 @@ main {
 	top: 50%;
 	left: 50%;
 
-	margin: var(--max-padding);
 	padding: var(--max-padding);
+
+	max-width: fit-content;
 
 	transform: translate(-50%, -50%);
 }
