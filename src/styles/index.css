@@ -185,6 +185,7 @@ navbar {
 
 navbarItem {
 	margin: var(--standard-padding);
+	white-space: nowrap;
 
 	font-family: var(--monospace);
 
