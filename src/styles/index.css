@@ -167,10 +167,11 @@ div.navbarWrapper {
   height: 48px;
 }
 navbar {
-	position: absolute;
+	position: fixed;
   display: inline;
 
   padding: var(--max-padding);
+	z-index: 10;
 
 	line-height: 1.5;
 
