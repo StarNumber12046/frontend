@@ -24,7 +24,8 @@
 			rel='stylesheet'
 			href="./src/styles/index.css" />
 
-		<script id='jquery' src="https://code.jquery.com/jquery-3.6.0.min.js"
+		<script id='jquery'
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
 			integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
 			crossorigin="anonymous"
 		></script>
@@ -34,35 +35,48 @@
 	</head>
 
 	<body>
-		<div class='navbarWrapper'>
-			<div>
-				<navbarItem class='subheadline logo'
-					href='/'>
+		<navbar>
+			<a href="/">
+				<navbarItem class='subheadline logo'>
 					Fasm.ga
 				</navbarItem>
+			</a>
+			<a href="/">
 				<navbarItem>
-					<icon>add_link</icon> 
-					New link
+					<icon>add_link</icon>
+					<span>New link</span>
 				</navbarItem>
+			</a>
+			<a href="/dashboard">
 				<navbarItem>
 					<icon>dashboard</icon> 
-					Dashboard
+					<span>Dashboard</span>
 				</navbarItem>
+			</a>
+			<a href="/settings">
 				<navbarItem>
 					<icon>settings</icon> 
-					Settings
+					<span>Settings</span>
 				</navbarItem>
+			</a>
+			<a href="/news">
 				<navbarItem>
 					<icon>newspaper</icon> 
-					News
+					<span>News</span>
 				</navbarItem>
-			</div>
-		</div>
+			</a>
+		</navbar>
 
 		<main>
-			<h2>New link</h2>
-			<input type='text' placeholder='Input any URL' />
-			<input type='submit' value='arrow_forward' />
+			<h2 id='headline'>
+				New link
+			</h2>
+			<input id='urlBox'
+				type='text' 
+				placeholder="Input any URL" />
+			<input id='submitUrl'
+				type='submit'	
+				value='arrow_forward' />
 		</main>
 	</body>
 </html>
