@@ -95,15 +95,11 @@ navbar {
 	Standard HTML elements
 ***/
 a {
-	font-weight: 300;
-
 	color: var(--accent);
 
 	transition: color var(--style-animation);
 }
 a:hover {
-	font-weight: 600;
-
 	color: var(--primary-400);
 
 	will-change: transition;
@@ -204,15 +200,16 @@ navbarItem {
 	
   transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
+@media only screen and (max-width: 480px) {
+	navbarItem span { display: none; }
+}
 navbarItem:hover {
 	color: var(--accent);
 
 	transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
 @media only screen and (min-width: 481px) {
-	navbarItem:hover {
-		margin: var(--max-padding);
-	}
+	navbarItem:hover { margin: var(--max-padding); }
 }
 
 input[type=text] {
