@@ -50,20 +50,6 @@ b:hover {
 	transition: font-weight var(--style-animation);
 }
 
-/* .window,
-  main {
-	
-} */
-.control,
-  button, info, navbarItem, input[type=text],
-  input[type=submit] {
-	box-shadow: var(--control-shadow) var(--background-20);
-}
-.section,
-  navbar, panel {
-	box-shadow: var(--section-shadow) var(--background-20);
-}
-
 h1, .display {
 	font-family: var(--display);
 	font-size: var(--display-size);
@@ -182,12 +168,15 @@ div.navbarWrapper {
 
   height: 48px;
 }
+
 navbar {
 	position: fixed;
   display: inline;
 
   padding: var(--max-padding);
 	z-index: 10;
+
+	box-shadow: var(--section-shadow) var(--background-20);
 
 	line-height: 1.5;
 
@@ -218,6 +207,12 @@ navbarItem:hover {
 	navbarItem:hover {
 		margin: var(--max-padding);
 	}
+}
+navbarItem::icon {
+	font-family: var(--icon);
+}
+navbarItem::text {
+	font-family: var(--monospace);
 }
 
 input[type=text] {
