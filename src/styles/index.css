@@ -1,7 +1,23 @@
-@import url('./static.css');
+/*
+	Fasm.ga
+	
+	-> Name: index.css
+	-> Description: The website's main style sheet.
+	-> Resource: index.css
+	-> Licensing: © 2022 Fasm.ga | https://www.fasmga.org/license
+*/
 
+/*** Imports ***/
+/*  └ Static */
+@import url("./static.css");
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
 
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+/***
+	The following rules apply to every element on the screen
+***/
 * {
 	min-width: -moz-fit-content;
 	min-width: -webkit-fill-available;
@@ -18,10 +34,66 @@
 	color: var(--foreground-10);
 }
 
+/***
+	Webpage background
+***/
 body {
 	background-color: var(--background-10);
 }
 
+/***
+	Sections and semantics
+***/
+main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	padding: clamp(var(--min-padding), var(--standard-padding), var(--max-padding));
+	white-space: nowrap;
+	
+	transform: translate(-50%, -50%);
+}
+
+panel {
+	width: 40ch;
+
+	margin: var(--max-padding);
+	padding: var(--max-padding);
+
+	border-radius: var(--section-corner-radius);
+
+	background-color: var(--primary-700);
+}
+
+navbar {
+	position: fixed;
+	display: inline;
+
+	margin: var(--max-padding);
+	margin-left: calc(var(--standard-padding) * -1);
+	padding: var(--max-padding);
+	z-index: 10;
+
+	width: 100vw;
+
+	box-shadow: var(--section-shadow) var(--background-20);
+
+	line-height: 1.5;
+
+	overflow-x: auto;
+}
+@media only screen and (max-width: 480px) {
+	navbar {
+		bottom: 0;
+
+		box-shadow: var(--section-shadow-upward) var(--background-20);
+	}
+}
+
+/***
+	Standard HTML elements
+***/
 a {
 	font-weight: 300;
 
@@ -52,9 +124,29 @@ b:hover {
 
 h1, .display {
 	font-family: var(--display);
-	font-size: var(--display-size);
+	font-size: var(--display-size) !important;
 }
 
+h2, .headline {
+	font-family: var(--headline);
+	font-size: var(--headline-size) !important;
+	font-weight: bold;
+}
+
+h3, .subheadline {
+	font-family: var(--subheadline);
+	font-size: var(--subheadline-size) !important;
+	font-weight: bold;
+}
+
+pre, code {
+	font-family: var(--monospace) !important;
+	font-size: var(--monospace-size);
+}
+
+/***
+	Stylistic elements
+***/
 .logo {
 	font-family: var(--display) !important;
 	font-size: var(--display-size);
@@ -72,25 +164,21 @@ h1, .display {
 	transition: color var(--style-animation);
 }
 
-h2, .headline {
-	font-family: var(--headline);
-	font-size: var(--headline-size);
-	font-weight: bold;
+icon {
+	position: relative;
+
+	top: var(--icon-line);
+
+	font-family: var(--icon);
+	font-size: var(--icon-size);
+	text-decoration: none;
 }
 
-h3, .subheadline {
-	font-family: var(--subheadline);
-	font-size: var(--subheadline-size);
-	font-weight: bold;
-}
-
-pre, code {
-	font-family: var(--monospace);
-	font-size: var(--monospace-size);
-}
-
+/***
+	Various controls
+***/
 button {
-  display: inline-block;
+	display: inline-block;
   vertical-align: top;
 
 	padding: var(--max-padding);
@@ -105,101 +193,19 @@ button {
   transition: font-weight var(--style-animation);
 }
 
-icon {
-	position: relative;
-
-	top: var(--icon-line);
-
-	font-family: var(--icon);
-	font-size: var(--icon-size);
-	text-decoration: none;
-}
-
-main {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-
-	padding: clamp(var(--min-padding), var(--standard-padding), var(--max-padding));
-	white-space: nowrap;
-
-	max-width: fit-content;
-
-	transform: translate(-50%, -50%);
-}
-
-info {
-	align-items: center;
-  justify-content: center;
-
-  padding: var(--standard-padding);
-
-  border-radius: var(--section-corner-radius);
-	
-  background-color: var(--accent);
-	color: var(--foreground-20);
-  opacity: var(--min-opacity);
-	
-  transition: padding var(--layout-animation), opacity var(--style-animation);
-}
-info:hover {
-	padding: var(--max-padding);
-
-  opacity: var(--max-opacity);
-	
-  transition: padding var(--layout-animation), opacity var(--style-animation);
-}
-
-panel {
-	width: 40ch;
-
-	margin: var(--max-padding);
-	padding: var(--max-padding);
-
-	border-radius: var(--section-corner-radius);
-
-	background-color: var(--primary-700);
-}
-
-div.navbarWrapper {
-  position: absolute;
-
-  padding: var(--max-padding);
-
-  height: 48px;
-}
-
-navbar {
-	position: fixed;
-  display: inline;
-
-  padding: var(--max-padding);
-	z-index: 10;
-
-	box-shadow: var(--section-shadow) var(--background-20);
-
-	line-height: 1.5;
-
-  overflow-x: auto;
-}
-@media only screen and (max-width: 480px) {
-	div.navbarWrapper, navbar { bottom: 0; }
-}
-
 navbarItem {
 	margin: var(--standard-padding);
 	white-space: nowrap;
-
+	
 	font-family: var(--monospace);
-
-  color: var(--onprimary);
-
+	
+  color: var(--foreground-10);
+	cursor: pointer;
+	
   transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
 navbarItem:hover {
-	color: var(--secondary);
-	
-	cursor: pointer;
+	color: var(--accent);
 
 	transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
@@ -208,36 +214,30 @@ navbarItem:hover {
 		margin: var(--max-padding);
 	}
 }
-navbarItem::icon {
-	font-family: var(--icon);
-}
-navbarItem::text {
-	font-family: var(--monospace);
-}
 
 input[type=text] {
 	display: inline;
-
+	
   padding: var(--standard-padding);
-
+	
   border: var(--max-border) solid var(--foreground-20);
   border-radius: var(--control-corner-radius);
   outline: none;
-
+	
   resize: none;
-
+	
   font-family: var(--monospace);
-
+	
 	background-color: transparent;
   color: var(--foreground-10);
-
+	
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 input[type=text]:hover {
 	border: var(--max-border) solid var(--accent);
-
+	
   font-weight: semibold;
-
+	
   color: var(--accent);
 
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
@@ -246,25 +246,50 @@ input[type=text]:hover {
 input[type=submit] {
 	display: inline-block;
   vertical-align: top;
-
+	
   padding: var(--max-padding);
-
+	
   border: none;
 	border-radius: var(--control-corner-radius);
-
+	
   font-family: var(--icon);
 	font-size: 20px;
 	font-weight: bold;
-
+	
   background-color: var(--foreground-20);
   color: var(--background-10);
-
+	
 	cursor: pointer;
-
+	
   transition: background-color var(--style-animation);
 }
 input[type=submit]:hover {
-  background-color: var(--accent);
-
+	background-color: var(--accent);
+	
   transition: background-color var(--style-animation);
+}
+
+/***
+	Additional webpage elements
+***/
+info {
+	align-items: center;
+	justify-content: center;
+
+	padding: var(--standard-padding);
+
+	border-radius: var(--section-corner-radius);
+	
+	background-color: var(--accent);
+	color: var(--foreground-20);
+	opacity: var(--min-opacity);
+	
+	transition: padding var(--layout-animation), opacity var(--style-animation);
+}
+info:hover {
+	padding: var(--max-padding);
+
+	opacity: var(--max-opacity);
+	
+	transition: padding var(--layout-animation), opacity var(--style-animation);
 }
