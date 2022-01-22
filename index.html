@@ -17,9 +17,6 @@
 		<link id='colorScheme'
 			rel='stylesheet'
 			href="./src/styles/theme/charmga/dark.css" />
-		<link id='materialIcons'
-		    rel='stylesheet'
-		    href="https://fonts.googleapis.com/icon?family=Material+Icon" />
 		<link id='style'
 			rel='stylesheet'
 			href="./src/styles/index.css" />
@@ -36,46 +33,49 @@
 
 	<body>
 		<navbar>
-			<a href="/">
-				<navbarItem class='subheadline logo'>
-					Fasm.ga
-				</navbarItem>
-			</a>
-			<a href="/">
-				<navbarItem>
-					<icon>add_link</icon>
-					<span>New link</span>
-				</navbarItem>
-			</a>
-			<a href="/dashboard">
-				<navbarItem>
-					<icon>dashboard</icon> 
-					<span>Dashboard</span>
-				</navbarItem>
-			</a>
-			<a href="/settings">
-				<navbarItem>
-					<icon>settings</icon> 
-					<span>Settings</span>
-				</navbarItem>
-			</a>
-			<a href="/news">
-				<navbarItem>
-					<icon>newspaper</icon> 
-					<span>News</span>
-				</navbarItem>
-			</a>
+			<center>
+				<a href="/">
+					<navbarItem class='subheadline logo'>
+						Fasm.ga
+					</navbarItem>
+				</a>
+				<a href="/">
+					<navbarItem>
+						<icon>add_link</icon>
+						<span>New link</span>
+					</navbarItem>
+				</a>
+				<a href="/dashboard">
+					<navbarItem>
+						<icon>dashboard</icon> 
+						<span>Dashboard</span>
+					</navbarItem>
+				</a>
+				<a href="/settings">
+					<navbarItem>
+						<icon>settings</icon> 
+						<span>Settings</span>
+					</navbarItem>
+				</a>
+				<a href="/news">
+					<navbarItem>
+						<icon>newspaper</icon> 
+						<span>News</span>
+					</navbarItem>
+				</a>
+			</center>
 		</navbar>
-
+			
 		<main>
 			<h2 id='headline'>
 				New link
 			</h2>
 			<input id='urlBox'
-				type='text' 
+				type='text'
 				placeholder="Input any URL" />
 			<input id='submitUrl'
-				type='submit'	
+				type='submit'
+				pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?|^((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
 				value='arrow_forward' />
 		</main>
 	</body>
