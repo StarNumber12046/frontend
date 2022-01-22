@@ -18,16 +18,16 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons&display=swap");
 
 /*  ├ Sections */
-@import url("./sections.css");
+@import url("./sections/sections.css");
 
 /*  ├ Standard HTML */
-@import url("./standard.css");
+@import url("./standard/standard.css");
 
 /*  ├ Controls */
-@import url("./controls.css");
+@import url("./controls/controls.css");
 
 /*  └ Elements */
-@import url("./elements.css");
+@import url("./elements/elements.css");
 
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
