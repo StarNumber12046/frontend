@@ -1,10 +1,15 @@
 /*
-	Fasm.ga
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
 	
 	-> Name: static.css
-	-> Description: Static properties that do not change with color schemes.
-	-> Resource: static.css
-	-> Licensing: © 2022 Fasm.ga | https://www.fasmga.org/license
+	-> Description: Non–dynamic properties and environment variables
+	-> Resource: 
+	-> Licensing: © 2022, Fasmga.org | https://www.fasmga.org/license
 */
 
 /*** Imports ***/
@@ -24,6 +29,9 @@
 	--min-padding: 6px;
 	--standard-padding: 8px;
 	--max-padding: 12px;
+
+	--small-screen: 720px;
+	--large-screen: 721px;
 	
 	--size-offset-10: 4px;
 	--size-offset-10: 8px;
