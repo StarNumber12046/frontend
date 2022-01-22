@@ -19,17 +19,3 @@
 	standardized navbar in "/content/std/navbar.html", to avoid repetition.
 ***/
 $("#navigation").load("./content/std/navbar.html");
-
-/***
-	Shows the message of the day in the '#motd' info panel picked randomly from
-	"/assets/motd.json".
-***/
-$.getJSON("./assets/motd.json", (data) => {
-	console.log(data);
-	// Get a random motd from [data]
-	const motd = data[
-		Math.floor(Math.random() * data.length)
-	];
-	// Write it in
-	$('#motd').attr('innerText', motd)
-});
