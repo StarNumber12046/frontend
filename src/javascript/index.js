@@ -21,8 +21,8 @@ const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 const lightTheme = window.matchMedia("(prefers-color-scheme: light)");
 
 darkTheme.matches
-? $('#colorScheme').attr('href', "./src/css/theme/charmga/dark.css") // set the color scheme to dark
-: $('#colorScheme').attr('href', "./src/css/theme/charmga/light.css") // set the color scheme to light
+? $('#colorScheme').attr('href', "/src/css/theme/charmga/dark.css") // set the color scheme to dark
+: $('#colorScheme').attr('href', "/src/css/theme/charmga/light.css") // set the color scheme to light
 
 /***
 	Handling data from the '#newLink' form
