@@ -1,0 +1,64 @@
+/*
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
+	
+	-> Name: standard.css
+	-> Description: Styling for standard HTML elements
+	-> Resource: standard.css
+	-> Licensing: © 2022, Fasmga.org | https://www.fasmga.org/license
+*/
+
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+a {
+	color: var(--accent);
+
+	will-change: transition;
+	transition: color var(--style-animation);
+}
+a:hover {
+	color: var(--primary-400);
+
+	will-change: transition;
+	transition: color var(--style-animation);
+}
+
+b {
+	font-weight: 600;
+	
+	will-change: transition;
+	transition: font-weight var(--style-animation);
+}
+b:hover {
+	font-weight: 800;
+
+	will-change: transition;
+	transition: font-weight var(--style-animation);
+}
+
+h1, .display {
+	font-family: var(--display);
+	font-size: var(--display-size) !important;
+}
+
+h2, .headline {
+	font-family: var(--headline);
+	font-size: var(--headline-size) !important;
+	font-weight: bold;
+}
+
+h3, .subheadline {
+	font-family: var(--subheadline);
+	font-size: var(--subheadline-size) !important;
+	font-weight: bold;
+}
+
+pre, code {
+	font-family: var(--monospace) !important;
+	font-size: var(--monospace-size);
+}

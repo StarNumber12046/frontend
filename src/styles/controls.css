@@ -1,0 +1,112 @@
+/*
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
+	
+	-> Name: controls.css
+	-> Description: Interactive controls with user input
+	-> Resource: controls.css
+	-> Licensing: © 2022, Fasmga.org | https://www.fasmga.org/license
+*/
+
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+/***
+	Interactive button with text
+***/
+button {
+	display: inline-block;
+  vertical-align: top;
+
+	padding: var(--max-padding);
+
+	border: none;
+	border-radius: var(--control-corner-radius);
+
+	font-size: 18px;
+
+	background-color: transparent;
+
+  transition: font-weight var(--style-animation);
+}
+
+/***
+	Text based input box
+***/
+input[type=text] {
+	display: inline;
+	
+  padding: var(--standard-padding);
+	
+  border: var(--max-border) solid var(--foreground-20);
+  border-radius: var(--control-corner-radius);
+  outline: none;
+	
+  resize: none;
+	
+  font-family: var(--monospace);
+	
+	background-color: transparent;
+  color: var(--foreground-10);
+	
+  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+}
+input[type=text]:hover {
+	border: var(--max-border) solid var(--accent);
+	
+  font-weight: semibold;
+	
+  color: var(--accent);
+	
+  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+}
+
+input[type=submit] {
+	display: inline-block;
+  vertical-align: top;
+	
+  padding: var(--max-padding);
+	
+  border: none;
+	border-radius: var(--control-corner-radius);
+	
+  font-family: var(--icon);
+	font-size: 20px;
+	font-weight: bold;
+	
+  background-color: var(--foreground-20);
+  color: var(--background-10);
+	
+	cursor: pointer;
+	
+  transition: background-color var(--style-animation);
+}
+input[type=submit]:hover {
+	background-color: var(--accent);
+	
+  transition: background-color var(--style-animation);
+}
+
+/***
+	Element in the top navigation bar
+***/
+navbarItem {
+	margin: var(--standard-padding);
+	white-space: nowrap;
+	
+	font-family: var(--monospace) !important;
+	
+	color: var(--foreground-10);
+	cursor: pointer;
+	
+	transition: margin var(--layout-animation) !important;
+}
+navbarItem:hover { margin: var(--max-padding); }
+navbarItem span { font-family: var(--monospace); }
+@media only screen and (max-width: 720px) {
+	navbarItem span { display: none; }
+}

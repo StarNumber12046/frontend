@@ -1,0 +1,65 @@
+/*
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
+	
+	-> Name: sections.css
+	-> Description: Sections and semantics
+	-> Resource: sections.css
+	-> Licensing: © 2022, Fasmga.org | https://www.fasmga.org/license
+*/
+
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	padding: clamp(var(--min-padding), var(--standard-padding), var(--max-padding));
+	white-space: nowrap;
+	
+	transform: translate(-50%, -50%);
+}
+
+panel {
+	width: 40ch;
+	
+	margin: var(--max-padding);
+	padding: var(--max-padding);
+	
+	border-radius: var(--section-corner-radius);
+	
+	background-color: var(--primary-700);
+}
+
+navbar {
+	position: fixed;
+	display: inline;
+
+	margin-left: calc(var(--standard-padding) * -1);
+	padding: var(--max-padding);
+	z-index: 10;
+
+	width: 100vw;
+
+	box-shadow: var(--section-shadow) var(--background-20);
+
+	line-height: 1.5;
+
+	overflow-x: auto;
+}
+/*
+CSS annoyingly does not support variable use in media
+queries, so we'll just preprocess them instead
+*/
+@media only screen and (max-width: 720px) {
+	navbar {
+		bottom: 0;
+		
+		box-shadow: var(--section-shadow-upward) var(--background-20);
+	}
+}

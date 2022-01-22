@@ -1,0 +1,65 @@
+/*
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
+	
+	-> Name: elements.css
+	-> Description: Additional webpage elements
+	-> Resource: elements.css
+	-> Licensing: © 2022, Fasmga.org | https://www.fasmga.org/license
+*/
+
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+.logo {
+	font-family: var(--display) !important;
+	font-size: var(--display-size);
+	
+	color: var(--foreground-20) !important;
+
+	cursor: pointer;
+	
+	will-change: transition;
+	transition: color var(--style-animation);
+}
+.logo:hover {
+	color: var(--accent) !important;
+
+	transition: color var(--style-animation);
+}
+
+icon {
+	position: relative;
+
+	top: var(--icon-line);
+
+	font-family: var(--icon);
+	font-size: var(--icon-size);
+	text-decoration: none;
+}
+
+info {
+	align-items: center;
+	justify-content: center;
+
+	padding: var(--standard-padding);
+
+	border-radius: var(--section-corner-radius);
+	
+	background-color: var(--accent);
+	color: var(--foreground-20);
+	opacity: var(--min-opacity);
+	
+	transition: padding var(--layout-animation), opacity var(--style-animation);
+}
+info:hover {
+	padding: var(--max-padding);
+
+	opacity: var(--max-opacity);
+	
+	transition: padding var(--layout-animation), opacity var(--style-animation);
+}
