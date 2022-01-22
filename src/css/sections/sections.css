@@ -25,15 +25,19 @@ main {
 	transform: translate(-50%, -50%);
 }
 
-panel {
-	width: 40ch;
-	
-	margin: var(--max-padding);
+card {
+	display: grid;
+
+	margin: var(--standard-padding);
 	padding: var(--max-padding);
-	
-	border-radius: var(--section-corner-radius);
-	
-	background-color: var(--primary-700);
+
+	font-family: var(--monospace);
+
+	background-image: none;
+	background-color: var(--accent);
+	color: var(--background-color)
+
+	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
 }
 
 navbar {
@@ -52,10 +56,6 @@ navbar {
 
 	overflow-x: auto;
 }
-/*
-CSS annoyingly does not support variable use in media
-queries, so we'll just preprocess them instead
-*/
 @media only screen and (max-width: 720px) {
 	navbar {
 		bottom: 0;
