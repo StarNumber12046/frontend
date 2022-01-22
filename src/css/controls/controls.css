@@ -65,11 +65,6 @@ input[type=text]:hover {
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 
-/*** For debugging purposes ***/
-input[value="icon:"]:hover {
-	font-family: var(--icon);
-}
-
 input[type=submit] {
 	display: inline-block;
   vertical-align: top;
