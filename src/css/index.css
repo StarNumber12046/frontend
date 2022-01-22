@@ -49,8 +49,6 @@
 	line-height: var(--default-line-height);
 
 	color: var(--foreground-10);
-
-	transition: var(--layout-animation);
 }
 
 /***
