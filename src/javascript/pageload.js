@@ -1,1 +1,1 @@
-$("#navigation").load("./src/css/sections/navbar.html");
+$("#navigation").load("./content/std/navbar.html");
