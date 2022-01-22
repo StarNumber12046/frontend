@@ -15,7 +15,7 @@
 /*** Imports ***/
 /*  ├ Static */
 @import url("./static.css");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*  ├ Sections */
 @import url("./sections/sections.css");
