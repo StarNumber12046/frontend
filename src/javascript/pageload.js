@@ -25,9 +25,10 @@ $("#navigation").load("./content/std/navbar.html");
 	"/assets/motd.json".
 ***/
 $.getJSON("./assets/motd.json", (data) => {
+	console.log(data);
 	// Get a random motd from [data]
 	const motd = data[
-		Math.floor(Math.random() * items.length)
+		Math.floor(Math.random() * data.length)
 	];
 	// Write it in
 	$('#motd').attr('innerText', motd)
