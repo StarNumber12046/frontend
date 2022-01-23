@@ -114,7 +114,8 @@ navbarItem:hover {
 }
 
 navbarItem::before { content: attr(icon); }
-navbarItem::after { content: attr(title); }
+navbar.vertical navbarItem::before { content: attr(icon); }
+navbarItem::after { content: " " attr(title); }
 @media only screen and (max-width: 720px) {
 	navbarItem::after { display: none; }
 }
