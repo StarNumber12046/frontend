@@ -16,6 +16,6 @@
 
 /***
 	Replace the '#navigation' div, present in most pages, with the
-	standardized navbar in "/content/std/navbar.html", to avoid repetition.
+	standardized navbar in "/content/navbar.html", to avoid repetition.
 ***/
-$("#navigation").load("/content/std/navbar.html");
+$("#navigation").load("/content/navbar.html");
