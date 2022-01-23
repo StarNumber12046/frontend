@@ -21,8 +21,8 @@
 let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
 // (These are the only currently available themes)
-const darkTheme = "/src/css/theme/charmga/dark.css";
-const lightTheme = "/src/css/theme/charmga/light.css";
+const darkTheme = "./src/css/theme/charmga/dark.css";
+const lightTheme = "./src/css/theme/charmga/light.css";
 
 // If the user prefers light theme we'll apply light theme to the webpage
 // Else fall back to the default dark theme
