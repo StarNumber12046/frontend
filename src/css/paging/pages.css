@@ -1,0 +1,29 @@
+/*
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
+	
+	-> Name: pages.css
+	-> Description: Embedding all the pages into a single HTML file using sections
+	-> Resource: /src/css/paging/pages.css
+	-> Licensing: © 2022, Fasm.ga | https://www.fasmga.org/license
+*/
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+
+section, main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	padding: clamp(var(--min-padding), var(--standard-padding), var(--max-padding));
+	white-space: nowrap;
+	
+	transform: translate(-50%, -50%);
+}
+
+section :not(main) { display: none; }

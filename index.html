@@ -51,23 +51,36 @@
 	<body>
 		<navbar id='navigation'></navbar>
 
-		<main>
-			<h2 id='headline'>
+		<main id='newLink'>
+			<h2>
 				New link
 			</h2>
-			<form id='newLink'>
+
+			<form id='newLinkForm'>
 				<input id='urlBox'
-					type='text'
+					type='text' name='url'
+					pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?|^((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
 					placeholder="Input any URL" />
 				<input id='submitUrl'
 					type='submit'
-					pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?|^((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
 					value='arrow_forward' />
 			</form>
-
-			<script id='pageload'
-				src="./src/javascript/pageload.js"
-			></script>
 		</main>
+		
+		<section id='dashboard'>
+			<h2>
+				Dashboard
+			</h2>
+		</section>
+
+		<section id='settings'>
+			<h2>
+				Settings
+			</h2>
+		</section>
+
+		<script id='pageload'
+			src="./src/javascript/pageload.js"
+		></script>
 	</body>
 </html>
