@@ -17,12 +17,20 @@
 /***
 	Dynamic theming based on user's system preferences
 ***/
-const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-const lightTheme = window.matchMedia("(prefers-color-scheme: light)");
+// Let's check if the user likes light theme through the browser
+let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
-darkTheme.matches
-? $('#colorScheme').attr('href', "/src/css/theme/charmga/dark.css") // set the color scheme to dark
-: $('#colorScheme').attr('href', "/src/css/theme/charmga/light.css") // set the color scheme to light
+// (These are the only currently available themes)
+const darkTheme = "/src/css/theme/charmga/dark.css";
+const lightTheme = "/src/css/theme/charmga/light.css";
+
+// If the user prefers light theme we'll apply light theme to the webpage
+// Else fall back to the default dark theme
+let theme = prefersLight ? lightTheme : darkTheme;
+
+// We set the '#colorScheme' link to our user's preferred theme
+// this is because CSS doesn't allow for dynamic imports with media queries
+$('#colorScheme').attr('href', theme)
 
 /***
 	Handling data from the '#newLink' form
