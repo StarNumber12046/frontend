@@ -103,10 +103,18 @@ navbarItem {
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: margin var(--layout-animation) !important;
+	transition: color var(--style-animation), margin var(--layout-animation) !important;
 }
-navbarItem:hover { margin: var(--max-padding); }
-navbarItem span { font-family: var(--monospace); }
+navbarItem:hover {
+	margin: var(--max-padding);
+	
+	color: var(--accent);
+
+	transition: color var(--style-animation), margin var(--layout-animation) !important;
+}
+
+navbarItem::before { content: attr(icon); }
+navbarItem::after { content: attr(title); }
 @media only screen and (max-width: 720px) {
-	navbarItem span { display: none; }
+	navbarItem::after { display: none; }
 }

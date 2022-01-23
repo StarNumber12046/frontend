@@ -32,7 +32,7 @@
 	transition: color var(--style-animation);
 }
 
-icon {
+icon, navbarItem::before {
 	position: relative;
 
 	top: var(--icon-line);
