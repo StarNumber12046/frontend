@@ -49,34 +49,52 @@
 	</head>
 	
 	<body>
-		<navbar id='navigation'></navbar>
+		<navbar class='horizontal' id='navigation'>
+		</navbar>
 
-		<main id='newLink'>
-			<h2>
-				New link
-			</h2>
+		<main>
+			<section id='newLink'>
+				<h2>
+					New link
+				</h2>
 
-			<form id='newLinkForm'>
-				<input id='urlBox'
-					type='text' name='url'
-					pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?|^((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
-					placeholder="Input any URL" />
-				<input id='submitUrl'
-					type='submit'
-					value='arrow_forward' />
-			</form>
+				<form id='newLinkForm'>
+					<input id='urlBox'
+						type='text' name='url'
+						pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?|^((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
+						placeholder="Input any URL" />
+					<input id='submitUrl'
+						type='submit'
+						value='arrow_forward' />
+				</form>
+			</section>
 		</main>
 		
 		<section id='dashboard'>
 			<h2>
 				Dashboard
 			</h2>
+
+			I'm a Cute Little<br/><br/>
+			F E M B O Y<br/><br/>
+			UㅤㅤwㅤㅤU
 		</section>
 
 		<section id='settings'>
 			<h2>
 				Settings
 			</h2>
+
+			<navbar class='vertical'>
+				<navbarItem icon='person' title='Account'>
+				</navbarItem><br/>
+				<navbarItem icon='monitor' title='Appeareance'>
+				</navbarItem><br/>
+				<navbarItem icon='lock' title='Security'>
+				</navbarItem><br/>
+				<navbarItem icon='code' title='Developer options'>
+				</navbarItem><br/>
+			</navbar>
 		</section>
 
 		<script id='pageload'
