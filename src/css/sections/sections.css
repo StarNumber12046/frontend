@@ -33,25 +33,35 @@ card {
 }
 
 navbar {
-	position: fixed;
 	display: inline;
 
-	margin-left: calc(var(--standard-padding) * -1);
 	padding: var(--max-padding);
+}
+
+navbar.horizontal {
+	position: fixed;
+	
+	margin-left: calc(var(--standard-padding) * -1);
 	z-index: 10;
-
+	
 	width: 100vw;
-
+	
 	box-shadow: var(--section-shadow) var(--background-20);
-
+	
 	line-height: 1.5;
-
+	
 	overflow-x: auto;
 }
 @media only screen and (max-width: 720px) {
-	navbar {
+	navbar.horizontal {
 		bottom: 0;
 		
 		box-shadow: var(--section-shadow-upward) var(--background-20);
 	}
+}
+
+navbar.vertical {
+	line-height: 2.5;
+
+	overflow-x: hidden;
 }

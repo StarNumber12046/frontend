@@ -92,7 +92,7 @@ input[type=submit]:hover {
 }
 
 /***
-	Element in the top navigation bar
+	Element in a navigation bar
 ***/
 navbarItem {
 	margin: var(--standard-padding);
