@@ -14,8 +14,9 @@
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
+section {
+	display: none;
 
-section, main {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -26,4 +27,6 @@ section, main {
 	transform: translate(-50%, -50%);
 }
 
-section :not(main) { display: none; }
+main section { display: block; }
+section:not(:target) { display: none; }
+section:target { display: block; }
