@@ -96,7 +96,7 @@ input[type=submit]:hover {
 /***
 	Element in a navigation bar
 ***/
-nav li, nav a li {
+ni {
 	margin: var(--standard-padding);
 	padding: var(--standard-padding);
 	white-space: nowrap;
@@ -109,7 +109,7 @@ nav li, nav a li {
 	
 	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
-nav li:hover, nav a li:hover {
+ni {
 	margin: var(--max-padding);
 	border-radius: var(--control-corner-radius-fuzzy-1);
 	
@@ -118,8 +118,8 @@ nav li:hover, nav a li:hover {
 	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 
-nav li::before, nav a li::before { content: attr(icon); }
-nav li::after, nav a li::before { content: " " attr(title); }
+ni::before { content: "<icon>" attr(icon) "</icon>"; }
+ni::after { content: " " attr(title); }
 @media only screen and (max-width: 720px) {
-	nav li::after, nav a li::after { display: none; }
+	ni::after { display: none; }
 }
