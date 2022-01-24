@@ -96,29 +96,31 @@ input[type=submit]:hover {
 /***
 	Element in a navigation bar
 ***/
-ni {
+navbarItem {
 	margin: var(--standard-padding);
 	padding: var(--standard-padding);
 	white-space: nowrap;
 	
-	font-family: var(--monospace);
+	font-family: var(--monospace) !important;
 
 	color: transparent;
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: margin var(--layout-animation), color var(--style-animation);
+	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
-ni:hover {
+navbarItem:hover {
 	margin: var(--max-padding);
+	border-radius: var(--control-corner-radius-fuzzy-1);
 	
-	color: var(--accent);
+	background-color: var(--accent);
 
-	transition: margin var(--layout-animation), color var(--style-animation);
+	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 
-ni::before { content: "<icon>" attr(icon) "</icon>"; }
-ni::after { content: " " attr(title); }
+navbarItem::before { content: attr(icon); }
+navbar.vertical navbarItem::before { content: attr(icon); }
+navbarItem::after { content: " " attr(title); }
 @media only screen and (max-width: 720px) {
-	ni::after { display: none; }
+	navbarItem::after { display: none; }
 }
