@@ -96,7 +96,7 @@ input[type=submit]:hover {
 /***
 	Element in a navigation bar
 ***/
-navbarItem {
+nav li {
 	margin: var(--standard-padding);
 	padding: var(--standard-padding);
 	white-space: nowrap;
@@ -109,7 +109,7 @@ navbarItem {
 	
 	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
-navbarItem:hover {
+nav li:hover {
 	margin: var(--max-padding);
 	border-radius: var(--control-corner-radius-fuzzy-1);
 	
@@ -118,9 +118,10 @@ navbarItem:hover {
 	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 
-navbarItem::before { content: attr(icon); }
-navbar.vertical navbarItem::before { content: attr(icon); }
-navbarItem::after { content: " " attr(title); }
+nav li::before { content: attr(icon); }
+nav[orientation="vertical"] navbar li::before
+{ content: attr(icon); }
+nav li::after { content: " " attr(title); }
 @media only screen and (max-width: 720px) {
-	navbarItem::after { display: none; }
+	nav li::after { display: none; }
 }

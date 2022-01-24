@@ -32,13 +32,13 @@ card {
 	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
 }
 
-navbar {
+nav {
 	display: inline;
 
 	padding: var(--max-padding);
 }
 
-navbar.horizontal {
+nav[orientation="horizontal"] {
 	position: fixed;
 	
 	margin-left: calc(var(--standard-padding) * -1);
@@ -53,14 +53,14 @@ navbar.horizontal {
 	overflow-x: auto;
 }
 @media only screen and (max-width: 720px) {
-	navbar.horizontal {
+	nav[orientation="horizontal"] {
 		bottom: 0;
 		
 		box-shadow: var(--section-shadow-upward) var(--background-20);
 	}
 }
 
-navbar.vertical {
+nav[orientation="vertical"] {
 	line-height: 2.5;
 
 	overflow-x: hidden;
