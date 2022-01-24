@@ -117,7 +117,7 @@ ni:hover {
 	transition: margin var(--layout-animation), color var(--style-animation);
 }
 
-ni::before { content: attr(icon); }
+ni::before { content: "<icon>" attr(icon) "</icon>"; }
 ni::after { content: " " attr(title); }
 @media only screen and (max-width: 720px) {
 	ni::after { display: none; }
