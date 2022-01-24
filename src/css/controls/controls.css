@@ -101,24 +101,23 @@ ni {
 	padding: var(--standard-padding);
 	white-space: nowrap;
 	
-	font-family: var(--monospace) !important;
+	font-family: var(--monospace);
 
 	color: transparent;
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: margin var(--layout-animation), color var(--style-animation) !important;
+	transition: margin var(--layout-animation), color var(--style-animation);
 }
-ni {
+ni:hover {
 	margin: var(--max-padding);
-	border-radius: var(--control-corner-radius-fuzzy-1);
 	
-	background-color: var(--accent);
+	color: var(--accent);
 
-	transition: margin var(--layout-animation), color var(--style-animation) !important;
+	transition: margin var(--layout-animation), color var(--style-animation);
 }
 
-ni::before { content: "<icon>" attr(icon) "</icon>"; }
+ni::before { content: attr(icon); }
 ni::after { content: " " attr(title); }
 @media only screen and (max-width: 720px) {
 	ni::after { display: none; }
