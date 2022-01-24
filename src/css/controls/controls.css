@@ -53,7 +53,7 @@ input[type=text] {
 	background-color: transparent;
   color: var(--foreground-10);
 	
-  transition: border-radius var(--style-animation), border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 input[type=text]:hover {
 	border: var(--max-border) solid var(--accent);
@@ -63,7 +63,7 @@ input[type=text]:hover {
 	
   color: var(--accent);
 	
-  transition: border-radius var(--style-animation), border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 
 input[type=submit] {
@@ -103,11 +103,11 @@ navbarItem {
 	
 	font-family: var(--monospace) !important;
 
-	background-color: transparent;
+	color: transparent;
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: border-radius var(--style-animation), background-color var(--style-animation), margin var(--layout-animation) !important;
+	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 navbarItem:hover {
 	margin: var(--max-padding);
@@ -115,7 +115,7 @@ navbarItem:hover {
 	
 	background-color: var(--accent);
 
-	transition: border-radius var(--style-animation), background-color var(--style-animation), margin var(--layout-animation) !important;
+	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 
 navbarItem::before { content: attr(icon); }
