@@ -53,16 +53,17 @@ input[type=text] {
 	background-color: transparent;
   color: var(--foreground-10);
 	
-  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+  transition: border-radius var(--style-animation), border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 input[type=text]:hover {
 	border: var(--max-border) solid var(--accent);
+	border-radius: var(--control-corner-radius-fuzzy-1);
 	
   font-weight: semibold;
 	
   color: var(--accent);
 	
-  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+  transition: border-radius var(--style-animation), border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 
 input[type=submit] {
@@ -83,12 +84,13 @@ input[type=submit] {
 	
 	cursor: pointer;
 	
-  transition: background-color var(--style-animation);
+  transition: border-radius var(--style-animation), background-color var(--style-animation);
 }
 input[type=submit]:hover {
 	background-color: var(--accent);
+	border-radius: var(--control-corner-radius-fuzzy-1);
 	
-  transition: background-color var(--style-animation);
+  transition: border-radius var(--style-animation), background-color var(--style-animation);
 }
 
 /***
@@ -96,21 +98,24 @@ input[type=submit]:hover {
 ***/
 navbarItem {
 	margin: var(--standard-padding);
+	padding: var(--standard-padding);
 	white-space: nowrap;
 	
 	font-family: var(--monospace) !important;
-	
+
+	background-color: transparent;
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: color var(--style-animation), margin var(--layout-animation) !important;
+	transition: border-radius var(--style-animation), background-color var(--style-animation), margin var(--layout-animation) !important;
 }
 navbarItem:hover {
 	margin: var(--max-padding);
+	border-radius: var(--control-corner-radius-fuzzy-1);
 	
-	color: var(--accent);
+	background-color: var(--accent);
 
-	transition: color var(--style-animation), margin var(--layout-animation) !important;
+	transition: border-radius var(--style-animation), background-color var(--style-animation), margin var(--layout-animation) !important;
 }
 
 navbarItem::before { content: attr(icon); }
