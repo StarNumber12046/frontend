@@ -32,7 +32,7 @@
 	transition: color var(--style-animation);
 }
 
-icon, ni:before {
+icon {
 	position: relative;
 
 	top: var(--icon-line);
