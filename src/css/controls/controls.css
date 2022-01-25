@@ -101,7 +101,7 @@ ni {
 	padding: var(--standard-padding);
 	white-space: nowrap;
 	
-	font-family: var(--monospace);
+	font-family: var(--monospace) !important;
 
 	color: transparent;
 	color: var(--foreground-10);
