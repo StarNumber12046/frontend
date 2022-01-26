@@ -57,7 +57,6 @@ input[type=text] {
 }
 input[type=text]:hover {
 	border: var(--max-border) solid var(--accent);
-	border-radius: var(--control-corner-radius-fuzzy-1);
 	
   font-weight: semibold;
 	
@@ -88,7 +87,7 @@ input[type=submit] {
 }
 input[type=submit]:hover {
 	background-color: var(--accent);
-	border-radius: var(--control-corner-radius-fuzzy-1);
+	border-radius: var(--control-fuzzy-corner-radius-1);
 	
   transition: border-radius var(--style-animation), background-color var(--style-animation);
 }
@@ -97,7 +96,7 @@ input[type=submit]:hover {
 	Element in a navigation bar
 ***/
 ni {
-	margin: var(--standard-padding);
+	margin: var(--min-padding);
 	padding: var(--standard-padding);
 	white-space: nowrap;
 	
@@ -116,6 +115,8 @@ ni:hover {
 
 	transition: margin var(--layout-animation), color var(--style-animation);
 }
-@media only screen and (max-width: 720px) {
-	ni span { display: none; }
+ni::before { content: attr(icon); }
+ni::after { content: attr(title); }
+@media only screen and (max-width: 800px) {
+	ni::after { display: none; }
 }
