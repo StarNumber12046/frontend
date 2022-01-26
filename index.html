@@ -49,13 +49,13 @@
 	</head>
 	
 	<body>
-		<navbar class='horizontal' id='navigation'>
+		<navbar orientation='horizontal' id='navigation'>
 		</navbar>
 
 		<main>
 			<section id='newLink'>
 				<h2>
-					New link
+					Shorten a link
 				</h2>
 
 				<form id='newLinkForm'>
@@ -85,16 +85,21 @@
 				Settings
 			</h2>
 
-			<navbar class='vertical'>
-				<navbarItem icon='person' title='Account'>
-				</navbarItem><br/>
-				<navbarItem icon='monitor' title='Appeareance'>
-				</navbarItem><br/>
-				<navbarItem icon='lock' title='Security'>
-				</navbarItem><br/>
-				<navbarItem icon='code' title='Developer options'>
-				</navbarItem><br/>
+			<navbar orientation='vertical'>
+				<ni icon='person' title='Account'>
+				</ni><br/>
+				<ni icon='monitor' title='Appeareance'>
+				</ni><br/>
+				<ni icon='lock' title='Security'>
+				</ni><br/>
+				<ni icon='code' title='Developer options'>
+				</ni><br/>
 			</navbar>
+		</section>
+
+		<section id='news'>
+			<post>
+			</post>
 		</section>
 
 		<script id='pageload'
