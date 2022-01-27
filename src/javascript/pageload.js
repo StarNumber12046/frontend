@@ -33,21 +33,9 @@ let theme = prefersLight ? lightTheme : darkTheme;
 $('#colorScheme').attr('href', theme)
 
 /***
-	Load all the website's pages
-***/
-// All the available pages (will probably be stored in a CSS property soon)
-let pages = {
-	"#newLink": "/content/shortenLink.html",
-	"#dashboard": "/content/dashboard.html",
-	"#settings": "/content/settings.html"
-};
-// Load the page associated with the section ID
-for (let page in pages) { $(page).load(pages.page); }
-
-/***
 	Automatically move to the user's preferred home page
 ***/
-let home = "#newlink"; // #newLink is the default
+let home = "#newLink"; // #newLink is the default
 window.location.hash = home; // automatically moves to the section in [home]
 
 /***
