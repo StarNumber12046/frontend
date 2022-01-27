@@ -45,6 +45,9 @@ navbar[orientation="horizontal"] {
 	box-shadow: var(--section-shadow) var(--background-20);
 	
 	line-height: 1.5;
+
+	-webkit-backdrop-filter: var(--control-blur);
+	backdrop-filter: var(--control-blur);
 	
 	overflow-x: auto;
 }
