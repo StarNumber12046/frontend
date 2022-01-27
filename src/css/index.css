@@ -55,6 +55,4 @@
 /***
 	Webpage background
 ***/
-body {
-	background-color: var(--background-10);
-}
+body { background-color: var(--background-10); }
