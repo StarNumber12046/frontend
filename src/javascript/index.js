@@ -13,3 +13,14 @@
 */
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+let form = $('#shortenlink');
+let urlBox = $('[name="url"]');
+let url = urlBox.text(value); // Sanitized user input
+
+// Not connected to prod data at the moment, so just showing
+// the user input
+form.on('submit', (event) => {
+	event.preventDefault();
+	$('#newLink').attr('title', url);
+})
