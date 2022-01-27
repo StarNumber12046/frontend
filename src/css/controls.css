@@ -80,18 +80,20 @@ input[type=submit] {
 	
   background-color: var(--foreground-20);
   color: var(--background-10);
-	-webkit-backdrop-filter: var(--control-blur);
-	backdrop-filter: var(--control-blur);
 	
 	cursor: pointer;
 	
-  transition: border-radius var(--style-animation), background-color var(--style-animation);
+	transition: border-radius var(--style-animation), box-shadow var(--style-animation), background-color var(--style-animation) -webkit-backdrop-filter var(--style-animation);
 }
 input[type=submit]:hover {
-	background-color: var(--accent);
-	border-radius: var(--control-fuzzy-corner-radius-1);
+	border-radius: var(--control-fuzzy-corner-radius-10);
+	box-shadow: var(--control-shadow);
 	
-  transition: border-radius var(--style-animation), background-color var(--style-animation);
+	background-color: var(--accent-gradient);
+	-webkit-backdrop-filter: var(--control-blur);
+	backdrop-filter: var(--control-blur);
+	
+  transition: border-radius var(--style-animation), box-shadow var(--style-animation), background-color var(--style-animation) -webkit-backdrop-filter var(--style-animation);
 }
 
 /***
