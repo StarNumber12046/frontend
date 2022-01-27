@@ -80,8 +80,6 @@ input[type=submit] {
 	
   background-color: var(--foreground-20);
   color: var(--background-10);
-	-webkit-backdrop-filter: var(--control-blur);
-	backdrop-filter: var(--control-blur);
 	
 	cursor: pointer;
 	
@@ -89,7 +87,7 @@ input[type=submit] {
 }
 input[type=submit]:hover {
 	background-color: var(--accent);
-	border-radius: var(--control-fuzzy-corner-radius-1);
+	border-radius: var(--control-fuzzy-corner-radius-10);
 	
   transition: border-radius var(--style-animation), background-color var(--style-animation);
 }
