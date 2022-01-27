@@ -18,17 +18,17 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*  ├ Semantics */
-@import url("./paging/pages.css");
-@import url("./sections/sections.css");
+@import url("./paging.css");
+@import url("./sections.css");
 
 /*  ├ Standard HTML */
-@import url("./standard/standard.css");
+@import url("./standard.css");
 
 /*  ├ Controls */
-@import url("./controls/controls.css");
+@import url("./controls.css");
 
 /*  └ Elements */
-@import url("./elements/elements.css");
+@import url("./elements.css");
 
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
