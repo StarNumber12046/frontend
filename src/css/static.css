@@ -69,6 +69,8 @@
 	--standard-opacity: 100%;
 	--max-opacity: 80%;
 
+	--control-blur: blur(25px) saturate(100px);
+
 	--style-animation: 0.2s ease;
 	--layout-animation: 0.3s ease;
 }
