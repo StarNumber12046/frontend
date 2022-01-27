@@ -1,5 +1,19 @@
 :root {
 	--accent: #04977C;
+	--accent-gradient: linear-gradient(
+		140deg,
+		hsl(169deg 95% 30%) 3%,
+		hsl(168deg 30% 52%) 28%,
+		hsl(175deg 26% 63%) 40%,
+		hsl(185deg 26% 73%) 48%,
+		hsl(198deg 34% 82%) 56%,
+		hsl(213deg 53% 90%) 63%,
+		hsl(208deg 50% 91%) 69%,
+		hsl(202deg 46% 91%) 75%,
+		hsl(194deg 42% 92%) 81%,
+		hsl(182deg 37% 92%) 88%,
+		hsl(168deg 43% 93%) 98%
+	);
 
 	--background-10: #E6F5F2;
 	--background-20: #D8E4F3;
@@ -22,6 +36,4 @@
 	--brightness-offset-20: 60%;
 }
 
-.accent {
-	color: var(--accent);
-}
+.accent {	color: var(--accent); }

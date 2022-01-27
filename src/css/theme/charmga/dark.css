@@ -1,5 +1,12 @@
 :root {
 	--accent: #04977C;
+	--accent-gradient: linear-gradient(
+		140deg,
+		hsl(175deg 94% 27%) 0%,
+		hsl(195deg 56% 19%) 40%,
+		hsl(210deg 27% 14%) 60%,
+		hsl(213deg 27% 17%) 100%
+	);
 
 	--background-10: #202B38;
 	--background-20: #172028;
@@ -22,6 +29,4 @@
 	--brightness-offset-20: 60%;
 }
 
-.accent {
-	color: var(--accent);
-}
+.accent { color: var(--accent); }
