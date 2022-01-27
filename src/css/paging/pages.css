@@ -31,9 +31,14 @@ main section { display: block; }
 section:not(:target) { display: none; }
 section:target { display: block; }
 
+section::before {
+	display: block;
+	content: attr(title);
+
+	line-height: 4rem;
+}
+
 section[outlined], post {
 	border-radius: var(--section-corner-radius);
 	box-shadow: var(--control-shadow) var(--background-20);
 }
-
-post::before { content: attr(title) "\A"; }

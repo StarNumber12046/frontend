@@ -47,7 +47,7 @@ h1, .display {
 	font-size: var(--display-size) !important;
 }
 
-h2, .headline {
+h2, .headline, section::before {
 	font-family: var(--headline);
 	font-size: var(--headline-size) !important;
 	font-weight: bold;
