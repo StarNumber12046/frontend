@@ -14,8 +14,5 @@
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
-/***
-	Replace the '#navigation' div, present in most pages, with the
-	standardized navbar in "/content/navbar.html", to avoid repetition.
-***/
+window.location.hash = "#newLink"; // Shows the '#newLink' section by default
 $("#navigation").load("/content/navbar.html");
