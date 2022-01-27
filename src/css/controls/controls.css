@@ -80,6 +80,8 @@ input[type=submit] {
 	
   background-color: var(--foreground-20);
   color: var(--background-10);
+	-webkit-backdrop-filter: var(--control-blur);
+	backdrop-filter: var(--control-blur);
 	
 	cursor: pointer;
 	
@@ -98,6 +100,8 @@ input[type=submit]:hover {
 ni {
 	margin: var(--min-padding);
 	padding: var(--standard-padding);
+	padding-top: var(--min-padding);
+	padding-bottom: var(--min-padding);
 	white-space: nowrap;
 	
 	font-family: var(--monospace) !important;
@@ -106,17 +110,17 @@ ni {
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: margin var(--layout-animation), color var(--style-animation);
+	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 ni:hover {
 	margin: var(--max-padding);
 	
 	color: var(--accent);
 
-	transition: margin var(--layout-animation), color var(--style-animation);
+	transition: margin var(--layout-animation), color var(--style-animation) !important;
 }
 ni::before { content: attr(icon); }
-ni::after { content: attr(title); }
+ni::after { content: " " attr(title); }
 @media only screen and (max-width: 800px) {
 	ni::after { display: none; }
 }

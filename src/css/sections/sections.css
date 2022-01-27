@@ -32,16 +32,12 @@ card {
 	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
 }
 
-navbar {
-	display: inline;
-
-	padding: var(--max-padding);
-}
+navbar { display: inline; }
 
 navbar[orientation="horizontal"] {
 	position: fixed;
 	
-	margin-left: calc(var(--standard-padding) * -1);
+	padding: var(--max-padding);
 	z-index: 10;
 	
 	width: 100vw;
