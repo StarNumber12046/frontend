@@ -43,6 +43,7 @@ navbar[orientation="horizontal"] {
 	padding: var(--max-padding);
 	z-index: 10;
 
+	border-radius: var(--section-corner-radius);
 	box-shadow: var(--section-shadow) var(--background-20);
 	
 	line-height: 1.5;
