@@ -56,6 +56,8 @@ info, warning, error {
 	word-wrap: break-word;
 	word-break: break-all;
 	overflow-wrap: break-word;
+	
+	overflow: auto;
 
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
