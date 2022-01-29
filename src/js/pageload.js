@@ -22,11 +22,9 @@ let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
 // If the user prefers light theme we'll apply light theme to the webpage
 // Else fall back to the default dark theme
-let theme = prefersLight ? 'light' : 'dark';
-
 // We set the '#colorScheme' link to our user's preferred theme
 // this is because CSS doesn't allow for dynamic imports with media queries
-setTheme(theme);
+setTheme(prefersLight ? 'light' : 'dark');
 
 /***
 	Automatically move to the user's preferred home page
