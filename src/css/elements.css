@@ -42,12 +42,13 @@ icon, ni::before {
 	text-decoration: none;
 }
 
-info {
+info, warning, error {
 	display: inline-block;
 
 	align-items: center;
 	justify-content: center;
 	
+	margin: var(--min-padding);
 	padding: var(--max-padding);
 
 	border-radius: var(--section-corner-radius);
@@ -56,11 +57,14 @@ info {
 	word-break: break-all;
 	overflow-wrap: break-word;
 
-	background-color: var(--primary-200);
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
 }
-info::before {
+info::before, warning::before, error::before {
 	display: block;
 	content: attr(title) " ";
 }
+
+info { background-color: var(--primary-200); }
+warning { background-color: yellow; }
+error { background-color: red; }
