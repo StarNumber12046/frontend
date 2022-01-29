@@ -65,8 +65,10 @@ info, warning, error {
 info::before, warning::before, error::before {
 	display: block;
 	content: attr(title) " ";
+
+	padding-bottom: var(--min-padding);
 }
 
 info { background-color: var(--background-20); }
-warning { background-color: yellow; }
-error { background-color: red; }
+warning { background-color: var(--yellow); }
+error { background-color: var(--red); }
