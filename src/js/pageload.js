@@ -8,7 +8,7 @@
 	
 	-> Name: pageload.js
 	-> Description: Executed at startup for data binding
-	-> Resource: /src/javascript/pageload.js
+	-> Resource: /src/js/pageload.js
 	-> Licensing: © 2022, Fasm.ga | https://www.fasmga.org/license
 */
 
@@ -30,7 +30,7 @@ let theme = prefersLight ? lightTheme : darkTheme;
 
 // We set the '#colorScheme' link to our user's preferred theme
 // this is because CSS doesn't allow for dynamic imports with media queries
-$('#colorScheme').attr('href', theme)
+$('#colorscheme').attr('href', theme)
 
 /***
 	Automatically move to the user's preferred home page

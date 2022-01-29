@@ -8,19 +8,20 @@
 	
 	-> Name: index.js
 	-> Description: Main webpage script
-	-> Resource: /src/javascript/index.js
+	-> Resource: /src/js/index.js
 	-> Licensing: © 2022, Fasm.ga | https://www.fasmga.org/license
 */
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 let form = $('#shortenlink');
-let urlBox = $('[name="url"]');
-let url = urlBox.text(value); // Sanitized user input
+let urlBox = $('#urlbox');
 
 // Not connected to prod data at the moment, so just showing
 // the user input
 form.on('submit', (event) => {
 	event.preventDefault();
-	$('#newLink').attr('title', url);
+	$('info')
+	.attr('title', 'This is the URL you entered:')
+	.text(urlBox.val());
 })
