@@ -16,19 +16,20 @@
 
 
 /***
-	Move to a specific section of the website
-***/
-function moveTo(section) {
-	window.location.hash(section);
-}
-
-/***
 	Change the current webpage theme
 ***/
 function setTheme(resource) {
 	switch (resource) {
-		case ('dark'): resource = "./src/css/theme/charmga/dark.css"
-		case ('light'): resource = "./src/css/theme/charmga/light.css"
+		// Holy shit, this is a mess.
+		case 'dark': resource = "./src/css/theme/charmga/dark.css"; break;
+		case 'light': resource = "./src/css/theme/charmga/light.css"; break;
 	}
 	$('#colorscheme').attr('href', resource)
+}
+
+/***
+	Move to a specific section of the website
+***/
+function moveTo(section) {
+	window.location.hash = section;
 }
