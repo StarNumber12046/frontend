@@ -31,7 +31,7 @@
 			Fasm.ga
 		</title>
 		
-		<link id='colorScheme'
+		<link id='colorscheme'
 			rel='stylesheet'
 			href="./src/css/theme/charmga/dark.css" />
 		<link id='style'
@@ -42,9 +42,6 @@
 			src="https://code.jquery.com/jquery-3.6.0.min.js"
 			integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
 			crossorigin="anonymous"
-		></script>
-		<script id='main'
-			src="./src/javascript/index.js"
 		></script>
 	</head>
 	
@@ -77,28 +74,34 @@
 
 		<main>
 			<section id='newLink' title='Shorten a link'>
-				<form id='shortenLink'>
-					<input id='urlBox'
-						type='url' name='url'
-						data-error="Enter a valid HTTP/HTTPS URL."
+				<form id='shortenlink'>
+					<input id='urlbox'
+					type='url' name='url'
+					data-error="Enter a valid HTTP/HTTPS URL."
 						placeholder="Input any URL"
 						required />
-					<input id='submitUrl'
+						<input id='submiturl'
 						type='submit'
 						value='arrow_forward' />
-				</form>
+					</form>
 
-				<br/>
-				<info title="Welcome to the Fasm.ga 4 Beta Demo">
-					Move around, navigate between pages, interact with elements.
-				</info>
+					<br/>
+					<info title="Welcome to the Fasm.ga 4 Beta Demo">
+						Move around, navigate between pages, interact with elements.
+					</info>
+					<warning title="Warning">
+					This is an example of a <code>&lt;warning&gt;</code> element.
+				</warning>
+				<error title="404">
+					This is an example of an <code>&lt;erorr&gt;</code> element.
+				</error>
 			</section>
 		</main>
 		
 		<section id='dashboard' title='Dashboard'>
 			<button>Click me</button>
 		</section>
-
+		
 		<section id='settings' title='Settings'>
 			<navbar orientation='vertical'>
 				<a>
@@ -128,14 +131,17 @@
 			</navbar>
 			<br/>
 		</section>
-
+		
 		<section id='news' title='News'>
 			<post>
 			</post>
 		</section>
-
+		
 		<script id='pageload'
-			src="./src/javascript/pageload.js"
+		src="./src/javascript/pageload.js"
+		></script>
+		<script id='main'
+			src="./src/javascript/index.js"
 		></script>
 	</body>
-</html>
+	</html>
