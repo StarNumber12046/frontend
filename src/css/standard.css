@@ -19,6 +19,8 @@
 a {
 	color: var(--accent);
 
+	text-decoration: dotted;
+
 	will-change: transition;
 	transition: color var(--style-animation);
 }
@@ -29,15 +31,9 @@ a:hover {
 	transition: color var(--style-animation);
 }
 
-b {
+b, info::before {
 	font-weight: 600;
 	
-	will-change: transition;
-	transition: font-weight var(--style-animation);
-}
-b:hover {
-	font-weight: 800;
-
 	will-change: transition;
 	transition: font-weight var(--style-animation);
 }
