@@ -45,21 +45,17 @@ icon, ni::before {
 info {
 	align-items: center;
 	justify-content: center;
-
-	padding: var(--standard-padding);
+	
+	padding: var(--max-padding);
+	
+	max-width: 50%;
 
 	border-radius: var(--section-corner-radius);
+
+	text-overflow: ellipsis;
 	
-	background-color: var(--accent);
+	background-color: var(--primary-200);
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
-	
-	transition: padding var(--layout-animation), opacity var(--style-animation);
 }
-info:hover {
-	padding: var(--max-padding);
-
-	opacity: var(--max-opacity);
-	
-	transition: padding var(--layout-animation), opacity var(--style-animation);
-}
+info::before { content: attr(title) " "; }
