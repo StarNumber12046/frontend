@@ -14,21 +14,21 @@
 
 /*** Imports ***/
 /*  ├ Static */
-@import url("./static.css");
+@import url("./static.css?v=2b41b68");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*  ├ Semantics */
-@import url("./paging.css");
-@import url("./sections.css");
+@import url("./paging.css?v=2b41b68");
+@import url("./sections.css?v=2b41b68");
 
 /*  ├ Standard HTML */
-@import url("./standard.css");
+@import url("./standard.css?v=2b41b68");
 
 /*  ├ Controls */
-@import url("./controls.css");
+@import url("./controls.css?v=2b41b68");
 
 /*  └ Elements */
-@import url("./elements.css");
+@import url("./elements.css?v=2b41b68");
 
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
