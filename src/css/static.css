@@ -58,10 +58,10 @@
 	--separator-thickness: 0.5px;
 
 	--text: 'Roboto'; --text-size: 1rem;
-	--logo: 'Poppins'; --logo-size: 4rem;
+	--logo: var(--display); --logo-size: 4rem;
 	--display: 'Poppins'; --display-size: 3rem;
-	--headline: 'JetBrains Mono NF'; --headline-size: 2rem;
-	--subheadline: 'Roboto'; --subheadline-size: 1.4rem;
+	--headline: var(--monospace); --headline-size: 2rem;
+	--subheadline: var(--text); --subheadline-size: 1.4rem;
 	--monospace: 'JetBrains Mono NF'; --monospace-size: 1.3rem;
 	--icon: 'Material Icons Outlined'; --icon-size: 1.1em;
 
