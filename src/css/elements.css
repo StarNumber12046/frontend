@@ -43,15 +43,17 @@ icon, ni::before {
 }
 
 info {
+	display: inline-block;
+
 	align-items: center;
 	justify-content: center;
 	
 	padding: var(--max-padding);
-	
-	width: min(80vw, 500px);
 
 	border-radius: var(--section-corner-radius);
 
+	word-wrap: break-word;
+	word-break: break-all;
 	overflow-wrap: break-word;
 
 	background-color: var(--primary-200);
