@@ -32,29 +32,26 @@ card {
 	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
 }
 
-navbar { display: inline; }
-
 navbar[orientation="horizontal"] {
-	position: fixed;
-	
+	display: flex;
+	justify-content: center;
+
 	padding: var(--max-padding);
 	z-index: 10;
-	
-	width: 100vw;
-	
+
 	box-shadow: var(--section-shadow) var(--background-20);
 	
 	line-height: 1.5;
-
-	-webkit-backdrop-filter: var(--control-blur);
-	backdrop-filter: var(--control-blur);
 	
 	overflow-x: auto;
 }
 @media only screen and (max-width: 800px) {
 	navbar[orientation="horizontal"] {
+		position: fixed;
 		bottom: 0;
 		
+		width: 100vw;
+
 		box-shadow: var(--section-shadow-upward) var(--background-20);
 	}
 }
