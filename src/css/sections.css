@@ -32,6 +32,10 @@ card {
 	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
 }
 
+navbar {
+	border-radius: var(--section-corner-radius);
+}
+
 navbar[orientation="horizontal"] {
 	display: flex;
 	justify-content: center;
