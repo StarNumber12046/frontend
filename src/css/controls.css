@@ -108,14 +108,12 @@ ni {
 	color: var(--foreground-10);
 	cursor: pointer;
 	
-	transition: margin var(--layout-animation), color var(--style-animation) !important;
+	transition: color var(--style-animation);
 }
 ni:hover {
-	margin: var(--max-padding);
-	
 	color: var(--accent);
 
-	transition: margin var(--layout-animation), color var(--style-animation) !important;
+	transition: color var(--style-animation);
 }
 ni::before { content: attr(icon); }
 ni::after { content: " " attr(title); }
