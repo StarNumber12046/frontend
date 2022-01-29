@@ -62,7 +62,7 @@
 	--display: 'Poppins'; --display-size: 3rem;
 	--headline: var(--monospace); --headline-size: 2rem;
 	--subheadline: var(--text); --subheadline-size: 1.4rem;
-	--monospace: 'JetBrains Mono NF'; --monospace-size: 1.3rem;
+	--monospace: 'JetBrains Mono NF'; --monospace-size: 1rem;
 	--icon: 'Material Icons Outlined'; --icon-size: 1.1em;
 
 	--min-opacity: 69%;
