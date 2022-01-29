@@ -67,6 +67,6 @@ info::before, warning::before, error::before {
 	content: attr(title) " ";
 }
 
-info { background-color: var(--primary-200); }
+info { background-color: var(--background-20); }
 warning { background-color: yellow; }
 error { background-color: red; }
