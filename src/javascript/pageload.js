@@ -37,9 +37,3 @@ $('#colorScheme').attr('href', theme)
 ***/
 let home = "#newLink"; // #newLink is the default
 window.location.hash = home; // automatically moves to the section in [home]
-
-/***
-	Load the global website navigation bar
-***/
-let navbar = "/content/navbar.html"; // has to be an HTML file
-$("#navigation").load(navbar);
