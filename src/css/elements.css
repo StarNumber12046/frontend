@@ -51,6 +51,8 @@ info, warning, error {
 	margin: var(--min-padding);
 	padding: var(--max-padding);
 
+	max-width: min(100vw, 50%);
+
 	border-radius: var(--section-corner-radius);
 	
 	overflow-wrap: break-word;
