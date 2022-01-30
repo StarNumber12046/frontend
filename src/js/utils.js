@@ -20,7 +20,6 @@
 ***/
 function setTheme(resource) {
 	switch (resource) {
-		// Holy shit, this is a mess.
 		case 'dark': resource = "./src/css/theme/charmga/dark.css"; break;
 		case 'light': resource = "./src/css/theme/charmga/light.css"; break;
 	}

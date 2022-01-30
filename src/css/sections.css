@@ -32,6 +32,8 @@ card {
 	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
 }
 
+/* Holy shit this is a mess. */
+
 navbar {
 	border-radius: var(--section-corner-radius);
 }
@@ -49,6 +51,18 @@ navbar[orientation="horizontal"] {
 	line-height: 1.5;
 	
 	overflow-x: auto;
+}
+@media only screen and (min-width: 801px) {
+	navbar[orientation="horizontal"] {
+		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
+	}
+	navbar[orientation="horizontal"]:hover {
+		margin-top: var(--max-padding);
+
+		box-shadow: var(--section-shadow) var(--accent);
+
+		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
+	}
 }
 @media only screen and (max-width: 800px) {
 	navbar[orientation="horizontal"] {
