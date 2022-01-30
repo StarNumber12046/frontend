@@ -18,7 +18,7 @@ assignees: ''
 <details><summary><b>Concepts</b></summary>
 
 > If you have created a concept, be it an image or a fork or pull request, you can append it here!
-<!-- Answer below -->
+<!-- Answer below (optional) -->
 
 </details>
 
@@ -26,6 +26,6 @@ assignees: ''
 <details><summary><b>Additional context</b></summary>
 
 > Do you have anything else to add? Put it here!
-<!-- Answer below -->
+<!-- Answer below (optional) -->
 
 </details>
