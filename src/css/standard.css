@@ -38,7 +38,9 @@ h1, .display {
 	font-size: var(--display-size) !important;
 }
 
-h2, .headline, section::before {
+h2, .headline,
+	section::before,
+	main > info::before, main > warning::before, main > error::before {
 	font-family: var(--headline);
 	font-size: var(--headline-size) !important;
 	font-weight: bold;
