@@ -52,9 +52,7 @@ info, warning, error {
 	padding: var(--max-padding);
 
 	border-radius: var(--section-corner-radius);
-
-	word-wrap: break-word;
-	word-break: break-all;
+	
 	overflow-wrap: break-word;
 	
 	overflow: auto;
