@@ -56,3 +56,5 @@ pre, code {
 	font-family: var(--monospace) !important;
 	font-size: var(--monospace-size);
 }
+
+n { display: inline-block; }
