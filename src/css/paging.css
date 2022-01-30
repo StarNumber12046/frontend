@@ -28,6 +28,8 @@ section {
 main section, section:target { display: grid; }
 section:not(:target) { display: none; }
 
+section:target section { display: grid; }
+
 section::before {
 	display: block;
 	content: attr(title);
