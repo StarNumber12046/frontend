@@ -58,6 +58,7 @@ navbar[orientation="horizontal"] {
 	}
 	navbar[orientation="horizontal"]:hover {
 		margin-top: var(--max-padding);
+		margin-left: calc(var(--size-offset-10) * -1);
 
 		box-shadow: var(--section-shadow) var(--accent);
 
