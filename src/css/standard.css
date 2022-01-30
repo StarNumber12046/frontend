@@ -59,3 +59,9 @@ pre, code {
 }
 
 n { display: inline-block; }
+
+img {
+	max-width: max(100%, 40%);
+	max-height: max(100%, 40%);
+	height: auto;
+}
