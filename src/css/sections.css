@@ -57,11 +57,10 @@ navbar[orientation="horizontal"] {
 		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
 	}
 	navbar[orientation="horizontal"]:hover {
-		margin-top: var(--max-padding);
-		margin-left: calc(var(--size-offset-10) * -1);
+		margin-top: calc(var(--max-padding) + var(--min-padding));
 
-		box-shadow: var(--section-shadow) var(--accent);
-
+		box-shadow: var(--section-shadow) var(--primary-300);
+		
 		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
 	}
 }
@@ -69,6 +68,8 @@ navbar[orientation="horizontal"] {
 	navbar[orientation="horizontal"] {
 		position: fixed;
 		bottom: 0;
+
+		margin-left: calc(var(--size-offset-10) * -1);
 		
 		width: 100vw;
 
