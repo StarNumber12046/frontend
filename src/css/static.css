@@ -30,11 +30,11 @@
 	--standard-padding: 8px;
 	--max-padding: 12px;
 
-	--small-screen: 720px;
-	--large-screen: 721px;
+	--small-screen: 800px;
+	--large-screen: 801px;
 	
 	--size-offset-10: 4px;
-	--size-offset-10: 8px;
+	--size-offset-20: 8px;
 	
 	--default-line-height: 0.9;
 	--icon-line: 0.2em;
