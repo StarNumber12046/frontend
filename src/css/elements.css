@@ -45,6 +45,7 @@ icon, ni::before {
 info, warning, error {
 	display: inline-block;
 
+	place-self: center;
 	align-items: center;
 	justify-content: center;
 	
@@ -59,6 +60,7 @@ info, warning, error {
 	
 	overflow: auto;
 
+	background-color: var(--background-20);
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
 }
@@ -69,6 +71,5 @@ info::before, warning::before, error::before {
 	padding-bottom: var(--min-padding);
 }
 
-info { background-color: var(--background-20); }
-warning { background-color: var(--yellow); }
-error { background-color: var(--red); }
+warning::before { color: hsl(50, 95%, 30%); }
+error::before { color: hsl(0, 95%, 30%); }
