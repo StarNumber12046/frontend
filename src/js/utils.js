@@ -20,8 +20,8 @@
 ***/
 function setTheme(resource) {
 	switch (resource) {
-		case 'dark': resource = "./src/css/theme/charmga/dark.css"; break;
-		case 'light': resource = "./src/css/theme/charmga/light.css"; break;
+		case 'dark': resource = "./src/css/theme/charmga/dark.css?v=2b41b71"; break;
+		case 'light': resource = "./src/css/theme/charmga/light.css?v=2b41b71"; break;
 	}
 	$('#colorscheme').attr('href', resource)
 }
