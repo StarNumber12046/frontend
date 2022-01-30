@@ -58,7 +58,7 @@ pre, code {
 	font-size: var(--monospace-size);
 }
 
-n { display: inline-block; }
+n { display: inline-block; } /* use <n/> only when working in grid layouts */
 
 img {
 	max-width: max(100%, 40%);
