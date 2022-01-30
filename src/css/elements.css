@@ -42,7 +42,7 @@ icon, ni::before {
 	text-decoration: none;
 }
 
-info, warning, error {
+info, warning, error, card {
 	display: inline-block;
 
 	place-self: center;
@@ -73,3 +73,22 @@ info::before, warning::before, error::before {
 
 warning::before { color: hsl(50, 95%, 30%); }
 error::before { color: hsl(0, 95%, 30%); }
+card::before { color: accent; }
+
+card {
+	text-shadow: var(--element-shadow);
+
+	background-color: var(--accent);
+	/* Not supported by any browser yet
+	background-image: attr(image); */
+	color: var(--background-10);
+}
+/* Backwards–comaptible background image */
+card > img {
+	padding: calc(var(--max-padding) * -1);
+	z-index: -10;
+
+	border-radius: var(--section-corner-radius);
+
+	filter: brightness(50%);
+}

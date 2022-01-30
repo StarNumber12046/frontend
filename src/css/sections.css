@@ -16,21 +16,6 @@
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 
-card {
-	display: grid;
-
-	margin: var(--standard-padding);
-	padding: var(--max-padding);
-
-	font-family: var(--monospace);
-
-	background-image: none;
-	background-color: var(--accent);
-	color: var(--background-color);
-
-	transition: background-image var(--style-animation), background-color var(--accent), color var(--accent);
-}
-
 /* Holy shit this is a mess. */
 
 navbar {
