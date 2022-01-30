@@ -36,6 +36,8 @@ card {
 
 navbar {
 	border-radius: var(--section-corner-radius);
+
+	background-color: var(--background-10);
 }
 
 navbar[orientation="horizontal"] {
