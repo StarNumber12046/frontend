@@ -31,7 +31,8 @@ a:hover {
 	transition: color var(--style-animation);
 }
 
-b, info::before, warning::before, error::before { font-weight: 600; }
+b,
+	info::before, warning::before, error::before { font-weight: 600; }
 
 h1, .display {
 	font-family: var(--display);
