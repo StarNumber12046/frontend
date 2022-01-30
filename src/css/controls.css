@@ -16,7 +16,7 @@
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 /***
-	Interactive button with text
+	Interactive button with label
 ***/
 button, input[type=submit] {
 	display: inline-block;
