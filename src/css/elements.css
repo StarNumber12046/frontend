@@ -76,6 +76,8 @@ error::before { color: hsl(0, 95%, 30%); }
 card::before { color: accent; }
 
 card {
+	padding: none;
+
 	text-shadow: var(--element-shadow);
 
 	background-color: var(--accent);
@@ -83,9 +85,9 @@ card {
 	background-image: attr(image); */
 	color: var(--background-10);
 }
+card *:not(img) { padding: var(--max-padding); }
 /* Backwards–comaptible background image */
 card > img {
-	padding: calc(var(--max-padding) * -1);
 	z-index: -10;
 
 	border-radius: var(--section-corner-radius);
