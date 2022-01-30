@@ -17,7 +17,6 @@
 
 
 card {
-	display: -ms-grid;
 	display: grid;
 
 	margin: var(--standard-padding);
