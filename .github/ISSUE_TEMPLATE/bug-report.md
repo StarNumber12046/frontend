@@ -22,7 +22,7 @@ assignees: ''
 <details><summary><b>Screenshots</b></summary>
 
 > On Windows you can press <kbd>⊞</kbd> <kbd>⇮</kbd> <kbd>S</kbd> and then <kbd>Ctrl</kbd> <kbd>V</kbd> here to quickly paste a screenshot.
-<!-- Answer below -->
+<!-- Answer below (optional) -->
 
 </details>
 
@@ -48,6 +48,6 @@ assignees: ''
 <details><summary><b>Additional context</b></summary>
 
 > Do you have anything else to add? Put it here!
-<!-- Answer below -->
+<!-- Answer below (optional) -->
 
 </details>
