@@ -13,14 +13,12 @@
 */
 
 /*** Imports ***/
-/*  └ Static */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @font-face {
 	font-family: 'JetBrains Mono NF';
 	src: url('https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf');
 }
-
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 

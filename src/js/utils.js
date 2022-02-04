@@ -19,7 +19,7 @@
 	Quickly get a JSON object from a URL
 ***/
 const getJson = (url) => {
-	$.getJSON(url, (data) => { return data; });
+	$.getJSON(url, (data) => { console.log(data); return data; });
 };
 
 /***
@@ -39,14 +39,16 @@ let settings = () => {
 /***
 	Get the current user's theme
 ***/
-let theme = $(resources.css.color_scheme).attr('href');
+// let theme = $(resources().css.color_scheme).attr('href');
+let theme = $('#colorscheme').attr('href');
 
 /***
 	Change the current webpage theme
 ***/
 function setTheme(resource) {
 	if (!!resources.resource) { resource = resources.resource; }
-	$(resources.css.color_scheme).attr('href', resource);
+	// $(resources.css.color_scheme).attr('href', resource);
+	$('#colorscheme').attr('href', resource);
 	return theme;
 }
 
@@ -62,8 +64,8 @@ function moveTo(section) {
 	Gets the user's screen size, then returns true if it's smaller than the
 	threshold, else returns false
 ***/
-const smallScreen = (smallScreen = getDefaults().ux.small_screen) => {
-	let mediaQuery = window.matchMedia(`only screen and (min-width: ${smallScreen})`);
+const smallScreen = (smallScreen = 800) => {
+	let mediaQuery = window.matchMedia(`only screen and (min-width: ${smallScreen}px)`);
 	return mediaQuery.matches;
 };
 
@@ -71,6 +73,6 @@ const smallScreen = (smallScreen = getDefaults().ux.small_screen) => {
 	Move navbar to the top/bottom
 ***/
 function moveNavbar(position) {
-	$(resources.html.navbar).attr('position', position);
-	return $(resources.html.navbar).attr('position');
+	$('#navigation').attr('position', position);
+	return $('#navigation').attr('position');
 }

@@ -13,13 +13,14 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41b80");
+@import url("./static.css?v=2b41b81");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
+
 /***
-The following rules apply to every element on the screen
+	The following rules apply to every element on the screen
 ***/
 * {
 	font-family: var(--text);
@@ -30,15 +31,20 @@ The following rules apply to every element on the screen
 	color: var(--foreground-10);
 }
 
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
 /***
-Webpage background
+	Webpage background
 ***/
 body { background-color: var(--background-10); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 /***
-Styles for standard HTML elements
+	Styles for standard HTML elements
 ***/
 a {
 	color: var(--accent);
@@ -145,8 +151,6 @@ section[outlined], post {
 	transition: color var(--style-animation);
 }
 
-logo { content: 'Fasm.ga'; }
-
 icon, ni::before {
 	position: relative;
 
@@ -167,7 +171,7 @@ info, warning, error, card {
 	margin: var(--min-padding);
 	padding: var(--max-padding);
 
-	max-width: min(100vw, 50%);
+	max-width: max(100vw, 50%);
 
 	border-radius: var(--section-corner-radius);
 	
@@ -192,22 +196,11 @@ card::before { color: accent; }
 
 card {
 	padding: none;
-
+	
 	text-shadow: var(--element-shadow);
-
+	
 	background-color: var(--accent);
-	/* Not supported by any browser yet
-	background-image: attr(image); */
 	color: var(--background-10);
-}
-card *:not(img) { padding: var(--max-padding); }
-/* Backwards–comaptible background image */
-card > img {
-	z-index: -10;
-
-	border-radius: var(--section-corner-radius);
-
-	filter: brightness(50%);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -222,20 +215,22 @@ navbar {
 }
 
 navbar[orientation="horizontal"] {
-	display: flex;
-	justify-content: center;
-
+	display: block;
+	
+	margin: var(--standard-padding);
 	padding: var(--max-padding);
 
 	border-radius: var(--section-corner-radius);
 	
-	line-height: 1.5;
-	
+	white-space: nowrap;
+
+	overflow-y: hidden;
 	overflow-x: auto;
 }
 navbar[orientation="vertical"] {
 	line-height: 2.5;
 
+	overflow-y: auto;
 	overflow-x: hidden;
 }
 
@@ -251,7 +246,7 @@ navbar[position="top"] {
 	navbar[position="top"]:hover {
 		margin-top: calc(var(--max-padding) + var(--min-padding));
 		
-		box-shadow: var(--section-shadow) var(--primary-300);
+		box-shadow: var(--section-shadow) var(--background-30);
 		
 		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
 	}
@@ -330,14 +325,14 @@ input[type=text]:hover, input[type=url]:hover, input[type=email]:hover, input[ty
 ni {
 	margin: var(--min-padding);
 	padding: var(--standard-padding);
-	padding-top: var(--min-padding);
-	padding-bottom: var(--min-padding);
-	white-space: nowrap;
-	
-	font-family: var(--monospace) !important;
 
+	font-family: var(--monospace);
+	
 	color: transparent;
 	color: var(--foreground-10);
+	
+	white-space: nowrap;
+
 	cursor: pointer;
 	
 	transition: color var(--style-animation);

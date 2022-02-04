@@ -10,16 +10,18 @@
 
 	--background-10: #202B38;
 	--background-20: #172028;
+	--background-30: #131A20;
 
 	--foreground-10: #E6F5F2;
 	--foreground-20: #D8E4F3;
+	--foreground-30: #C7CBD1;
 
 	--primary-50: #F2F2F2;
 	--primary-100: #E6F5F2;
 	--primary-200: #C0E5DE;
 	--primary-300: #9BD5CB;
 	--primary-400: #4FB6A3;
-	--primary-500: var(--accent);
+	--primary-500: #04877C;
 	--primary-600: #048870;
 	--primary-700: #03715D;
 	--primary-800: #025B42;

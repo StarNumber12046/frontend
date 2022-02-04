@@ -14,16 +14,10 @@
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
-let resources = resources();
-let defaults = defaults();
-let settings = settings();
-
 /***
 	Responsive UI
 */
-if (smallScreen() && settings.ux.interface in ["auto", "mobile"]) {
-	moveNavbar("bottom");
-}
+if (smallScreen()) { moveNavbar("bottom"); }
 
 /***
 	Dynamic theming based on user's system preferences
@@ -40,5 +34,4 @@ setTheme(prefersLight ? 'light' : 'dark');
 /***
 	Automatically move to the user's preferred home page
 ***/
-let home = "#newLink"; // #newLink is the default
-moveTo(home); // automatically moves to the section in [home]
+moveTo(settings.ux.home); // automatically moves to the section in [home]
