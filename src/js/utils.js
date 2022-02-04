@@ -33,7 +33,7 @@ const resources = () => { return getJson("/content/resources.json"); };
 const defaults = () => { getJson(resources.data.defaults); };
 let settings = () => {
 	try { return getJson(resources.data.settings); }
-	catch { return getDefaults(); }
+	catch { return defaults(); }
 };
 
 /***
