@@ -32,7 +32,7 @@ const resources = () => { return getJson("/content/resources.json"); };
 ***/
 const defaults = () => { getJson(resources.data.defaults); };
 let settings = () => {
-	try { return getJson(resources.data.settings); }
+	try { return getJson(resources().data.settings); }
 	catch { return defaults(); }
 };
 
@@ -46,7 +46,7 @@ let theme = $('#colorscheme').attr('href');
 	Change the current webpage theme
 ***/
 function setTheme(resource) {
-	if (!!resources.resource) { resource = resources.resource; }
+	if (!!resources().resource) { resource = resources().resource; }
 	// $(resources.css.color_scheme).attr('href', resource);
 	$('#colorscheme').attr('href', resource);
 	return theme;
