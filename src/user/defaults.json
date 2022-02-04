@@ -1,0 +1,13 @@
+{
+	"appeareance": {
+		"color_scheme": "system",
+		"fuzzy_corners": true,
+		"shadows": true,
+		"animations": 1
+	},
+	"ux": {
+		"interface": "auto",
+		"show_tips": true,
+		"autocomplete": true
+	}
+}
