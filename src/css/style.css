@@ -226,20 +226,29 @@ navbar[orientation="horizontal"] {
 	justify-content: center;
 
 	padding: var(--max-padding);
-	z-index: 10;
 
 	border-radius: var(--section-corner-radius);
-	box-shadow: var(--section-shadow) var(--background-20);
 	
 	line-height: 1.5;
 	
 	overflow-x: auto;
 }
+navbar[orientation="vertical"] {
+	line-height: 2.5;
+
+	overflow-x: hidden;
+}
+
+navbar[position="top"] {
+	z-index: 10;
+
+	box-shadow: var(--section-shadow) var(--background-20);
+}
 @media only screen and (min-width: 801px) {
-	navbar[orientation="horizontal"] {
+	navbar[position="top"] {
 		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
 	}
-	navbar[orientation="horizontal"]:hover {
+	navbar[position="top"]:hover {
 		margin-top: calc(var(--max-padding) + var(--min-padding));
 		
 		box-shadow: var(--section-shadow) var(--primary-300);
@@ -247,23 +256,11 @@ navbar[orientation="horizontal"] {
 		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
 	}
 }
-@media only screen and (max-width: 800px) {
-	navbar[orientation="horizontal"] {
-		position: fixed;
-		bottom: 0;
-		
-		margin-left: calc(var(--size-offset-10) * -1);
-		
-		width: 100vw;
-		
-		box-shadow: var(--section-shadow-upward) var(--background-20);
-	}
-}
-
-navbar[orientation="vertical"] {
-	line-height: 2.5;
-
-	overflow-x: hidden;
+navbar[position="bottom"] {
+	position: fixed;
+	bottom: 0;
+	
+	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
