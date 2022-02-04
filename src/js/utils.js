@@ -46,7 +46,7 @@ let theme = $('#colorscheme').attr('href');
 	Change the current webpage theme
 ***/
 function setTheme(resource) {
-	if (!!resources().resource) { resource = resources().resource; }
+	if (resources().css.themes.resource) { resource = resources().resource; }
 	// $(resources.css.color_scheme).attr('href', resource);
 	$('#colorscheme').attr('href', resource);
 	return theme;
