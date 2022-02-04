@@ -16,14 +16,38 @@
 
 
 /***
+	Quickly get a JSON object from a URL
+***/
+const getJson = (url) => {
+	$.getJSON(url, (data) => { return data; });
+};
+
+/***
+	Webpage resources: pages, styles, content, scripts etc.
+***/
+const resources = () => { return getJson("/content/resources.json"); };
+
+/***
+	Get the user's settings, defaults to default settings if none
+***/
+const defaults = () => { getJson(resources.data.defaults); };
+let settings = () => {
+	try { return getJson(resources.data.settings); }
+	catch { return getDefaults(); }
+};
+
+/***
+	Get the current user's theme
+***/
+let theme = $(resources.css.color_scheme).attr('href');
+
+/***
 	Change the current webpage theme
 ***/
 function setTheme(resource) {
-	switch (resource) {
-		case 'dark': resource = "./src/css/theme/dark.css?v=2b41b79"; break;
-		case 'light': resource = "./src/css/theme/light.css?v=2b41b79"; break;
-	}
-	$('#colorscheme').attr('href', resource)
+	if (!!resources.resource) { resource = resources.resource; }
+	$(resources.css.color_scheme).attr('href', resource);
+	return theme;
 }
 
 /***
@@ -31,4 +55,22 @@ function setTheme(resource) {
 ***/
 function moveTo(section) {
 	window.location.hash = section;
+	return window.location.hash;
+}
+
+/***
+	Gets the user's screen size, then returns true if it's smaller than the
+	threshold, else returns false
+***/
+const smallScreen = (smallScreen = getDefaults().ux.small_screen) => {
+	let mediaQuery = window.matchMedia(`only screen and (min-width: ${smallScreen})`);
+	return mediaQuery.matches;
+};
+
+/***
+	Move navbar to the top/bottom
+***/
+function moveNavbar(position) {
+	$(resources.html.navbar).attr('position', position);
+	return $(resources.html.navbar).attr('position');
 }
