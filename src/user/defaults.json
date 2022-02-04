@@ -1,13 +1,13 @@
 {
 	"appeareance": {
-		"color_scheme": "system",
-		"fuzzy_corners": true,
+		"color_scheme": "auto",
 		"shadows": true,
-		"animations": 1
+		"animations": true
 	},
 	"ux": {
+		"home": "#newLink",
 		"interface": "auto",
-		"show_tips": true,
-		"autocomplete": true
+		"small_screen": 800,
+		"large_screen": 801
 	}
 }
