@@ -14,6 +14,17 @@
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
+let resources = resources();
+let defaults = defaults();
+let settings = settings();
+
+/***
+	Responsive UI
+*/
+if (smallScreen() && settings.ux.interface in ["auto", "mobile"]) {
+	moveNavbar("bottom");
+}
+
 /***
 	Dynamic theming based on user's system preferences
 ***/
