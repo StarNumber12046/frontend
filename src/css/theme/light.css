@@ -21,16 +21,16 @@
 	--foreground-10: #271B0C;
 	--foreground-20: #080601;
 
-	--primary-50: #F2F2F2;
-	--primary-100: #E6F5F2;
-	--primary-200: #C0E5DE;
-	--primary-300: #9BD5CB;
-	--primary-400: #4FB6A3;
-	--primary-500: #04977C;
-	--primary-600: #048870;
-	--primary-700: #03715D;
-	--primary-800: #025B42;
-	--primary-900: #024A32;
+	--primary-50: #024A32;
+	--primary-100: #025B42;
+	--primary-200: #03715D;
+	--primary-300: #048870;
+	--primary-400: var(--accent);
+	--primary-500: #4FB6A3;
+	--primary-600: #9BD5CB;
+	--primary-700: #C0E5DE;
+	--primary-800: #E6F5F2;
+	--primary-900: #F2F2F2;
 
 	--brightness-offset-10: 40%;
 	--brightness-offset-20: 60%;
