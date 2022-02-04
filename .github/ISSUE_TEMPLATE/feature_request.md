@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for our website.
+about: Suggest an idea or improvement for our website.
 title: 'Feature request — '
 labels: enhancement
 assignees: ''
@@ -8,17 +8,15 @@ assignees: ''
 ---
 
 ## Description
-> Briefly describe your feature proposal here.
-<!-- Answer below -->
+> Briefly describe your enhancement proposal here.
 
 ## Reasoning
 > Why would you like this idea to be implemented? Is it related to a particolar issue with the current UX?
-<!-- Answer below -->
 
 <details><summary><b>Concepts</b></summary>
 
 > If you have created a concept, be it an image or a fork or pull request, you can append it here!
-<!-- Answer below (optional) -->
+<!-- Optional, but it would greatly help us! -->
 
 </details>
 
@@ -26,6 +24,6 @@ assignees: ''
 <details><summary><b>Additional context</b></summary>
 
 > Do you have anything else to add? Put it here!
-<!-- Answer below (optional) -->
+<!-- Optional. -->
 
 </details>
