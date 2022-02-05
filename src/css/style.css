@@ -217,10 +217,7 @@ navbar {
 navbar[orientation="horizontal"] {
 	display: block;
 	
-	margin: var(--standard-padding);
 	padding: var(--max-padding);
-
-	border-radius: var(--section-corner-radius);
 	
 	white-space: nowrap;
 
