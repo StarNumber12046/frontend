@@ -283,8 +283,9 @@ button, input[type=submit] {
   transition: border-radius var(--style-animation), background-color var(--style-animation);
 }
 button:hover, input[type=submit]:hover {
-	background-color: var(--accent);
 	border-radius: var(--control-fuzzy-corner-radius-10);
+	
+	background-color: var(--accent);
 	
   transition: border-radius var(--style-animation), background-color var(--style-animation);
 }
