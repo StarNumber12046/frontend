@@ -43,7 +43,7 @@ let section = window.location.hash;
 */
 function moveTo(path) {
 	// Add a leading # hash to the given string if not already present
-	if (!section.startsWith("#")) { path = `#${path}`; }
+	if (!path.startsWith("#")) { path = `#${path}`; }
 	// Move to the specified section; it just adds #section to the URL
 	window.location.hash = path;
 	return section;
