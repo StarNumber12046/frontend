@@ -14,14 +14,15 @@
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
-/***
+
+/*
 	Responsive UI
 */
 if (smallScreen()) { moveNavbar("bottom"); }
 
-/***
+/*
 	Dynamic theming based on user's system preferences
-***/
+*/
 // Let's check if the user likes light theme through the browser
 let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
@@ -31,7 +32,7 @@ let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 // this is because CSS doesn't allow for dynamic imports with media queries
 setTheme(prefersLight ? 'light' : 'dark');
 
-/***
+/*
 	Automatically move to the user's preferred home page
-***/
+*/
 moveTo(settings.ux.home); // automatically moves to the section in [home]
