@@ -208,11 +208,7 @@ card {
 /***
 	Sections and semantics, parts of the webpage
 ***/
-navbar {
-	border-radius: var(--section-corner-radius);
-
-	background-color: var(--background-10);
-}
+navbar { background-color: var(--background-10); }
 
 navbar[orientation="horizontal"] {
 	display: block;
@@ -237,10 +233,10 @@ navbar[position="top"] {
 	box-shadow: var(--section-shadow) var(--background-20);
 }
 @media only screen and (min-width: 801px) {
-	navbar[position="top"] {
+	navbar {
 		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
 	}
-	navbar[position="top"]:hover {
+	navbar:hover {
 		margin-top: calc(var(--max-padding) + var(--min-padding));
 		
 		box-shadow: var(--section-shadow) var(--background-30);
@@ -251,6 +247,8 @@ navbar[position="top"] {
 navbar[position="bottom"] {
 	position: fixed;
 	bottom: 0;
+
+	width: 100%;
 	
 	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
