@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41b84");
+@import url("./static.css?v=2b41b87");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -182,14 +182,21 @@ info, warning, error, card {
 	background-color: var(--background-20);
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
+	
+	transition: opacity var(--style-animation);
+}
+info:hover, warning:hover error:hover {
+	opacity: var(--max-opacity);
+
+	transition: opacity var(--style-animation);
 }
 info::before, warning::before, error::before {
 	display: block;
 	content: attr(title) " ";
-
+	
 	padding-bottom: var(--min-padding);
+	
 }
-
 warning::before { color: hsl(50, 95%, 30%); }
 error::before { color: hsl(0, 95%, 30%); }
 card::before { color: accent; }
