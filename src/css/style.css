@@ -71,14 +71,14 @@ h1, .display {
 
 h2, .headline,
 section::before,
-	main > info::before, main > warning::before, main > error::before {
-		font-family: var(--headline);
-		font-size: var(--headline-size) !important;
-		font-weight: bold;
-	}
-	
-	h3, .subheadline {
-		font-family: var(--subheadline);
+main > info::before, main > warning::before, main > error::before {
+	font-family: var(--headline);
+	font-size: var(--headline-size) !important;
+	font-weight: bold;
+}
+
+h3, .subheadline {
+	font-family: var(--subheadline);
 	font-size: var(--subheadline-size) !important;
 	font-weight: bold;
 }
@@ -233,7 +233,7 @@ navbar[orientation="vertical"] {
 navbar[position="top"] {
 	z-index: 10;
 
-	border-radius: none;
+	border-radius: 0;
 	box-shadow: var(--section-shadow) var(--background-20);
 }
 @media only screen and (min-width: 801px) {
@@ -254,7 +254,7 @@ navbar[position="bottom"] {
 	
 	width: 100%;
 	
-	border-radius: none;
+	border-radius: 0;
 	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
 
