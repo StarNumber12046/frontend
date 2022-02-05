@@ -23,18 +23,30 @@ let theme = $(res.css.color_scheme).attr('href');
 /*
 	Change the current webpage theme
 */
-function setTheme(resource) {
-	resource = res.
-	$(res.css.color_scheme).attr('href', resource);
+function setTheme(path) {
+	// Check if the given theme name exists in the res.themes list, if so gets
+	// the associated path
+	if (path in res.themes) { path = res.themes[path]; }
+	// Applies the theme by changing the href attribute of the colorscheme object
+	// because CSS does not allow dynamic imports
+	$(res.css.color_scheme).attr('href', path);
 	return theme;
 }
 
 /*
+	Get the user's current working page
+*/
+let section = window.location.hash;
+
+/*
 	Move to a specific section of the website
 */
-function moveTo(section) {
-	window.location.hash = section;
-	return window.location.hash;
+function moveTo(path) {
+	// Add a leading # hash to the given string if not already present
+	if (!section.startsWith("#")) { path = `#${path}`; }
+	// Move to the specified section; it just adds #section to the URL
+	window.location.hash = path;
+	return section;
 }
 
 /*
@@ -42,7 +54,9 @@ function moveTo(section) {
 	threshold, else returns false
 */
 const smallScreen = (smallScreen = settings.ux.small_screen) => {
-	let mediaQuery = window.matchMedia(`only screen and (min-width: ${smallScreen}px)`);
+	// Create a media query that checks for screen sizes smaller than smallScreen
+	// This only accounts for screens; if the page is printed this will return false
+	let mediaQuery = window.matchMedia(`only screen and (max-width: ${smallScreen}px)`);
 	return mediaQuery.matches;
 };
 
@@ -50,6 +64,9 @@ const smallScreen = (smallScreen = settings.ux.small_screen) => {
 	Move navbar to the top/bottom
 */
 function moveNavbar(position) {
-	$('#navigation').attr('position', position);
-	return $('#navigation').attr('position');
+	let navbar = $(res.html.navbar);
+	// Change the position attribute of the navbar element, which is assigned to
+	// the navbar[position="top"] CSS class
+	navbar.attr('position', position);
+	return navbar.attr('position');
 }
