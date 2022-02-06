@@ -66,25 +66,27 @@ info::before, warning::before, error::before { font-weight: 600; }
 
 h1, .display {
 	font-family: var(--display);
-	font-size: var(--display-size) !important;
+	font-size: var(--display-size);
 }
 
 h2, .headline,
 section::before,
 main > info::before, main > warning::before, main > error::before {
 	font-family: var(--headline);
-	font-size: var(--headline-size) !important;
+	font-size: var(--headline-size);
 	font-weight: bold;
 }
 
-h3, .subheadline {
+h3, .subheadline,
+section[subtitle]::before {
 	font-family: var(--subheadline);
-	font-size: var(--subheadline-size) !important;
+	font-size: var(--subheadline-size);
 	font-weight: bold;
 }
 
-pre, code {
-	font-family: var(--monospace) !important;
+pre,
+code {
+	font-family: var(--monospace);
 	font-size: var(--monospace-size);
 }
 
@@ -123,6 +125,8 @@ section::before {
 	
 	line-height: 4rem;
 }
+section[title]::before { content: attr(title); }
+section[subtitle]::before { content: attr(subtitle); }
 
 section[outlined], post {
 	border-radius: var(--section-corner-radius);
@@ -136,49 +140,48 @@ section[outlined], post {
 ***/
 .logo {
 	font-family: var(--display);
-	font-size: var(--display-size);
 	
 	color: var(--foreground-20);
-	
-	cursor: pointer;
 	
 	will-change: transition;
 	transition: color var(--style-animation);
 }
 .logo:hover {
 	color: var(--accent);
-
+	
+	will-change: transition;
 	transition: color var(--style-animation);
 }
 
-icon, ni::before {
+icon,
+ni::before {
 	position: relative;
-
+	
 	top: var(--icon-line);
-
+	
 	font-family: var(--icon);
 	font-size: var(--icon-size);
 	text-decoration: none;
 }
 
-info, warning, error, card {
+info, warning, error, code {
 	display: inline-block;
-
+	
 	place-self: center;
 	align-items: center;
 	justify-content: center;
 	
 	margin: var(--min-padding);
 	padding: var(--max-padding);
-
-	max-width: max(100vw, 50%);
-
-	border-radius: var(--section-corner-radius);
+	
+	max-width: max(100vw, 20%);
+	
+	border-radius: var(--element-corner-radius);
 	
 	overflow-wrap: break-word;
 	
 	overflow: auto;
-
+	
 	background-color: var(--background-20);
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
@@ -187,27 +190,25 @@ info, warning, error, card {
 }
 info:hover, warning:hover error:hover {
 	opacity: var(--max-opacity);
-
+	
 	transition: opacity var(--style-animation);
 }
 info::before, warning::before, error::before {
 	display: block;
 	content: attr(title) " ";
-	
+
 	padding-bottom: var(--min-padding);
-	
 }
 warning::before { color: hsl(50, 95%, 30%); }
 error::before { color: hsl(0, 95%, 30%); }
-card::before { color: accent; }
+info > button, warning > button, error > button { margin-top: var(--min-padding); }
 
-card {
-	padding: none;
-	
-	text-shadow: var(--element-shadow);
-	
-	background-color: var(--accent);
-	color: var(--background-10);
+code {
+	padding: var(--standard-padding);
+
+	border-radius: var(--element-corner-radius);
+
+	background-color: var(--background-20);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -274,32 +275,37 @@ button, input[type=submit] {
 	display: inline-block;
   vertical-align: top;
 	
-  padding: var(--max-padding);
+  padding: var(--standard-padding);
 	
   border: none;
 	border-radius: var(--control-corner-radius);
 	
 	font-family: var(--monospace);
-	font-weight: bold;
+	font-size: var(--button-text-size);
 	
   background-color: var(--foreground-20);
   color: var(--background-10);
 	
 	cursor: pointer;
 	
-  transition: border-radius var(--style-animation), background-color var(--style-animation);
+  transition: padding var(--layout-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 button:hover, input[type=submit]:hover {
-	border-radius: var(--control-fuzzy-corner-radius-10);
+	padding: var(--max-padding);
 	
 	background-color: var(--accent);
 	
-  transition: border-radius var(--style-animation), background-color var(--style-animation);
+  transition: padding var(--layout-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 
 input[type=submit] {
+	padding: var(--max-padding);
+
+	border-radius: var(--control-fuzzy-corner-radius-10);
+
 	font-family: var(--icon);
-	font-size: 20px;
+	font-size: var(--icon-button-size);
+	font-weight: bold;
 }
 
 input[type=text], input[type=url], input[type=email], input[type=search] {
