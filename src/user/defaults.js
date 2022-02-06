@@ -3,12 +3,13 @@
 */
 const defaults = {
 	"appeareance": {
-		"color_scheme": "auto"
+		"colorScheme": "auto"
 	},
 	"ux": {
 		"home": "#newLink",
 		"interface": "auto",
-		"small_screen": 800,
-		"large_screen": 801
+		"mobileScreen": 800,
+		"tabletScreen": 801,
+		"desktopScreen": 968
 	}
 };

@@ -49,16 +49,16 @@ function moveTo(path) {
 	return section;
 }
 
-/*
-	Gets the user's screen size, then returns true if it's smaller than the
-	threshold, else returns false
-*/
-const smallScreen = (smallScreen = settings.ux.small_screen) => {
-	// Create a media query that checks for screen sizes smaller than smallScreen
-	// This only accounts for screens; if the page is printed this will return false
-	let mediaQuery = window.matchMedia(`only screen and (max-width: ${smallScreen}px)`);
-	return mediaQuery.matches;
+function screenSmaller(size) {
+	return window.matchMedia(`only screen and (max-width: ${size}px)`).matches;
 };
+function screenLarger(size) {
+	return window.matchMedia(`only screen and (min-width: ${size}px)`).matches;
+};
+
+let mobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
+let tablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
+let desktop =()=> { return screenLarger(settings.ux.desktopScreen); }
 
 /*
 	Move navbar to the top/bottom

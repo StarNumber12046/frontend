@@ -19,8 +19,8 @@
 	Responsive UI
 */
 const resizeNavbar =()=> {
-	if (smallScreen()) { moveNavbar("bottom"); }
-	else { moveNavbar("top"); }
+	if (mobile() || tablet()) { moveNavbar("bottom"); }
+	if (desktop()) { moveNavbar("top"); }
 }
 resizeNavbar();
 $(window).on('resize', resizeNavbar);
