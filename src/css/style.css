@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41b88");
+@import url("./static.css?v=2b41b90");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -29,6 +29,7 @@
 	line-height: var(--default-line-height);
 	
 	color: var(--foreground-10);
+	accent-color: var(--accent);
 }
 
 html, body {
@@ -282,25 +283,28 @@ button, input[type=submit] {
 	
 	cursor: pointer;
 	
-  transition: padding var(--layout-animation), border-radius var(--style-animation), background-color var(--style-animation);
+  transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 button:hover, input[type=submit]:hover {
 	padding: var(--max-padding);
+
+	font-weight: 600;
 	
 	background-color: var(--accent);
 	
-  transition: padding var(--layout-animation), border-radius var(--style-animation), background-color var(--style-animation);
+  transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 
 input[type=submit] {
 	padding: var(--max-padding);
 
 	border-radius: var(--control-fuzzy-corner-radius-10);
-
+	
 	font-family: var(--icon);
 	font-size: var(--icon-button-size);
 	font-weight: bold;
 }
+input[type=submit]:hover { border-radius: var(--control-fuzzy-corner-radius-20); }
 
 input[type=text], input[type=url], input[type=email], input[type=search] {
 	display: inline;
