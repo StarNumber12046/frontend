@@ -18,7 +18,12 @@
 /*
 	Responsive UI
 */
-if (smallScreen()) { moveNavbar("bottom"); }
+const resizeNavbar =()=> {
+	if (smallScreen()) { moveNavbar("bottom"); }
+	else { moveNavbar("top"); }
+}
+resizeNavbar();
+$(window).on('resize', resizeNavbar);
 
 /*
 	Dynamic theming based on user's system preferences
