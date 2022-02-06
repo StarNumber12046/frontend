@@ -35,7 +35,7 @@
 	--size-offset-20: 8px;
 	
 	--default-line-height: 0.9;
-	--icon-line: 0.2em;
+	--icon-line: 0.15em;
 
 	--standard-border: 1px;
 	--max-border: 2px;
@@ -62,6 +62,8 @@
 	--subheadline: var(--text); --subheadline-size: 1.4rem;
 	--monospace: 'JetBrains Mono NF'; --monospace-size: 1rem;
 	--icon: 'Material Icons Outlined'; --icon-size: 1.1em;
+	--icon-button-size: 20px;
+	--button-text-size: 0.9rem;
 
 	--min-opacity: 69%;
 	--standard-opacity: 100%;
