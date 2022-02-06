@@ -134,19 +134,19 @@ section[outlined], post {
 /***
 	Additional webpage or stylistic elements
 ***/
-.logo, logo {
-	font-family: var(--display) !important;
+.logo {
+	font-family: var(--display);
 	font-size: var(--display-size);
 	
-	color: var(--foreground-20) !important;
+	color: var(--foreground-20);
 	
 	cursor: pointer;
 	
 	will-change: transition;
 	transition: color var(--style-animation);
 }
-.logo:hover, logo:hover {
-	color: var(--accent) !important;
+.logo:hover {
+	color: var(--accent);
 
 	transition: color var(--style-animation);
 }
