@@ -3,9 +3,7 @@
 */
 const defaults = {
 	"appeareance": {
-		"color_scheme": "auto",
-		"shadows": true,
-		"animations": true
+		"color_scheme": "auto"
 	},
 	"ux": {
 		"home": "#newLink",
