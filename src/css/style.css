@@ -167,10 +167,6 @@ ni::before {
 info, warning, error, code {
 	display: inline-block;
 	
-	place-self: center;
-	align-items: center;
-	justify-content: center;
-	
 	margin: var(--min-padding);
 	padding: var(--max-padding);
 	
@@ -179,8 +175,6 @@ info, warning, error, code {
 	border-radius: var(--element-corner-radius);
 	
 	overflow-wrap: break-word;
-	
-	overflow: auto;
 	
 	background-color: var(--background-20);
 	color: var(--foreground-20);
