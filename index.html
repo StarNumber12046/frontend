@@ -53,7 +53,7 @@
 		<link id='style'
 			rel='stylesheet'
 			href="./src/css/style.css?v=2b41b87" />
-		
+			
 		<script id='utils'
 			src="./src/js/utils.js?v=2b41b85"
 		></script>
@@ -63,7 +63,7 @@
 		<navbar orientation='horizontal' position="top" id='navigation'>
 			<center>
 				<a href="/">
-					<ni class='subheadline logo'>
+					<ni class='logo subheadline'>
 						Fasm.ga
 					</ni>
 				</a>
@@ -90,42 +90,36 @@
 			<section id='newLink' title='Shorten a link'>
 				<form id='shortenlink'>
 					<input id='urlbox'
-						type='url' name='url'
+						type='url' name='url' autocomplete='url'
 						placeholder="Input any URL"
 						required />
 					<input id='submiturl'
 						type='submit'
 						value='arrow_forward' />
+					</datalist>
 				</form>
-				
-				<section id='information'>			
-					<info id='motd' title="Welcome to the Fasm.ga 4 Beta Demo">
-						Move around, navigate between pages, interact with elements.<br/>
-						We'd really appreciate knowing your feedback on this demo, and how
-						it could be improved in your opinion.
-						<br/><br/>
-						<button onclick="window.location.href='https://github.com/fasmga/frontend/issues/new/choose'">Send feedback</button>
-					</info>
-				</section>
+					
+				<info id='motd' title="Fasm.ga 4 Beta">
+					We'd love to hear your feedback and your opinion on this demo:
+					<br/>
+					<button onclick="window.location.href='https://github.com/fasmga/frontend/issues/new/choose'">Send feedback</button>
+				</info>
 			</section>
 		</main>
 		
 		<section id='dashboard' title='Dashboard'>
 			<info title="Your link">
-				727 clicks, average retention rate of 23%<br/><br/>
+				727 clicks, average retention rate of 23%<br/>
 				<button>Test button</button>
 			</info>
-			<br/>
-			The above <code>&lt;info&gt;</code> element is <i>not</i> what will be
-			used for <a href="#dashboard">dashboard</a> elements.
 		</section>
 		
 		<section id='settings' title='Settings'>
 			<navbar orientation='vertical'>
-				<a>
+				<!-- a href="#settings-account">
 					<ni icon='person' title='Account'>
 					</ni>
-				</a>
+				</a -->
 				<br/>
 				<a>
 					<ni icon='monitor' title='Appeareance'>
@@ -148,6 +142,17 @@
 				</a>
 			</navbar>
 			<br/>
+			<section id='appeareance' subtitle='Appeareance'>
+				<input id='themeselector'
+					type='text' name='theme' list='themes'
+					placeholder="Select your theme" />
+				
+				<datalist id='themes'>
+					<option value='System default' />
+					<option value='Dark' />
+					<option value='Light' />
+				</datalist>
+			</section>
 		</section>
 		
 		<script id='main'
