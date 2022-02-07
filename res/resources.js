@@ -4,10 +4,10 @@
 const res = {
 	"html": {
 		"index": "./index.html",
-		"navbar": "#navigation"
+		"navbar": "#navbar"
 	},
 	"css": {
-		"color_scheme": "#colorscheme",
+		"colorScheme": "#colorscheme",
 		"style": "./src/css/style.css",
 		"static": "./src/css/static.css",
 	},

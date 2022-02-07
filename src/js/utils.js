@@ -18,7 +18,7 @@
 /*
 	Get the current user's theme
 */
-let theme = $(res.css.color_scheme).attr('href');
+let theme = $(res.css.colorScheme).attr('href');
 
 /*
 	Change the current webpage theme
@@ -29,7 +29,7 @@ function setTheme(path) {
 	if (path in res.themes) { path = res.themes[path]; }
 	// Applies the theme by changing the href attribute of the colorscheme object
 	// because CSS does not allow dynamic imports
-	$(res.css.color_scheme).attr('href', path);
+	$(res.css.colorScheme).attr('href', path);
 	return theme;
 }
 
@@ -68,5 +68,6 @@ function moveNavbar(position) {
 	// Change the position attribute of the navbar element, which is assigned to
 	// the navbar[position="top"] CSS class
 	navbar.attr('position', position);
+	$('section:target').attr('fixed_navbar', position);
 	return navbar.attr('position');
 }
