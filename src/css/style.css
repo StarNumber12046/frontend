@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41b90");
+@import url("./static.css?v=2b41b91");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -102,7 +102,7 @@ img {
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 /***
-Styles for website pages and sections, designed for fast page navigation
+	Styles for website pages and sections, designed for fast page navigation
 ***/
 section {
 	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
@@ -213,6 +213,7 @@ code {
 ***/
 navbar {
 	border-radius: var(--section-corner-radius);
+
 	background-color: var(--background-10);
 }
 
@@ -234,8 +235,9 @@ navbar[orientation="vertical"] {
 }
 
 navbar[position="top"] {
+	margin-bottom: calc(var(--max-padding) + var(--min-padding));
 	z-index: 10;
-
+	
 	border-radius: 0;
 	box-shadow: var(--section-shadow) var(--background-20);
 }
@@ -252,14 +254,22 @@ navbar[position="top"] {
 	}
 }
 navbar[position="bottom"] {
-	position: fixed;
 	bottom: 0;
-	
-	width: 100%;
 	
 	border-radius: 0;
 	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
+
+navbar[fixed], navbar[position="bottom"] {
+	position: fixed;
+
+	width: 100%;
+}
+
+/* Avoids the navbar covering content */
+/* I know, I really don't get paid enough for this shit. */
+section[fixed_navbar="top"] { margin-top: var(--max-padding); }
+section[fixed_navbar="bottom"] { margin-bottom: var(--max-padding); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
