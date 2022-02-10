@@ -181,11 +181,13 @@ info, warning, error, code {
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
 	
+	will-change: transition;
 	transition: opacity var(--style-animation);
 }
 info:hover, warning:hover error:hover {
 	opacity: var(--max-opacity);
 	
+	will-change: transition;
 	transition: opacity var(--style-animation);
 }
 info::before, warning::before, error::before {
@@ -215,6 +217,8 @@ navbar {
 	border-radius: var(--section-corner-radius);
 
 	background-color: var(--background-10);
+
+	will-change: transition;
 }
 
 navbar[orientation=horizontal] {
@@ -285,6 +289,7 @@ button, input[type=submit] {
 	
 	cursor: pointer;
 	
+	will-change: transition;
   transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 button:hover, input[type=submit]:hover {
@@ -294,6 +299,7 @@ button:hover, input[type=submit]:hover {
 	
 	background-color: var(--accent);
 	
+	will-change: transition;
   transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 
@@ -323,6 +329,7 @@ input[type=text], input[type=url], input[type=email], input[type=search] {
 	background-color: var(--transparency);
   color: var(--foreground-10);
 	
+	will-change: transition;
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 input[type=text]:hover, input[type=url]:hover, input[type=email]:hover, input[type=search]:hover {
@@ -345,11 +352,13 @@ ni {
 
 	cursor: var(--link-cursor);
 	
+	will-change: transition;
 	transition: color var(--style-animation);
 }
 ni:hover {
 	color: var(--accent);
 
+	will-change: transition;
 	transition: color var(--style-animation);
 }
 ni::before { content: attr(icon); }
