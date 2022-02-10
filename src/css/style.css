@@ -300,13 +300,12 @@ button:hover, input[type=submit]:hover {
 input[type=submit] {
 	padding: var(--max-padding);
 
-	border-radius: var(--control-fuzzy-corner-radius-10);
+	border-radius: var(--control-fuzzy-corner-radius);
 	
 	font-family: var(--icon);
 	font-size: var(--icon-button-size);
 	font-weight: var(--bold);
 }
-input[type=submit]:hover { border-radius: var(--control-fuzzy-corner-radius-20); }
 
 input[type=text], input[type=url], input[type=email], input[type=search] {
 	display: inline;

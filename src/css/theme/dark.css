@@ -17,35 +17,70 @@
 
 :root {
 	--accent: #04877C;
-	--accent-gradient: linear-gradient(
-		140deg,
-		hsl(175deg 94% 27%) 0%,
-		hsl(195deg 56% 19%) 40%,
-		hsl(210deg 27% 14%) 60%,
-		hsl(213deg 27% 17%) 100%
-	);
 
 	--background-10: #202B38;
-	--background-20: #343E4A;
-	--background-30: #46505A;
+	--background-20: #1D2125;
+	--background-30: #16191D;
+	--background-40: #121417;
+	--background-50: #101214;
 
 	--foreground-10: #E6F5F2;
 	--foreground-20: #D8E4F3;
 	--foreground-30: #C7CBD1;
+	--foreground-40: #E0E4EB;
+	--foreground-50: #F2F2F2;
 
-	--primary-50: #F2F2F2;
-	--primary-100: #E6F5F2;
-	--primary-200: #C0E5DE;
-	--primary-300: #9BD5CB;
-	--primary-400: #4FB6A3;
-	--primary-500: #04877C;
-	--primary-600: #048870;
-	--primary-700: #03715D;
-	--primary-800: #025B42;
-	--primary-900: #024A32;
+	--primary: var(--accent);
 
-	--brightness-offset-10: 40%;
-	--brightness-offset-20: 60%;
+	--charmga-accent-10: #06EFC4;
+	--charmga-accent-20: #06DBB4;
+	--charmga-accent-30: #05C7A3;
+	--charmga-accent-40: #05B393;
+	--charmga-accent-50: #04977C;
+	--charmga-accent-60: #048B72;
+	--charmga-accent-70: #037762;
+	--charmga-accent-80: #036352;
+	--charmga-accent-90: #025041;
+
+	--light-blue-10: #D8E4F3;
+	--light-blue-20: #A1BFE2;
+	--light-blue-30: #82A9D9;
+	--light-blue-40: #639ACF;
+	--light-blue-50: #447EC5;
+	--light-blue-60: #356AAC;
+	--light-blue-70: #2B578C;
+	--light-blue-80: #2B578C;
+	--light-blue-90: #2B578C;
+
+	--maya-blue-10: #C6E5FB;
+	--maya-blue-20: #B3DCF9;
+	--maya-blue-30: #A0D3F8;
+	--maya-blue-40: #8DCBF6;
+	--maya-blue-50: #78C1F5;
+	--maya-blue-60: #67B9F4;
+	--maya-blue-70: #54B0F2;
+	--maya-blue-80: #41A8F1;
+	--maya-blue-90: #2E9FEF;
+
+	--sussy-red-10: #E33B5A;
+	--sussy-red-20: #E0294A;
+	--sussy-red-30: #D61F40;
+	--sussy-red-40: #C41C3B;
+	--sussy-red-50: #B01934;
+	--sussy-red-60: #A11730;
+	--sussy-red-70: #8F142B;
+	--sussy-red-80: #7D1225;
+	--sussy-red-90: #6B0F20;
+
+	--light-yellow-10: #FDE372;
+	--light-yellow-20: #FDE05E;
+	--light-yellow-30: #FCDC4A;
+	--light-yellow-40: #FCD836;
+	--light-yellow-50: #FCD31C;
+	--light-yellow-60: #FBD00E;
+	--light-yellow-70: #F1C604;
+	--light-yellow-80: #DDB503;
+	--light-yellow-90: #C9A503;
 }
 
 .accent, [accent] { color: var(--accent); }
