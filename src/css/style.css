@@ -254,27 +254,14 @@ navbar[position=top] {
 	}
 }
 navbar[position=bottom] {
+	position: fixed;
 	bottom: 0;
 	
+	width: var(--fixed-navbar-width);
+
 	border-radius: 0;
 	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
-navbar[position=left], navbar[position=right] {
-	display: grid;
-
-	float: attr(position);
-}
-
-navbar[fixed], navbar[position=bottom] {
-	position: fixed;
-
-	width: var(--navbar-width);
-}
-
-/* Avoids the navbar covering content */
-/* I know, I really don't get paid enough for this shit. */
-section[fixed_navbar="top"] { margin-top: var(--max-padding); }
-section[fixed_navbar="bottom"] { margin-bottom: var(--max-padding); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
