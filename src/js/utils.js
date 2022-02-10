@@ -15,6 +15,9 @@
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 
+/* The document body in jQuery */
+const body = $(document.body);
+
 /*
 	Get the current user's theme
 */
