@@ -24,19 +24,29 @@
 
 
 :root {
+	--page-padding: 0;
 	--min-padding: 6px;
 	--standard-padding: 8px;
 	--max-padding: 12px;
 
-	--small-screen: 800px;
-	--large-screen: 801px;
-	
 	--size-offset-10: 4px;
 	--size-offset-20: 8px;
-	
+	--responsive-width: max(100%, 50%);
+	--responsive-height: max(100%, 50%);
+
+	--behind-content: -5;
+	--in-content: 0;
+	--in-between: 5;
+	--on-top: 10;
+
 	--default-line-height: 0.9;
 	--icon-line: 0.15em;
+	--no-wrap: nowrap;
 
+	--fixed-navbar-width: 100%;
+	--vertical-navbar-padding: 2.5;
+
+	--min-border: none;
 	--standard-border: 1px;
 	--max-border: 2px;
 
@@ -48,8 +58,7 @@
 	
 	--window-corner-radius: 0px;
 	--control-corner-radius: 4px;
-	--control-fuzzy-corner-radius-10: 34% 21% 27% 16% / 20% 27% 27% 23%;
-	--control-fuzzy-corner-radius-20: 20% 27% 27% 23% / 34% 21% 27% 16%;
+	--control-fuzzy-corner-radius: 34% 21% 27% 16% / 20% 27% 27% 23%;
 	--element-corner-radius: 4px;
 	--section-corner-radius: 8px;
 
@@ -58,17 +67,27 @@
 	--text: 'Roboto'; --text-size: 1rem;
 	--logo: var(--display); --logo-size: 4rem;
 	--display: 'Poppins'; --display-size: 3rem;
-	--headline: var(--monospace); --headline-size: 2rem;
+	--headline: var(--monospace); --headline-size: 2rem; --title-height: 4rem;
 	--subheadline: var(--text); --subheadline-size: 1.4rem;
 	--monospace: 'JetBrains Mono NF'; --monospace-size: 1rem;
 	--icon: 'Material Icons Outlined'; --icon-size: 1.1em;
 	--icon-button-size: 20px;
 	--button-text-size: 0.9rem;
+	--link-text-decoration: dotted; --link-cursor: pointer;
+
+	--thin: thin;
+	--light: lighter;
+	--regular: normal;
+	--bold: bold;
+	--thick: bolder;
+
+	--text-spacing: ' ';
 
 	--min-opacity: 69%;
 	--standard-opacity: 100%;
 	--max-opacity: 80%;
 
+	--transparency: transparent;
 	--control-blur: blur(25px) saturate(100px);
 
 	--style-animation: 0.2s ease;
