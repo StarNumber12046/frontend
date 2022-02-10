@@ -63,7 +63,10 @@ a:hover {
 }
 
 b,
-info::before, warning::before, error::before { font-weight: var(--bold); }
+info::before, warning::before, error::before {
+	font-weight: var(--bold);
+	letter-spacing: var(--bold-letter-spacing);
+}
 
 h1, .display {
 	font-family: var(--display);
@@ -177,7 +180,7 @@ info, warning, error, code {
 	
 	overflow-wrap: break-word;
 	
-	background-color: var(--background-20);
+	background-color: var(--background-40);
 	color: var(--foreground-20);
 	opacity: var(--min-opacity);
 	
@@ -196,8 +199,8 @@ info::before, warning::before, error::before {
 
 	padding-bottom: var(--min-padding);
 }
-warning::before { color: hsl(50, 95%, 30%); }
-error::before { color: hsl(0, 95%, 30%); }
+warning::before { color: var(--bright-yellow-50); }
+error::before { color: var(--sussy-red-50); }
 info > button, warning > button, error > button { margin-top: var(--min-padding); }
 
 code {

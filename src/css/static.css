@@ -64,7 +64,7 @@
 
 	--separator-thickness: 0.5px;
 
-	--text: 'Rubik'; --text-size: 1rem;
+	--text: 'Rubik'; --text-size: 1rem; --bold-letter-spacing: 0.1ch;
 	--logo: var(--display); --logo-size: 4rem;
 	--display: 'Poppins'; --display-size: 3rem;
 	--headline: var(--monospace); --headline-size: 2rem; --title-height: 4rem;
