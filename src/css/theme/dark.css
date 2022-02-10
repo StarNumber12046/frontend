@@ -1,3 +1,20 @@
+/*
+		 _____
+		|  ___|_ _ ___ _ __ ___    __ _  __ _
+		| |_ / _` / __| '_ ` _ \  / _` |/ _` |
+		|  _| (_| \__ \ | | | | || (_| | (_| |
+		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
+															|___/
+	
+	-> Name: dark.css
+	-> Description: Charm.ga dark theme for CSS
+	-> Resource: /src/css/theme/dark.css
+	-> Licensing: © 2022, Fasm.ga | https://www.fasmga.org/license
+*/
+
+/*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
+
+
 :root {
 	--accent: #04877C;
 	--accent-gradient: linear-gradient(
