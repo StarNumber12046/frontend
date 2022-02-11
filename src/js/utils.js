@@ -43,26 +43,26 @@ function screenLarger(size) {
 	return window.matchMedia(`only screen and (min-width: ${size}px)`).matches;
 }
 
-let desktop =()=> { return screenLarger(settings.ux.desktopScreen); }
-let tablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
-let mobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
+let isDesktop =()=> { return screenLarger(settings.ux.desktopScreen); }
+let isTablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
+let isMobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
 
 /*
 	Switch between UI modes
-	*/
-	function setUI(device) {
+*/
+function setUI(device) {
 	res.ui[device].forEach(expr => {
 		return eval(expr)
 	});
 }
 
 /*
-Get the user's current working page
+	Get the user's current working page
 */
 let section = window.location.hash;
 
 /*
-Move to a specific section of the website
+	Move to a specific section of the website
 */
 function moveTo(path) {
 	// Add a leading # hash to the given string if not already present
@@ -73,7 +73,7 @@ function moveTo(path) {
 }
 
 /*
-Move navbar to the top/bottom
+	Move navbar to the top/bottom
 */
 function moveNavbar(position) {
 	let navbar = $(res.html.navbar);
@@ -94,4 +94,4 @@ const tablet =()=> setUI('tablet');
 const mobile =()=> setUI('mobile');
 const newLink =()=> moveTo('#newLink');
 const dashboard =()=> moveTo('#dashboard');
-const settings =()=> moveTo('#settings');
+const settingsPage =()=> moveTo('#settings');

@@ -19,9 +19,9 @@
 	Responsive UI
 */
 checkUI =()=> { setUI([
-	desktop() && 'desktop' ||
-	tablet() && 'tablet' ||
-	mobile() && 'mobile'
+	isDesktop() && 'desktop' ||
+	isTablet() && 'tablet' ||
+	isMobile() && 'mobile'
 ]); };
 $(window).on('resize', checkUI);
 
