@@ -11,6 +11,17 @@ const res = {
 		"style": "./src/css/style.css",
 		"static": "./src/css/static.css",
 	},
+	"ui": {
+		"mobile": [
+			"moveNavbar('bottom');"
+		],
+		"tablet": [
+			"moveNavbar('bottom');"
+		],
+		"desktop": [
+			"moveNavbar('top');"
+		]
+	},
 	"themes": {
 		"dark": "./src/css/theme/dark.css",
 		"light": "./src/css/theme/light.css"
