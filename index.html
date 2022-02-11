@@ -49,17 +49,17 @@
 			
 		<link id='colorscheme'
 			rel='stylesheet'
-			href="./src/css/theme/dark.css?v=2b41b99" />
+			href="./src/css/theme/dark.css?v=2b41c01" />
 		<link id='style'
 			rel='stylesheet'
-			href="./src/css/style.css?v=2b41b99" />
+			href="./src/css/style.css?v=2b41c01" />
 		
 		<link id='favicon'
 			rel='icon'
 			href="./res/raster/favicon.ico" />
 			
 		<script id='utils'
-			src="./src/js/utils.js?v=2b41b99"
+			src="./src/js/utils.js?v=2b41c01"
 		></script>
 	</head>
 	
@@ -102,12 +102,29 @@
 						value='arrow_forward' />
 					</datalist>
 				</form>
-					
+				
 				<info id='motd' title="Fasm.ga 4 Beta">
 					We'd love to hear your feedback and your opinion on this demo:
 					<br/>
 					<button onclick="window.location.href='https://github.com/fasmga/frontend/issues/new/choose'">Send feedback</button>
 				</info>
+
+				<section id='debugging' subtitle='Debug'>
+					<form id='debug'>
+						<input id='repl'
+							type='text' name='repl'
+							placeholder="Input JS"
+							required />
+						<input id='evalrepl'
+							type='submit'
+							value='bug_report' />
+						</datalist>
+					</form>
+
+					<code id='result' title='Input any JS code above'>
+						// The evaluated result will be shown here.
+					</code>
+				</section>
 			</section>
 		</main>
 		
@@ -148,10 +165,10 @@
 		</section>
 		
 		<script id='main'
-			src="./src/js/index.js?v=2b41b99"
+			src="./src/js/index.js?v=2b41c01"
 		></script>
 		<script id='pageload'
-			src="./src/js/pageload.js?v=2b41b99"
+			src="./src/js/pageload.js?v=2b41c01"
 		></script>
 	</body>
 </html>

@@ -14,14 +14,25 @@
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
-let form = $('#shortenlink');
+let shortenLink = $('#shortenlink');
 let urlBox = $('#urlbox');
+let debug = $('#debug');
+let repl = $('#repl');
 
 // Not connected to prod data at the moment, so just showing
 // the user input
-form.on('submit', (event) => {
+shortenLink.on('submit', (event) => {
 	event.preventDefault();
 	$('info')
 	.attr('title', 'This is the URL you entered:')
-	.text(urlBox.val());
-})
+	.html(`<a href='${urlBox.val()}'>${urlBox.val()}</a>
+<i>This demo is not connected to production APIs.</i>
+`);
+});
+
+debug.on('submit', (event) => {
+	event.preventDefault();
+	$('code')
+	.attr('title', `Evaluated expression: ${repl.val()}`)
+	.text(eval(repl.val()));
+});

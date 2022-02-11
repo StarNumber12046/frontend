@@ -65,7 +65,7 @@ a:hover {
 }
 
 b,
-info::before, warning::before, error::before {
+info::before, warning::before, error::before, code::before {
 	font-weight: var(--bold);
 	letter-spacing: var(--bold-letter-spacing);
 }
@@ -187,13 +187,13 @@ info, warning, error, code {
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
-info:hover, warning:hover error:hover {
+info:hover, warning:hover, error:hover, code:hover {
 	opacity: var(--max-opacity);
 	
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
-info::before, warning::before, error::before {
+info::before, warning::before, error::before, code::before {
 	display: block;
 	content: attr(title) " ";
 
@@ -201,7 +201,7 @@ info::before, warning::before, error::before {
 }
 warning::before { color: var(--bright-yellow-50); }
 error::before { color: var(--sussy-red-50); }
-info > button, warning > button, error > button { margin-top: var(--min-padding); }
+info > button, warning > button, error > button, code > button { margin-top: var(--min-padding); }
 
 code {
 	padding: var(--standard-padding);
