@@ -49,10 +49,10 @@
 			
 		<link id='colorscheme'
 			rel='stylesheet'
-			href="./src/css/theme/dark.css?v=2b41c01" />
+			href="./src/css/theme/dark.css?v=2b41c02" />
 		<link id='style'
 			rel='stylesheet'
-			href="./src/css/style.css?v=2b41c01" />
+			href="./src/css/style.css?v=2b41c02" />
 		
 		<link id='favicon'
 			rel='icon'
@@ -105,58 +105,54 @@
 				
 				<info id='motd' title="Fasm.ga 4 Beta">
 					We'd love to hear your feedback and your opinion on this demo:
-					<br/>
 					<button onclick="window.location.href='https://github.com/fasmga/frontend/issues/new/choose'">Send feedback</button>
 				</info>
-
+				
 				<section id='debugging' subtitle='Debug'>
 					<form id='debug'>
 						<input id='repl'
-							type='text' name='repl'
-							placeholder="Input JS"
-							required />
+						type='text' name='repl'
+						placeholder="Input JS"
+						required />
 						<input id='evalrepl'
-							type='submit'
-							value='bug_report' />
-						</datalist>
-					</form>
-
-					<code id='result' title='Input any JS code above'>
-						// The evaluated result will be shown here.
+						type='submit'
+						value='bug_report' />
+					</datalist>
+				</form>
+				
+				<code id='result' title='Input any JS code above'>
+					// The evaluated result will be shown here.
+					<button onclick="window.location.href='https://github.com/fasmga/frontend/wiki'">Read the docs</button>
 					</code>
 				</section>
 			</section>
 		</main>
 		
 		<section id='dashboard' title='Dashboard'>
-			<info title="Your link">
-				727 clicks, average retention rate of 23%<br/>
+			<warning title="This section is empty">
+				06/12/2017
 				<button>Test button</button>
-			</info>
+			</warning>
 		</section>
 		
 		<section id='settings' title='Settings'>
 			<navbar orientation='vertical'>
-				<!-- a href="#settings-account">
+				<a>
 					<ni icon='person' title='Account'>
 					</ni>
-				</a
-				<br -->
+				</a>
 				<a>
 					<ni icon='monitor' title='Appeareance'>
 					</ni>
 				</a>
-				<br/>
 				<a>
 					<ni icon='web' title='User experience'>
 					</ni>
 				</a>
-				<br/>
 				<a>
 					<ni icon='lock' title='Security'>
 					</ni>
 				</a>
-				<br/>
 				<a>
 					<ni icon='code' title='Developer options'>
 					</ni>

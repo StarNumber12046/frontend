@@ -201,7 +201,11 @@ info::before, warning::before, error::before, code::before {
 }
 warning::before { color: var(--bright-yellow-50); }
 error::before { color: var(--sussy-red-50); }
-info > button, warning > button, error > button, code > button { margin-top: var(--min-padding); }
+info > button, warning > button, error > button, code > button {
+	display: block;
+	
+	margin-top: var(--min-padding);
+}
 
 code {
 	padding: var(--standard-padding);
@@ -369,3 +373,4 @@ ni::after { content: var(--text-spacing) attr(title); }
 @media only screen and (max-width: 800px) {
 	ni::after { display: none; }
 }
+navbar[orientation=vertical] ni { display: block; }
