@@ -18,12 +18,12 @@
 /*
 	Responsive UI
 */
-const resizeNavbar =()=> {
-	if (mobile() || tablet()) { moveNavbar("bottom"); }
-	if (desktop()) { moveNavbar("top"); }
-}
-resizeNavbar();
-$(window).on('resize', resizeNavbar);
+checkUI =()=> { setUI([
+	desktop() && 'desktop' ||
+	tablet() && 'tablet' ||
+	mobile() && 'mobile'
+]); };
+$(window).on('resize', checkUI);
 
 /*
 	Dynamic theming based on user's system preferences
