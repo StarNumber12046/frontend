@@ -54,14 +54,23 @@ function moveTo(path) {
 
 function screenSmaller(size) {
 	return window.matchMedia(`only screen and (max-width: ${size}px)`).matches;
-};
+}
 function screenLarger(size) {
 	return window.matchMedia(`only screen and (min-width: ${size}px)`).matches;
-};
+}
 
 let mobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
 let tablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
 let desktop =()=> { return screenLarger(settings.ux.desktopScreen); }
+
+/*
+	Switch between UI modes
+*/
+function setUI(device) {
+	res.ui[device].forEach(expr => {
+		return eval(expr)
+	});
+}
 
 /*
 	Move navbar to the top/bottom
