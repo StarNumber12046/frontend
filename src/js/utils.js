@@ -36,13 +36,33 @@ function setTheme(path) {
 	return theme;
 }
 
+function screenSmaller(size) {
+	return window.matchMedia(`only screen and (max-width: ${size}px)`).matches;
+}
+function screenLarger(size) {
+	return window.matchMedia(`only screen and (min-width: ${size}px)`).matches;
+}
+
+let desktop =()=> { return screenLarger(settings.ux.desktopScreen); }
+let tablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
+let mobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
+
 /*
-	Get the user's current working page
+	Switch between UI modes
+	*/
+	function setUI(device) {
+	res.ui[device].forEach(expr => {
+		return eval(expr)
+	});
+}
+
+/*
+Get the user's current working page
 */
 let section = window.location.hash;
 
 /*
-	Move to a specific section of the website
+Move to a specific section of the website
 */
 function moveTo(path) {
 	// Add a leading # hash to the given string if not already present
@@ -52,28 +72,8 @@ function moveTo(path) {
 	return section;
 }
 
-function screenSmaller(size) {
-	return window.matchMedia(`only screen and (max-width: ${size}px)`).matches;
-}
-function screenLarger(size) {
-	return window.matchMedia(`only screen and (min-width: ${size}px)`).matches;
-}
-
-let mobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
-let tablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
-let desktop =()=> { return screenLarger(settings.ux.desktopScreen); }
-
 /*
-	Switch between UI modes
-*/
-function setUI(device) {
-	res.ui[device].forEach(expr => {
-		return eval(expr)
-	});
-}
-
-/*
-	Move navbar to the top/bottom
+Move navbar to the top/bottom
 */
 function moveNavbar(position) {
 	let navbar = $(res.html.navbar);
@@ -83,3 +83,15 @@ function moveNavbar(position) {
 	$('section:target').attr('fixed_navbar', position);
 	return navbar.attr('position');
 }
+
+/*
+	Convenience functions for quicker debugging
+*/
+const dark =()=> setTheme('dark');
+const light =()=> setTheme('light');
+const desktop =()=> setUI('desktop');
+const tablet =()=> setUI('tablet');
+const mobile =()=> setUI('mobile');
+const newLink =()=> moveTo('#newLink');
+const dashboard =()=> moveTo('#dashboard');
+const settings =()=> moveTo('#settings');
