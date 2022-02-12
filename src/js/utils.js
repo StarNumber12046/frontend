@@ -92,6 +92,3 @@ const light =()=> setTheme('light');
 const desktop =()=> setUI('desktop');
 const tablet =()=> setUI('tablet');
 const mobile =()=> setUI('mobile');
-const newLink =()=> moveTo('#newLink');
-const dashboard =()=> moveTo('#dashboard');
-const settingsPage =()=> moveTo('#settings');
