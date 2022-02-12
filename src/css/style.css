@@ -30,6 +30,9 @@
 	
 	color: var(--foreground-10);
 	accent-color: var(--accent);
+
+	will-change: transition;
+	transition: background-color var(--style-animation), color var(--style-animation);
 }
 
 html, body {
@@ -42,11 +45,7 @@ html, body {
 /***
 	Webpage background
 ***/
-body, navbar {
-	background-color: var(--background-10);
-
-	transition: background-color var(--style-animation);
-}
+body, navbar { background-color: var(--background-10); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -100,13 +99,13 @@ code {
 	font-size: var(--monospace-size);
 }
 
-n { display: inline-block; } /* use <n/> only when working in grid layouts */
-
 img {
 	max-width: var(--responsive-width);
 	max-height: var(--responsive-height);
 	height: auto;
 }
+
+n { display: inline-block; } /* use <n/> only when working in grid layouts */
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -325,8 +324,8 @@ input[type=text], input[type=url], input[type=email], input[type=search] {
   border: var(--max-border) solid var(--foreground-20);
   border-radius: var(--control-corner-radius);
   outline: none;
-	
-  resize: none;
+
+	resize: none;
 	
   font-family: var(--monospace);
 	
@@ -343,6 +342,7 @@ input[type=text]:hover, input[type=url]:hover, input[type=email]:hover, input[ty
 	
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
+input[resizable] { resize: both; }
 
 ni {
 	margin: var(--min-padding);
