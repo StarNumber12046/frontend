@@ -18,11 +18,11 @@
 :root {
 	--accent: #04877C;
 
-	--background-10: #161E27;
-	--background-20: #141C24;
-	--background-30: #131A22;
-	--background-40: #11181F;
-	--background-50: #10151C;
+	--background-10: #08001A;
+	--background-20: #070018;
+	--background-30: #070016;
+	--background-40: #060014;
+	--background-50: #050012;
 
 	--foreground-10: #E6F5F2;
 	--foreground-20: #D8E4F3;
@@ -52,15 +52,15 @@
 	--light-blue-80: #2B578C;
 	--light-blue-90: #2B578C;
 
-	--maya-blue-10: #C6E5FB;
-	--maya-blue-20: #B3DCF9;
-	--maya-blue-30: #A0D3F8;
-	--maya-blue-40: #8DCBF6;
-	--maya-blue-50: #78C1F5;
-	--maya-blue-60: #67B9F4;
-	--maya-blue-70: #54B0F2;
-	--maya-blue-80: #41A8F1;
-	--maya-blue-90: #2E9FEF;
+	--purple-haze-10: #CFBAFF;
+	--purple-haze-20: #B697FF;
+	--purple-haze-30: #9E75FF;
+	--purple-haze-40: #8652FF;
+	--purple-haze-50: #6E2FFF;
+	--purple-haze-60: #550DFF;
+	--purple-haze-70: #4600E9;
+	--purple-haze-80: #3C00C7;
+	--purple-haze-90: #3100A4;
 
 	--sussy-red-10: #E33B5A;
 	--sussy-red-20: #E0294A;
@@ -84,3 +84,4 @@
 }
 
 .accent, [accent] { color: var(--accent); }
+.primary, [primary] { background-color: var(--accent); }
