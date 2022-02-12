@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41b99");
+@import url("./static.css?v=2b41c03");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -42,7 +42,11 @@ html, body {
 /***
 	Webpage background
 ***/
-body { background-color: var(--background-10); }
+body, navbar {
+	background-color: var(--background-10);
+
+	transition: background-color var(--style-animation);
+}
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -180,8 +184,8 @@ info, warning, error, code {
 	
 	overflow-wrap: break-word;
 	
-	background-color: var(--background-30);
-	color: var(--foreground-20);
+	background-color: var(--foreground-40);
+	color: var(--background-40);
 	opacity: var(--min-opacity);
 	
 	will-change: transition;
@@ -205,14 +209,9 @@ info > button, warning > button, error > button, code > button {
 	display: block;
 	
 	margin-top: var(--min-padding);
-}
 
-code {
-	padding: var(--standard-padding);
-
-	border-radius: var(--element-corner-radius);
-
-	background-color: var(--background-20);
+	background-color: var(--background-40);
+	color: var(--foreground-40);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -222,9 +221,7 @@ code {
 ***/
 navbar {
 	border-radius: var(--section-corner-radius);
-
-	background-color: var(--background-10);
-
+	
 	will-change: transition;
 }
 
