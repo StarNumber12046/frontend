@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41c03");
+@import url("./static.css?v=2b41c05");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -45,7 +45,7 @@ html, body {
 /***
 	Webpage background
 ***/
-body, navbar { background-color: var(--background-10); }
+body { background-color: var(--background-10); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -176,6 +176,7 @@ info, warning, error, code {
 	
 	margin: var(--min-padding);
 	padding: var(--max-padding);
+	z-index: var(--in-between);
 	
 	max-width: max(100vw, 20%);
 	
@@ -183,8 +184,8 @@ info, warning, error, code {
 	
 	overflow-wrap: break-word;
 	
-	background-color: var(--foreground-40);
-	color: var(--background-40);
+	background-color: var(--overlay-background-5);
+	color: var(--overlay-foreground-5);
 	opacity: var(--min-opacity);
 	
 	will-change: transition;
@@ -209,8 +210,8 @@ info > button, warning > button, error > button, code > button {
 	
 	margin-top: var(--min-padding);
 
-	background-color: var(--background-40);
-	color: var(--foreground-40);
+	background-color: var(--overlay-foreground-5);
+	color: var(--overlay-background-5);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -219,7 +220,11 @@ info > button, warning > button, error > button, code > button {
 	Sections and semantics, parts of the webpage
 ***/
 navbar {
+	z-index: var(--on-top);
+	
 	border-radius: var(--section-corner-radius);
+
+	background-color: var(--background-10);
 	
 	will-change: transition;
 }
@@ -243,21 +248,20 @@ navbar[orientation=vertical] {
 
 navbar[position=top] {
 	margin-bottom: calc(var(--max-padding) + var(--min-padding));
-	z-index: var(--on-top);
 	
 	border-radius: 0;
 	box-shadow: var(--section-shadow) var(--background-30);
 }
 @media only screen and (min-width: 801px) {
 	navbar {
-		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
+		transition: padding-top var(--layout-animation), box-shadow var(--style-animation);
 	}
 	navbar:hover {
-		margin-top: calc(var(--max-padding) + var(--min-padding));
+		padding-top: calc(var(--max-padding) + var(--min-padding));
 		
 		box-shadow: var(--section-shadow) var(--background-40);
 		
-		transition: margin-top var(--layout-animation), box-shadow var(--style-animation);
+		transition: padding-top var(--layout-animation), box-shadow var(--style-animation);
 	}
 }
 navbar[position=bottom] {
