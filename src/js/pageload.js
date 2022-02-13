@@ -23,6 +23,7 @@ checkUI =()=> { setUI([
 	isTablet() && 'tablet' ||
 	isMobile() && 'mobile'
 ]); };
+checkUI();
 $(window).on('resize', checkUI);
 
 /*
