@@ -24,11 +24,19 @@
 	--background-40: #E0E4EB;
 	--background-50: #F2F2F2;
 
+	--overlay-background-5: var(--background-20);
+	--overlay-background-10: var(--background-30);
+	--overlay-background-15: var(--background-40);
+
 	--foreground-10: #08001A;
 	--foreground-20: #070018;
 	--foreground-30: #070016;
 	--foreground-40: #060014;
 	--foreground-50: #050012;
+
+	--overlay-foreground-5: var(--foreground-20);
+	--overlay-foreground-10: var(--foreground-30);
+	--overlay-foreground-15: var(--foreground-40);
 
 	--charmga-accent-10: #025041;
 	--charmga-accent-20: #036352;

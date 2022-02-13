@@ -24,11 +24,19 @@
 	--background-40: #060014;
 	--background-50: #050012;
 
+	--overlay-background-5: var(--background-20);
+	--overlay-background-10: var(--background-30);
+	--overlay-background-15: var(--background-40);
+	
 	--foreground-10: #E6F5F2;
 	--foreground-20: #D8E4F3;
 	--foreground-30: #C7CBD1;
 	--foreground-40: #E0E4EB;
 	--foreground-50: #F2F2F2;
+	
+	--overlay-foreground-5: var(--foreground-20);
+	--overlay-foreground-10: var(--foreground-30);
+	--overlay-foreground-15: var(--foreground-40);
 
 	--primary: var(--accent);
 
