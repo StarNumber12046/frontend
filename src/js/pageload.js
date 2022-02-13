@@ -28,14 +28,9 @@ $(window).on('resize', checkUI);
 /*
 	Dynamic theming based on user's system preferences
 */
-// Let's check if the user likes light theme through the browser
-let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-
 // If the user prefers light theme we'll apply light theme to the webpage
 // Else fall back to the default dark theme
-// We set the '#colorScheme' link to our user's preferred theme
-// this is because CSS doesn't allow for dynamic imports with media queries
-setTheme(prefersLight ? 'light' : 'dark');
+setTheme('auto');
 
 /*
 	Automatically move to the user's preferred home page

@@ -36,3 +36,5 @@ const res = {
 		"defaults": "./src/user/defaults.json"
 	}
 };
+
+res.themes["auto"] = window.matchMedia("(prefers-color-scheme: light)").matches ? res.themes.light : res.themes.dark;
