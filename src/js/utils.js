@@ -18,14 +18,19 @@
 /* The document body in jQuery */
 const body = $(document.body);
 
-/*
-	Get the current user's theme
-*/
-let theme = $(res.css.colorScheme).attr('href');
+/* Get the current browser location */
+let location =()=> { return window.location.href; };
 
-/*
-	Change the current webpage theme
-*/
+/* Change the user's location */
+function go(href) {
+	window.location.href = href;
+	return location;
+}
+
+/* Get the current user's theme */
+let theme =()=> { return $(res.css.colorScheme).attr('href'); };
+
+/* Change the current webpage theme */
 function setTheme(path) {
 	// Check if the given theme name exists in the res.themes list, if so gets
 	// the associated path
@@ -33,7 +38,7 @@ function setTheme(path) {
 	// Applies the theme by changing the href attribute of the colorscheme object
 	// because CSS does not allow dynamic imports
 	$(res.css.colorScheme).attr('href', path);
-	return theme;
+	return theme();
 }
 
 function screenSmaller(size) {
@@ -47,34 +52,26 @@ let isDesktop =()=> { return screenLarger(settings.ux.desktopScreen); }
 let isTablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
 let isMobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
 
-/*
-	Switch between UI modes
-*/
+/* Switch between UI modes */
 function setUI(device) {
 	res.ui[device].forEach(expr => {
 		return eval(expr)
 	});
 }
 
-/*
-	Get the user's current working page
-*/
-let section = window.location.hash;
+/* Get the user's current working page */
+let section =()=> { return window.location.hash; };
 
-/*
-	Move to a specific section of the website
-*/
+/* Move to a specific section of the website */
 function moveTo(path) {
 	// Add a leading # hash to the given string if not already present
 	if (!path.startsWith("#")) { path = `#${path}`; }
 	// Move to the specified section; it just adds #section to the URL
 	window.location.hash = path;
-	return section;
+	return section();
 }
 
-/*
-	Move navbar to the top/bottom
-*/
+/* Move navbar to the top/bottom */
 function moveNavbar(position) {
 	let navbar = $(res.html.navbar);
 	// Change the position attribute of the navbar element, which is assigned to
@@ -84,9 +81,7 @@ function moveNavbar(position) {
 	return navbar.attr('position');
 }
 
-/*
-	Convenience functions for quicker debugging
-*/
+/* Convenience functions for quicker debugging */
 const dark =()=> setTheme('dark');
 const light =()=> setTheme('light');
 const desktop =()=> setUI('desktop');
