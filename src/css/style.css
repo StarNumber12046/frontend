@@ -68,7 +68,7 @@ a:hover {
 }
 
 b,
-info::before, warning::before, error::before, code::before {
+info::before, code::before {
 	font-weight: var(--bold);
 	letter-spacing: var(--bold-letter-spacing);
 }
@@ -80,7 +80,7 @@ h1, .display {
 
 h2, .headline,
 section::before,
-main > info::before, main > warning::before, main > error::before {
+main > info::before {
 	font-family: var(--headline);
 	font-size: var(--headline-size);
 	font-weight: var(--bold);
@@ -135,11 +135,6 @@ section::before {
 section[title]::before { content: attr(title); }
 section[subtitle]::before { content: attr(subtitle); }
 
-section[outlined], post {
-	border-radius: var(--section-corner-radius);
-	box-shadow: var(--control-shadow) var(--background-20);
-}
-
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 /***
@@ -171,7 +166,7 @@ ni::before {
 	text-decoration: none;
 }
 
-info, warning, error, code {
+info, code {
 	display: inline-block;
 	
 	margin: var(--min-padding);
@@ -191,21 +186,21 @@ info, warning, error, code {
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
-info:hover, warning:hover, error:hover, code:hover {
+info:hover, code:hover {
 	opacity: var(--max-opacity);
 	
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
-info::before, warning::before, error::before, code::before {
+info::before, code::before {
 	display: block;
 	content: attr(title) " ";
 
 	padding-bottom: var(--min-padding);
 }
-warning::before { color: var(--bright-yellow-50); }
-error::before { color: var(--sussy-red-50); }
-info > button, warning > button, error > button, code > button {
+info[type=warning]::before { color: var(--bright-yellow-50); }
+info[type=error]::before { color: var(--sussy-red-50); }
+info > button, code > button {
 	display: block;
 	
 	margin-top: var(--min-padding);
