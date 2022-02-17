@@ -1,11 +1,5 @@
-<div id='intro' align="center">
-
-  ## Contributor Covenant Code of Conduct
-  **Please read this thoroughly.** We value inclusivity and acceptance in our
-  environment.
-
-</div>
-
+Contributor Covenant Code of Conduct
+---
 ## Our Pledge
 
 <blockquote>
