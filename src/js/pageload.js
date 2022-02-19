@@ -15,10 +15,8 @@
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 
-/*
-	Responsive UI
-*/
-checkUI =()=> { setUI([
+/* Responsive UI stuff */
+let checkUI =()=> { setUI([
 	isDesktop() && 'desktop' ||
 	isTablet() && 'tablet' ||
 	isMobile() && 'mobile'
@@ -26,14 +24,8 @@ checkUI =()=> { setUI([
 checkUI();
 $(window).on('resize', checkUI);
 
-/*
-	Dynamic theming based on user's system preferences
-*/
-// If the user prefers light theme we'll apply light theme to the webpage
-// Else fall back to the default dark theme
+/* Dynamic theming based on user's system preferences */
 setTheme('auto');
 
-/*
-	Automatically move to the user's preferred home page
-*/
-moveTo(settings.ux.home); // automatically moves to the section in [home]
+/* Automatically move to the user's preferred home page */
+moveTo(settings.ux.home);
