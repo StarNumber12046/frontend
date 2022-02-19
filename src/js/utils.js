@@ -19,12 +19,12 @@
 const body = $(document.body);
 
 /* Get the current browser location */
-let location =()=> { return window.location.href; };
+let href =()=> { return window.location.href; };
 
 /* Change the user's location */
 function go(href) {
 	window.location.href = href;
-	return location;
+	return href;
 }
 
 /* Get the current user's theme */
