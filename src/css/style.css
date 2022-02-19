@@ -66,7 +66,7 @@ a:hover {
 	will-change: transition;
 	transition: color var(--style-animation);
 }
-a[type=button] {
+a[type=button], ni {
 	padding: var(--min-padding);
 	
 	border-radius: var(--control-corner-radius);
@@ -75,7 +75,7 @@ a[type=button] {
 
 	transition: background-color var(--style-animation), color var(--style-animation);
 }
-a[type=button]:hover {
+a[type=button]:hover, ni:hover {
 	background-color: var(--overlay-background-10);
 	color: var(--overlay-foreground-5);
 	background-blend-mode: overlay;
@@ -364,12 +364,6 @@ ni {
 
 	cursor: var(--link-cursor);
 	
-	will-change: transition;
-	transition: color var(--style-animation);
-}
-ni:hover {
-	color: var(--accent);
-
 	will-change: transition;
 	transition: color var(--style-animation);
 }
