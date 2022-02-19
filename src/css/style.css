@@ -255,14 +255,14 @@ navbar[position=top] {
 }
 @media only screen and (min-width: 801px) {
 	navbar[position] {
-		transition: padding-top var(--layout-animation), box-shadow var(--style-animation);
+		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
 	navbar[position]:hover {
-		padding-top: calc(var(--max-padding) + var(--min-padding));
+		padding-bottom: calc(var(--max-padding) + var(--min-padding));
 		
 		box-shadow: var(--section-shadow) var(--background-40);
 		
-		transition: padding-top var(--layout-animation), box-shadow var(--style-animation);
+		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
 }
 navbar[position=bottom] {
