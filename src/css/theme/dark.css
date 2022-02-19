@@ -18,22 +18,22 @@
 :root {
 	--accent: #04877C;
 
-	--background-10: #08001A;
-	--background-20: #070018;
-	--background-30: #070016;
-	--background-40: #060014;
-	--background-50: #050012;
+	--background-10: #202B38;
+	--background-20: #293747;
+	--background-30: #324357;
+	--background-40: #3C4F68;
+	--background-50: #455C78;
 
 	--overlay-background-5: var(--background-20);
 	--overlay-background-10: var(--background-30);
 	--overlay-background-15: var(--background-40);
 	
-	--foreground-10: #E6F5F2;
+	--foreground-10: #E5F5F2;
 	--foreground-20: #D8E4F3;
-	--foreground-30: #C7CBD1;
-	--foreground-40: #E0E4EB;
-	--foreground-50: #F2F2F2;
-	
+	--foreground-30: #C8D7E9;
+	--foreground-40: #BBCADD;
+	--foreground-50: #B1BECE;
+
 	--overlay-foreground-5: var(--foreground-20);
 	--overlay-foreground-10: var(--foreground-30);
 	--overlay-foreground-15: var(--foreground-40);

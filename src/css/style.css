@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41c12");
+@import url("./static.css?v=2b41c13");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -251,7 +251,7 @@ navbar[position=top] {
 	margin-bottom: calc(var(--max-padding) + var(--min-padding));
 	
 	border-radius: 0;
-	box-shadow: var(--section-shadow) var(--background-30);
+	box-shadow: var(--section-shadow) var(--background-20);
 }
 @media only screen and (min-width: 801px) {
 	navbar[position] {
@@ -260,7 +260,7 @@ navbar[position=top] {
 	navbar[position]:hover {
 		padding-bottom: calc(var(--max-padding) + var(--min-padding));
 		
-		box-shadow: var(--section-shadow) var(--background-40);
+		box-shadow: var(--section-shadow) var(--background-30);
 		
 		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
@@ -272,7 +272,7 @@ navbar[position=bottom] {
 	width: var(--fixed-navbar-width);
 
 	border-radius: 0;
-	box-shadow: var(--section-shadow-upward) var(--background-30);
+	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
