@@ -310,11 +310,14 @@ button:hover, input[type=submit]:hover, main button, main > form input[type=subm
 	will-change: transition;
   transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
-main button:hover, main > form input[type=submit]:hover { background-color: var(--charmga-accent-80); }
+main button:hover, main > form input[type=submit]:hover {
+	border-radius: var(--control-fuzzy-corner-radius);
+	
+	background-color: var(--charmga-accent-80);
+}
 input[type=submit] {
 	padding: var(--max-padding);
 
-	border-radius: var(--control-fuzzy-corner-radius);
 	
 	font-family: var(--icon);
 	font-size: var(--icon-button-size);
