@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41c08");
+@import url("./static.css?v=2b41c09");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -61,10 +61,26 @@ a {
 	transition: color var(--style-animation);
 }
 a:hover {
-	color: var(--primary-400);
+	color: var(--charmga-accent-60);
 	
 	will-change: transition;
 	transition: color var(--style-animation);
+}
+a[type=button] {
+	padding: var(--min-padding);
+	
+	border-radius: var(--control-corner-radius);
+
+	color: var(--accent);
+
+	transition: background-color var(--style-animation), color var(--style-animation);
+}
+a[type=button]:hover {
+	background-color: var(--overlay-background-10);
+	color: var(--overlay-foreground-5);
+	background-blend-mode: overlay;
+
+	transition: background-color var(--style-animation), color var(--style-animation);
 }
 
 b,
@@ -104,8 +120,6 @@ img {
 	max-height: var(--responsive-height);
 	height: auto;
 }
-
-n { display: inline-block; } /* use <n/> only when working in grid layouts */
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -198,16 +212,8 @@ info::before, code::before {
 
 	padding-bottom: var(--min-padding);
 }
-info[type=warning]::before { color: var(--bright-yellow-50); }
+info[type=warning]::before { color: var(--light-yellow-10); }
 info[type=error]::before { color: var(--sussy-red-50); }
-info > button, code > button {
-	display: block;
-	
-	margin-top: var(--min-padding);
-
-	background-color: var(--overlay-foreground-5);
-	color: var(--overlay-background-5);
-}
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -248,10 +254,10 @@ navbar[position=top] {
 	box-shadow: var(--section-shadow) var(--background-30);
 }
 @media only screen and (min-width: 801px) {
-	navbar {
+	navbar[position] {
 		transition: padding-top var(--layout-animation), box-shadow var(--style-animation);
 	}
-	navbar:hover {
+	navbar[position]:hover {
 		padding-top: calc(var(--max-padding) + var(--min-padding));
 		
 		box-shadow: var(--section-shadow) var(--background-40);
@@ -294,7 +300,7 @@ button, input[type=submit] {
 	will-change: transition;
   transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
-button:hover, input[type=submit]:hover {
+button:hover, input[type=submit]:hover, main button, main > form input[type=submit] {
 	padding: var(--max-padding);
 
 	font-weight: var(--bold);
@@ -304,7 +310,7 @@ button:hover, input[type=submit]:hover {
 	will-change: transition;
   transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
-
+main button:hover, main > form input[type=submit]:hover { background-color: var(--charmga-accent-80); }
 input[type=submit] {
 	padding: var(--max-padding);
 
