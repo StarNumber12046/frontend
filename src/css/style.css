@@ -332,7 +332,7 @@ input[type=submit] {
 	font-weight: var(--bold);
 }
 
-input[type=text], input[type=url], input[type=email], input[type=search] {
+input:is([type=text], [type=url], [type=email], [type=search]) {
 	display: inline;
 	
   padding: var(--standard-padding);
@@ -351,7 +351,7 @@ input[type=text], input[type=url], input[type=email], input[type=search] {
 	will-change: transition;
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
-input[type=text]:hover, input[type=url]:hover, input[type=email]:hover, input[type=search]:hover {
+input:is([type=text], [type=url], [type=email], [type=search]):hover {
 	border: var(--max-border) solid var(--accent);
 	
   color: var(--accent);
