@@ -384,5 +384,5 @@ nav a::after
 		content: attr(title);
 	}
 }
-nav[orientation=vertical] nav a
+nav[orientation=vertical] a
 { display: block; }
