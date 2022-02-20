@@ -66,7 +66,7 @@ a:hover {
 	will-change: transition;
 	transition: color var(--style-animation);
 }
-a[type=button], nav a {
+a[type=button] {
 	padding: var(--min-padding);
 	
 	border-radius: var(--control-corner-radius);
@@ -75,7 +75,7 @@ a[type=button], nav a {
 
 	transition: background-color var(--style-animation), color var(--style-animation);
 }
-a[type=button]:hover, nav a:hover {
+a[type=button]:hover {
 	background-color: var(--overlay-background-10);
 	color: var(--overlay-foreground-5);
 	background-blend-mode: overlay;
