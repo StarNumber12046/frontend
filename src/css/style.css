@@ -322,6 +322,8 @@ main button:hover, main > form input[type=submit]:hover {
 	
 	background-color: var(--charmga-accent-80);
 }
+main > form input:is([type=text], [type=url], [type=email], [type=search])
+{ border-color: var(--accent); }
 input[type=submit] {
 	padding: var(--max-padding);
 	
