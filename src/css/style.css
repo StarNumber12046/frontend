@@ -66,7 +66,7 @@ a:hover {
 	will-change: transition;
 	transition: color var(--style-animation);
 }
-a[type=button], ni {
+a[type=button], nav a {
 	padding: var(--min-padding);
 	
 	border-radius: var(--control-corner-radius);
@@ -75,7 +75,7 @@ a[type=button], ni {
 
 	transition: background-color var(--style-animation), color var(--style-animation);
 }
-a[type=button]:hover, ni:hover {
+a[type=button]:hover, nav a:hover {
 	background-color: var(--overlay-background-10);
 	color: var(--overlay-foreground-5);
 	background-blend-mode: overlay;
@@ -137,8 +137,10 @@ section {
 	overflow: auto;
 }
 
-main section, section:target, section:target section { display: grid; }
-section:not(:target) { display: none; }
+main section, section:target, section:target section, section:target-within
+{ display: grid; }
+section:not(:target)
+{ display: none; }
 
 section::before {
 	display: block;
@@ -170,7 +172,7 @@ section[subtitle]::before { content: attr(subtitle); }
 }
 
 icon,
-ni::before {
+nav a::before {
 	position: relative;
 	
 	top: var(--icon-line);
@@ -220,7 +222,7 @@ info[type=error]::before { color: var(--sussy-red-50); }
 /***
 	Sections and semantics, parts of the webpage
 ***/
-navbar {
+nav {
 	z-index: var(--on-top);
 	
 	border-radius: var(--section-corner-radius);
@@ -230,7 +232,7 @@ navbar {
 	will-change: transition;
 }
 
-navbar[orientation=horizontal] {
+nav[orientation=horizontal] {
 	display: block;
 	
 	padding: var(--max-padding);
@@ -240,24 +242,24 @@ navbar[orientation=horizontal] {
 	overflow-y: hidden;
 	overflow-x: auto;
 }
-navbar[orientation=vertical] {
-	line-height: var(--vertical-navbar-padding);
+nav[orientation=vertical] {
+	line-height: var(--vertical-nav-padding);
 
 	overflow-y: auto;
 	overflow-x: hidden;
 }
 
-navbar[position=top] {
+nav[position=top] {
 	margin-bottom: calc(var(--max-padding) + var(--min-padding));
 	
 	border-radius: 0;
 	box-shadow: var(--section-shadow) var(--background-20);
 }
 @media only screen and (min-width: 801px) {
-	navbar[position] {
+	nav[position] {
 		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
-	navbar[position]:hover {
+	nav[position]:hover {
 		padding-bottom: calc(var(--max-padding) + var(--min-padding));
 		
 		box-shadow: var(--section-shadow) var(--background-30);
@@ -265,11 +267,11 @@ navbar[position=top] {
 		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
 }
-navbar[position=bottom] {
+nav[position=bottom] {
 	position: fixed;
 	bottom: 0;
 	
-	width: var(--fixed-navbar-width);
+	width: var(--fixed-nav-width);
 
 	border-radius: 0;
 	box-shadow: var(--section-shadow-upward) var(--background-20);
@@ -352,7 +354,7 @@ input[type=text]:hover, input[type=url]:hover, input[type=email]:hover, input[ty
 }
 input[resizable] { resize: both; }
 
-ni {
+nav a {
 	margin: var(--min-padding);
 	padding: var(--standard-padding);
 
@@ -367,9 +369,9 @@ ni {
 	will-change: transition;
 	transition: color var(--style-animation);
 }
-ni::before { content: attr(icon); }
-ni::after { content: var(--text-spacing) attr(title); }
+nav a::before { content: attr(icon); }
+nav a::after { content: var(--text-spacing) attr(title); }
 @media only screen and (max-width: 800px) {
-	ni::after { display: none; }
+	nav a::after { display: none; }
 }
-navbar[orientation=vertical] ni { display: block; }
+nav[orientation=vertical] nav a { display: block; }
