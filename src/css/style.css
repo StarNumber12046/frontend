@@ -45,7 +45,8 @@ html, body {
 /***
 	Webpage background
 ***/
-body { background-color: var(--background-10); }
+body
+{ background-color: var(--background-10); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -148,8 +149,10 @@ section::before {
 	
 	line-height: var(--title-height);
 }
-section[title]::before { content: attr(title); }
-section[subtitle]::before { content: attr(subtitle); }
+section[title]::before
+{ content: attr(title); }
+section[subtitle]::before
+{ content: attr(subtitle); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -214,8 +217,10 @@ info::before, code::before {
 
 	padding-bottom: var(--min-padding);
 }
-info[type=warning]::before { color: var(--light-yellow-10); }
-info[type=error]::before { color: var(--sussy-red-50); }
+info[type=warning]::before
+{ color: var(--light-yellow-10); }
+info[type=error]::before
+{ color: var(--sussy-red-50); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -319,7 +324,6 @@ main button:hover, main > form input[type=submit]:hover {
 }
 input[type=submit] {
 	padding: var(--max-padding);
-
 	
 	font-family: var(--icon);
 	font-size: var(--icon-button-size);
@@ -352,7 +356,8 @@ input[type=text]:hover, input[type=url]:hover, input[type=email]:hover, input[ty
 	
   transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
-input[resizable] { resize: both; }
+input[resizable]
+{ resize: both; }
 
 nav a {
 	margin: var(--min-padding);
@@ -369,12 +374,15 @@ nav a {
 	will-change: transition;
 	transition: color var(--style-animation);
 }
-nav a::before { content: attr(icon); }
-nav a::after { content: var(--text-spacing) attr(title); }
+nav a::before
+{ content: attr(icon); }
+nav a::after
+{ content: var(--text-spacing) attr(title); }
 @media only screen and (max-width: 800px) {
 	nav a::after {
 		display: none;
 		content: attr(title);
 	}
 }
-nav[orientation=vertical] nav a { display: block; }
+nav[orientation=vertical] nav a
+{ display: block; }
