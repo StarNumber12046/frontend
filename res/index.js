@@ -13,10 +13,10 @@ const res = {
 	},
 	"ui": {
 		"mobile": [
-			"moveNavbar('bottom');"
+			"moveNavbar('top');"
 		],
 		"tablet": [
-			"moveNavbar('bottom');"
+			"moveNavbar('top');"
 		],
 		"desktop": [
 			"moveNavbar('top');"

@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41c14");
+@import url("./static.css?v=2b41c15");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -271,15 +271,6 @@ nav[position=top] {
 		
 		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
-}
-nav[position=bottom] {
-	position: fixed;
-	bottom: 0;
-	
-	width: var(--fixed-nav-width);
-
-	border-radius: 0;
-	box-shadow: var(--section-shadow-upward) var(--background-20);
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
