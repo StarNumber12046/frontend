@@ -23,6 +23,7 @@ let repl = $('#repl');
 // the user input
 shortenLink.on('submit', (event) => {
 	event.preventDefault();
+	if (urlBox.val() === "2 + 3") { go("http://billwurtz.com/2plus3.mp4"); }
 	$('info')
 	.attr('title', 'This is the URL you entered:')
 	.html(`<a href='${urlBox.val()}'>${urlBox.val()}</a>
@@ -32,7 +33,8 @@ shortenLink.on('submit', (event) => {
 
 debug.on('submit', (event) => {
 	event.preventDefault();
-	let result = repl.val() in ["2+2", "2 + 2"] ? "a billion" : eval(repl.val());
+	let result = eval(repl.val());
+	if (result === 4) { result = "a billion"; }
 	$('code')
 	.attr('title', `Evaluated expression: ${repl.val()}`)
 	.text(result);
