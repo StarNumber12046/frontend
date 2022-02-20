@@ -137,7 +137,7 @@ section {
 	overflow: auto;
 }
 
-main section, section:target, section:target section, section:target-within
+main section, section:target, section:target section
 { display: grid; }
 section:not(:target)
 { display: none; }
