@@ -24,15 +24,16 @@ let repl = $('#repl');
 shortenLink.on('submit', (event) => {
 	event.preventDefault();
 	$('info')
+	.attr('type', 'info')
 	.attr('title', 'This is the URL you entered:')
 	.html(`<a href='${urlBox.val()}'>${urlBox.val()}</a>
 <i>This demo is not connected to production APIs.</i>
 `);
 });
 
-shortenLink.on('invalid', (event) => {
-	if (urlBox.val() === "2 + 3") { go("http://billwurtz.com/2plus3.mp4"); }
-}
+urlBox.on('invalid', (event) => {
+	if (urlBox.val() === "2+3") { go("https://billwurtz.com/2plus3.mp4"); }
+})
 
 debug.on('submit', (event) => {
 	event.preventDefault();
