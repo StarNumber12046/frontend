@@ -23,13 +23,16 @@ let repl = $('#repl');
 // the user input
 shortenLink.on('submit', (event) => {
 	event.preventDefault();
-	if (urlBox.val() === "2 + 3") { go("http://billwurtz.com/2plus3.mp4"); }
 	$('info')
 	.attr('title', 'This is the URL you entered:')
 	.html(`<a href='${urlBox.val()}'>${urlBox.val()}</a>
 <i>This demo is not connected to production APIs.</i>
 `);
 });
+
+shortenLink.on('invalid', (event) => {
+	if (urlBox.val() === "2 + 3") { go("http://billwurtz.com/2plus3.mp4"); }
+}
 
 debug.on('submit', (event) => {
 	event.preventDefault();
