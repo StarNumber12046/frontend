@@ -32,7 +32,8 @@ shortenLink.on('submit', (event) => {
 
 debug.on('submit', (event) => {
 	event.preventDefault();
+	let result = repl.val() in ["2+2", "2 + 2"] ? "a billion" : eval(repl.val());
 	$('code')
 	.attr('title', `Evaluated expression: ${repl.val()}`)
-	.text(eval(repl.val()));
+	.text(result);
 });
