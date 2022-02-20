@@ -372,6 +372,9 @@ nav a {
 nav a::before { content: attr(icon); }
 nav a::after { content: var(--text-spacing) attr(title); }
 @media only screen and (max-width: 800px) {
-	nav a::after { display: none; }
+	nav a::after {
+		display: none;
+		content: attr(title);
+	}
 }
 nav[orientation=vertical] nav a { display: block; }
