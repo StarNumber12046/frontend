@@ -217,9 +217,9 @@ info::before, code::before {
 
 	padding-bottom: var(--min-padding);
 }
-info[type=warning]::before
+info[type=warning]::before, code[type=warning]::before
 { color: var(--light-yellow-10); }
-info[type=error]::before
+info[type=error]::before, code[type=error]::before
 { color: var(--sussy-red-50); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
