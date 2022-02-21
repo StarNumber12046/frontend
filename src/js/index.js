@@ -37,9 +37,15 @@ urlBox.on('invalid', (event) => {
 
 debug.on('submit', (event) => {
 	event.preventDefault();
-	let result = eval(repl.val());
-	if (result === 4) { result = "a billion"; }
-	$('code')
-	.attr('title', `Evaluated expression: ${repl.val()}`)
-	.text(result);
+	try {
+		let result = eval(repl.val());
+		$('code')
+		.attr('title', `Evaluated expression: ${repl.val()}`)
+		.text(result);
+	} catch (error) {
+		$('code')
+		.attr('type', 'error')
+		.attr('title', typeof error)
+		.text(error.message);
+	}
 });
