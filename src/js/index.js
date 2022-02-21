@@ -45,7 +45,7 @@ debug.on('submit', (event) => {
 	} catch (error) {
 		$('code')
 		.attr('type', 'error')
-		.attr('title', error.constructor.name)
+		.attr('title', typeof error)
 		.text(error.message);
 	}
 });
