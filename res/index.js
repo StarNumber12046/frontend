@@ -12,15 +12,9 @@ const res = {
 		"static": "./src/css/static.css",
 	},
 	"ui": {
-		"mobile": [
-			"moveNavbar('top');"
-		],
-		"tablet": [
-			"moveNavbar('top');"
-		],
-		"desktop": [
-			"moveNavbar('top');"
-		]
+		"mobile": [],
+		"tablet": [],
+		"desktop": []
 	},
 	"themes": {
 		"dark": "./src/css/theme/dark.css",

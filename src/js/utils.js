@@ -71,16 +71,6 @@ function moveTo(path) {
 	return section();
 }
 
-/* Move navbar to the top/bottom */
-function moveNavbar(position) {
-	let navbar = $(res.html.navbar);
-	// Change the position attribute of the navbar element, which is assigned to
-	// the navbar[position="top"] CSS class
-	navbar.attr('position', position);
-	$('section:target').attr('fixed_navbar', position);
-	return navbar.attr('position');
-}
-
 /* Convenience functions for quicker debugging */
 const dark =()=> setTheme('dark');
 const light =()=> setTheme('light');
