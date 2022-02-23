@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41c15");
+@import url("./static.css?v=2b41c22");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -43,10 +43,13 @@ html, body {
 }
 
 /***
-	Webpage background
+	Webpage body
 ***/
-body
-{ background-color: var(--background-10); }
+body {
+	scroll-behavior: smooth;
+
+	background-color: var(--background-10);
+}
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
