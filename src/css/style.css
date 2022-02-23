@@ -5,7 +5,7 @@
 		|  _| (_| \__ \ | | | | || (_| | (_| |
 		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
 															|___/
-	
+
 	-> Name: style.css
 	-> Description: Document stylesheet for the Fasm.ga webpage.
 	-> Resource: /src/css/style.css
@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?v=2b41c22");
+@import url("./static.css");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -27,10 +27,11 @@
 	font-size: var(--text-size);
 	text-decoration: none;
 	line-height: var(--default-line-height);
-	
+
 	color: var(--foreground-10);
 	accent-color: var(--accent);
 
+	scroll-behavior: smooth;
 	will-change: transition;
 	transition: background-color var(--style-animation), color var(--style-animation);
 }
@@ -45,11 +46,8 @@ html, body {
 /***
 	Webpage body
 ***/
-body {
-	scroll-behavior: smooth;
-
-	background-color: var(--background-10);
-}
+body
+{ background-color: var(--background-10); }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -58,21 +56,21 @@ body {
 ***/
 a {
 	color: var(--accent);
-	
+
 	text-decoration: var(--link-text-decoration);
-	
+
 	will-change: transition;
 	transition: color var(--style-animation);
 }
 a:hover {
 	color: var(--charmga-accent-60);
-	
+
 	will-change: transition;
 	transition: color var(--style-animation);
 }
 a[type=button] {
 	padding: var(--min-padding);
-	
+
 	border-radius: var(--control-corner-radius);
 
 	color: var(--accent);
@@ -132,13 +130,15 @@ img {
 ***/
 section {
 	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  grid-column-gap: var(--standard-padding);
-  grid-row-gap: var(--standard-padding);
+	grid-column-gap: var(--standard-padding);
+	grid-row-gap: var(--standard-padding);
 	place-items: center;
-	
+
 	padding: clamp(var(--min-padding), var(--standard-padding), var(--max-padding));
-	
+
 	overflow: auto;
+
+	scroll-behavior: smooth;
 }
 
 main section, section:target, section:target section
@@ -149,7 +149,7 @@ section:not(:target)
 section::before {
 	display: block;
 	content: attr(title);
-	
+
 	line-height: var(--title-height);
 }
 section[title]::before
@@ -164,15 +164,15 @@ section[subtitle]::before
 ***/
 .logo {
 	font-family: var(--display);
-	
+
 	color: var(--foreground-20);
-	
+
 	will-change: transition;
 	transition: color var(--style-animation);
 }
 .logo:hover {
 	color: var(--accent);
-	
+
 	will-change: transition;
 	transition: color var(--style-animation);
 }
@@ -180,9 +180,9 @@ section[subtitle]::before
 icon,
 nav a::before {
 	position: relative;
-	
+
 	top: var(--icon-line);
-	
+
 	font-family: var(--icon);
 	font-size: var(--icon-size);
 	text-decoration: none;
@@ -190,27 +190,27 @@ nav a::before {
 
 info, code {
 	display: inline-block;
-	
+
 	margin: var(--min-padding);
 	padding: var(--max-padding);
 	z-index: var(--in-between);
-	
+
 	max-width: max(100vw, 20%);
-	
+
 	border-radius: var(--element-corner-radius);
-	
+
 	overflow-wrap: break-word;
-	
+
 	background-color: var(--overlay-background-5);
 	color: var(--overlay-foreground-5);
 	opacity: var(--min-opacity);
-	
+
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
 info:hover, code:hover {
 	opacity: var(--max-opacity);
-	
+
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
@@ -232,19 +232,19 @@ info[type=error]::before, code[type=error]::before
 ***/
 nav {
 	z-index: var(--on-top);
-	
+
 	border-radius: var(--section-corner-radius);
 
 	background-color: var(--background-10);
-	
+
 	will-change: transition;
 }
 
 nav[orientation=horizontal] {
 	display: block;
-	
+
 	padding: var(--max-padding);
-	
+
 	white-space: var(--no-wrap);
 
 	overflow-y: hidden;
@@ -259,7 +259,7 @@ nav[orientation=vertical] {
 
 nav[position=top] {
 	margin-bottom: calc(var(--max-padding) + var(--min-padding));
-	
+
 	border-radius: 0;
 	box-shadow: var(--section-shadow) var(--background-20);
 }
@@ -269,9 +269,9 @@ nav[position=top] {
 	}
 	nav[position]:hover {
 		padding-bottom: calc(var(--max-padding) + var(--min-padding));
-		
+
 		box-shadow: var(--section-shadow) var(--background-30);
-		
+
 		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
 	}
 }
@@ -283,44 +283,44 @@ nav[position=top] {
 ***/
 button, input[type=submit] {
 	display: inline-block;
-  vertical-align: top;
-	
-  padding: var(--standard-padding);
-	
-  border: none;
+	vertical-align: top;
+
+	padding: var(--standard-padding);
+
+	border: none;
 	border-radius: var(--control-corner-radius);
-	
+
 	font-family: var(--monospace);
 	font-size: var(--button-text-size);
-	
-  background-color: var(--foreground-20);
-  color: var(--background-10);
-	
+
+	background-color: var(--foreground-20);
+	color: var(--background-10);
+
 	cursor: pointer;
-	
+
 	will-change: transition;
-  transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
+	transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 button:hover, input[type=submit]:hover, main button, main > form input[type=submit] {
 	padding: var(--max-padding);
 
 	font-weight: var(--bold);
-	
+
 	background-color: var(--accent);
-	
+
 	will-change: transition;
-  transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
+	transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
 main button:hover, main > form input[type=submit]:hover {
 	border-radius: var(--control-fuzzy-corner-radius);
-	
+
 	background-color: var(--charmga-accent-80);
 }
 main > form input:is([type=text], [type=url], [type=email], [type=search])
 { border-color: var(--accent); }
 input[type=submit] {
 	padding: var(--max-padding);
-	
+
 	font-family: var(--icon);
 	font-size: var(--icon-button-size);
 	font-weight: var(--bold);
@@ -328,29 +328,29 @@ input[type=submit] {
 
 input:is([type=text], [type=url], [type=email], [type=search]) {
 	display: inline;
-	
-  padding: var(--standard-padding);
-	
-  border: var(--max-border) solid var(--foreground-20);
-  border-radius: var(--control-corner-radius);
-  outline: none;
+
+	padding: var(--standard-padding);
+
+	border: var(--max-border) solid var(--foreground-20);
+	border-radius: var(--control-corner-radius);
+	outline: none;
 
 	resize: none;
-	
-  font-family: var(--monospace);
-	
+
+	font-family: var(--monospace);
+
 	background-color: var(--transparency);
-  color: var(--foreground-10);
-	
+	color: var(--foreground-10);
+
 	will-change: transition;
-  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+	transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 input:is([type=text], [type=url], [type=email], [type=search]):hover {
 	border: var(--max-border) solid var(--accent);
-	
-  color: var(--accent);
-	
-  transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
+
+	color: var(--accent);
+
+	transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
 input[resizable]
 { resize: both; }
@@ -362,11 +362,11 @@ nav a {
 	font-family: var(--monospace);
 
 	color: var(--foreground-10);
-	
+
 	white-space: var(--no-wrap);
 
 	cursor: var(--link-cursor);
-	
+
 	will-change: transition;
 	transition: color var(--style-animation);
 }
