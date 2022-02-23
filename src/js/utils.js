@@ -5,7 +5,7 @@
 		|  _| (_| \__ \ | | | | || (_| | (_| |
 		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
 															|___/
-	
+
 	-> Name: utils.js
 	-> Description: General utility/debugging functions
 	-> Resource: /src/js/utils.js

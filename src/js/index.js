@@ -5,7 +5,7 @@
 		|  _| (_| \__ \ | | | | || (_| | (_| |
 		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
 															|___/
-	
+
 	-> Name: index.js
 	-> Description: Main webpage script
 	-> Resource: /src/js/index.js

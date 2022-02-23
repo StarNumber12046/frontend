@@ -5,7 +5,7 @@
 		|  _| (_| \__ \ | | | | || (_| | (_| |
 		|_|  \__,_|___/_| |_| |_(_)__, |\__,_|
 															|___/
-	
+
 	-> Name: pageload.js
 	-> Description: Executed at startup for data binding
 	-> Resource: /src/js/pageload.js
