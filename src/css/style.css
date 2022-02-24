@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css");
+@import url("./static.css?date=20220224_1");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -48,6 +48,9 @@ html, body {
 ***/
 body
 { background-color: var(--background-10); }
+
+grid
+{ display: grid; }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -143,6 +146,12 @@ section {
 
 main section, section:target, section:target section
 { display: grid; }
+/* Using @supports since :target-within is
+annoyingly not supported by any browser ATM */
+@supports selector(:target-within) {
+	section:target-within
+	{ display: grid; }
+}
 section:not(:target)
 { display: none; }
 

@@ -32,34 +32,34 @@
 		</title>
 
 		<script id='jquery'
-			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			src="https://code.jquery.com/jquery-3.6.0.min.js?date=20220224_1"
 			integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
 			crossorigin="anonymous"
 		></script>
 
 		<script id='resources'
-			src="./res/index.js"
+			src="./res/index.js?date=20220224_1"
 		></script>
 		<script id='defaults'
-			src="./content/byUser/defaults.js"
+			src="./content/byUser/defaults.js?date=20220224_1"
 		></script>
 		<script id='usersettings'
-			src="./content/byUser/settings.js"
+			src="./content/byUser/settings.js?date=20220224_1"
 		></script>
 
 		<link id='colorscheme'
 			rel='stylesheet'
-			href="./src/css/theme/dark.css" />
+			href="./src/css/theme/dark.css?date=20220224_1" />
 		<link id='style'
 			rel='stylesheet'
-			href="./src/css/style.css" />
+			href="./src/css/style.css?date=20220224_1" />
 
 		<link id='favicon'
 			rel='icon'
 			href="./res/raster/favicon.ico" />
 
 		<script id='utils'
-			src="./src/js/utils.js"
+			src="./src/js/utils.js?date=20220224_1"
 		></script>
 	</head>
 
@@ -136,30 +136,52 @@
 		</section>
 
 		<section id='settings' title='Settings'>
-			<nav orientation='vertical'>
-				<a
-					icon='person' title='Account'
-				></a>
-				<a
-					icon='monitor' title='Appeareance'
-				></a>
-				<a
-					icon='web' title='User experience'
-				></a>
-				<a
-					icon='lock' title='Security'
-				></a>
-				<a
-					icon='code' title='Developer options'
-				></a>
-			</nav>
+			<div>
+				<nav orientation='vertical'>
+					<a
+						icon='person' title='Account'
+					></a>
+					<a
+						icon='monitor' title='Appeareance'
+					></a>
+					<a
+						icon='web' title='User experience'
+					></a>
+					<a
+						icon='lock' title='Security'
+					></a>
+					<a
+						icon='code' title='Developer options'
+					></a>
+				</nav>
+				
+				<section id='settings_account' subtitle='Account'>
+					<info type='warning'>
+						<i>Website is not connected to the account system.</i>
+					</info>
+				</section>
+
+				<section id='settings_appeareance' subtitle='Appeareance'>
+					<info>
+						This section will allow you to control the website's
+						appeareance.
+					</info>
+				</section>
+
+				<section id='settings_ux' subtitle='User experience'>
+					<info>
+						This section will allow you to control your experience
+						on the website.
+					</info>
+				</section>
+			</div>
 		</section>
 
 		<script id='main'
-			src="./src/js/index.js"
+			src="./src/js/index.js?date=20220224_1"
 		></script>
 		<script id='pageload'
-			src="./src/js/pageload.js"
+			src="./src/js/pageload.js?date=20220224_1"
 		></script>
 	</body>
 </html>
