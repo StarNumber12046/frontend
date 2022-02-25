@@ -235,7 +235,7 @@ info[type=error]::before, code[type=error]::before
 { color: var(--sussy-red-50); }
 info.standWithUkraine {
 	background-color: #0057B7;
-	color: var(--overlay-background-5);
+	color: var(--foreground-10);
 }
 info.standWithUkraine::before {
 	content: '#StandWithUkraine';
