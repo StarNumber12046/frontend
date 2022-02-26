@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?date=20220226_3");
+@import url("./static.css?date=20220226_4");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -148,6 +148,33 @@ section[title]::before
 section[subtitle]::before
 { content: attr(subtitle); }
 
+header, footer
+{
+	display: block;
+
+	padding: var(--min-padding);
+	z-index: var(--on-top);
+
+	background-color: var(--background-10);
+
+	will-change: transition;
+	transition: box-shadow var(--style-animation);
+}
+header.sticky
+{ position: absolute; }
+header
+{ box-shadow: var(--section-shadow) var(--background-20); }
+footer
+{	box-shadow: var(--section-shadow-upward) var(--background-20); }
+@media only screen and (min-width: 801px) {
+	header:hover,
+	footer:hover {
+		box-shadow: var(--section-shadow) var(--background-30);
+
+		transition: box-shadow var(--style-animation);
+	}
+}
+
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 /***
@@ -229,20 +256,15 @@ info.standWithUkraine::before
 /***
 	Sections and semantics, parts of the webpage
 ***/
-nav {
-	z-index: var(--on-top);
+nav
+{
+	padding: var(--standard-padding);
 
 	border-radius: var(--section-corner-radius);
-
-	background-color: var(--background-10);
-
-	will-change: transition;
 }
 
 nav[orientation=horizontal] {
 	display: block;
-
-	padding: var(--max-padding);
 
 	white-space: var(--no-wrap);
 
@@ -258,21 +280,11 @@ nav[orientation=vertical] {
 	overflow-x: hidden;
 }
 
-nav[position=top] {
+header nav,
+footer nav {
+	text-align: center;
+
 	border-radius: 0;
-	box-shadow: var(--section-shadow) var(--background-20);
-}
-@media only screen and (min-width: 801px) {
-	nav[position] {
-		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
-	}
-	nav[position]:hover {
-		padding-bottom: calc(var(--max-padding) + var(--min-padding));
-
-		box-shadow: var(--section-shadow) var(--background-30);
-
-		transition: padding-bottom var(--layout-animation), box-shadow var(--style-animation);
-	}
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/

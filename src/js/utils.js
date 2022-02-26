@@ -16,7 +16,7 @@
 
 
 /* The document body in jQuery */
-const body = $(document.body);
+const body =()=> $(document.body);
 
 /* Get the current browser location */
 let href =()=> { return window.location.href; };
@@ -41,6 +41,7 @@ function setTheme(path) {
 	return theme();
 }
 
+/* Handling screen sizes */
 function screenSmaller(size) {
 	return window.matchMedia(`only screen and (max-width: ${size}px)`).matches;
 }
@@ -62,6 +63,12 @@ function setUI(device) {
 /* Get the user's current working page */
 let section =()=> { return window.location.hash; };
 
+/* The page's header */
+let header =()=> $('header').first();
+
+/* The page's footer */
+let footer =()=> $('footer').last();
+
 /* Move to a specific section of the website */
 function moveTo(path) {
 	// Add a leading # hash to the given string if not already present
@@ -69,6 +76,18 @@ function moveTo(path) {
 	// Move to the specified section; it just adds #section to the URL
 	window.location.hash = path;
 	return section();
+}
+
+/*
+	Show the header at the top of the screen, absolutely positioned
+*/
+function showHeader() {
+	header().addClass('sticky');
+	return header;
+}
+function hideHeader() {
+	header().removeClass('sticky');
+	return header;
 }
 
 /* Convenience functions for quicker debugging */
