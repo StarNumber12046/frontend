@@ -40,7 +40,7 @@ debug.on('submit', (event) => {
 	try {
 		let result = eval(repl.val());
 		$('code')
-		.attr('title', `Evaluated expression: ${repl.val()}`)
+		.attr('title', repl.val())
 		.text(result);
 	} catch (error) {
 		$('code')
