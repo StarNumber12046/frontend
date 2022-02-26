@@ -152,19 +152,13 @@ header, footer
 {
 	display: block;
 
-	padding: var(--min-padding);
+	padding: var(--standard-padding);
 	z-index: var(--on-top);
 
 	background-color: var(--background-10);
 
 	will-change: transition;
 	transition: box-shadow var(--style-animation);
-}
-header.sticky
-{
-	position: absolute;
-	
-	width: 100%;
 }
 header
 { box-shadow: var(--section-shadow) var(--background-20); }

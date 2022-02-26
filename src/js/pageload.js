@@ -16,13 +16,13 @@
 
 
 /* Responsive UI stuff */
-let checkUI =()=> { setUI([
+let changeUI =()=> { setUI([
 	isDesktop() && 'desktop' ||
 	isTablet() && 'tablet' ||
 	isMobile() && 'mobile'
 ]); };
-checkUI();
-$(window).on('resize', checkUI);
+changeUI();
+$(window).on('resize', changeUI);
 
 /* Dynamic theming based on user's system preferences */
 setTheme('auto');

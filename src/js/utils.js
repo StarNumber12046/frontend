@@ -78,18 +78,6 @@ function moveTo(path) {
 	return section();
 }
 
-/*
-	Show the header at the top of the screen, absolutely positioned
-*/
-function showHeader() {
-	header().addClass('sticky');
-	return header;
-}
-function hideHeader() {
-	header().removeClass('sticky');
-	return header;
-}
-
 /* Convenience functions for quicker debugging */
 const dark =()=> setTheme('dark');
 const light =()=> setTheme('light');
