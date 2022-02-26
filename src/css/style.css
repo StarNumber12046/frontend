@@ -49,7 +49,7 @@ html, body {
 body
 { background-color: var(--background-10); }
 
-grid
+.grid
 { display: grid; }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -146,8 +146,6 @@ section {
 
 main section, section:target, section:target section
 { display: grid; }
-/* Using @supports since :target-within is
-annoyingly not supported by any browser ATM */
 @supports selector(:target-within) {
 	section:target-within
 	{ display: grid; }
@@ -200,7 +198,7 @@ nav a::before {
 info, code {
 	display: inline-block;
 
-	margin: var(--min-padding);
+	margin: var(--element-margin);
 	padding: var(--max-padding);
 	z-index: var(--in-between);
 
@@ -269,6 +267,8 @@ nav[orientation=horizontal] {
 	overflow-x: auto;
 }
 nav[orientation=vertical] {
+	display: inline;
+
 	line-height: var(--vertical-nav-padding);
 
 	overflow-y: auto;
@@ -276,8 +276,6 @@ nav[orientation=vertical] {
 }
 
 nav[position=top] {
-	margin-bottom: calc(var(--max-padding) + var(--min-padding));
-
 	border-radius: 0;
 	box-shadow: var(--section-shadow) var(--background-20);
 }
@@ -370,11 +368,9 @@ input:is([type=text], [type=url], [type=email], [type=search]):hover {
 
 	transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
-input[resizable]
-{ resize: both; }
 
 nav a {
-	margin: var(--min-padding);
+	margin: var(--inline-control-margin);
 	padding: var(--standard-padding);
 
 	font-family: var(--monospace);
