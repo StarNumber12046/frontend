@@ -103,3 +103,11 @@
 	--style-animation: 0.2s ease;
 	--layout-animation: 0.3s ease;
 }
+@media (prefers-reduced-motion) {
+	:root {
+		--control-fuzzy-corner-radius: var(--control-corner-radius);
+
+		--style-animation: 0s;
+		--layout-animation: 0s;
+	}
+}
