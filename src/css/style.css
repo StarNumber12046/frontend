@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?date=20220224_1");
+@import url("./static.css?date=20220226_1");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -233,7 +233,7 @@ info[type=error]::before, code[type=error]::before
 { color: var(--sussy-red-50); }
 info.standWithUkraine {
 	background-color: #0057B7;
-	color: var(--foreground-10);
+	color: var(--background-10);
 }
 info.standWithUkraine::before {
 	content: '#StandWithUkraine';
