@@ -19,7 +19,7 @@
 const body =()=> $(document.body);
 
 /* Get the current browser location */
-let href =()=> { return window.location.href; };
+let href =()=> window.location.href;
 
 /* Change the user's location */
 function go(href) {
@@ -28,7 +28,7 @@ function go(href) {
 }
 
 /* Get the current user's theme */
-let theme =()=> { return $(res.css.colorScheme).attr('href'); };
+let theme =()=> $(res.css.colorScheme).attr('href');
 
 /* Change the current webpage theme */
 function setTheme(path) {
@@ -49,9 +49,9 @@ function screenLarger(size) {
 	return window.matchMedia(`only screen and (min-width: ${size}px)`).matches;
 }
 
-let isDesktop =()=> { return screenLarger(settings.ux.desktopScreen); }
-let isTablet =()=> { return screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen); }
-let isMobile =()=> { return screenSmaller(settings.ux.mobileScreen); }
+let isDesktop =()=> screenLarger(settings.ux.desktopScreen);
+let isTablet =()=> screenLarger(settings.ux.tabletScreen) && screenSmaller(settings.ux.desktopScreen);
+let isMobile =()=> screenSmaller(settings.ux.mobileScreen);
 
 /* Switch between UI modes */
 function setUI(device) {
