@@ -161,7 +161,11 @@ header, footer
 	transition: box-shadow var(--style-animation);
 }
 header.sticky
-{ position: absolute; }
+{
+	position: absolute;
+	
+	width: 100%;
+}
 header
 { box-shadow: var(--section-shadow) var(--background-20); }
 footer
@@ -282,9 +286,9 @@ nav[orientation=vertical] {
 
 header nav,
 footer nav {
-	text-align: center;
-
 	border-radius: 0;
+
+	text-align: center;
 }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
