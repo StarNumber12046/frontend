@@ -24,6 +24,14 @@
 
 
 :root {
+	--window-margin: var(--page-padding);
+	--control-margin: var(--min-padding);
+	--inline-control-margin: 0 var(--min-padding);
+	--element-margin: var(--min-padding) 0;
+	--inline-element-margin: 0 var(--min-padding);
+	--section-margin: var(--standard-padding) 0;
+	--inline-section-margin: 0 var(--min-padding);
+
 	--page-padding: 0;
 	--min-padding: 6px;
 	--standard-padding: 8px;
