@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?date=20220226_1");
+@import url("./static.css?date=20220226_3");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -70,22 +70,6 @@ a:hover {
 
 	will-change: transition;
 	transition: color var(--style-animation);
-}
-a[type=button] {
-	padding: var(--min-padding);
-
-	border-radius: var(--control-corner-radius);
-
-	color: var(--accent);
-
-	transition: background-color var(--style-animation), color var(--style-animation);
-}
-a[type=button]:hover {
-	background-color: var(--overlay-background-10);
-	color: var(--overlay-foreground-5);
-	background-blend-mode: overlay;
-
-	transition: background-color var(--style-animation), color var(--style-animation);
 }
 
 b,
@@ -191,9 +175,13 @@ nav a::before {
 	top: var(--icon-line);
 
 	font-family: var(--icon);
-	font-size: var(--icon-size);
 	text-decoration: none;
 }
+
+icon.material,
+nav a::before,
+input[type=submit]
+{ font-family: var(--icon); }
 
 info, code {
 	display: inline-block;
@@ -202,11 +190,9 @@ info, code {
 	padding: var(--max-padding);
 	z-index: var(--in-between);
 
-	max-width: max(100vw, 20%);
+	max-width: var(--max-line-width);
 
 	border-radius: var(--element-corner-radius);
-
-	overflow-wrap: break-word;
 
 	background-color: var(--overlay-background-5);
 	color: var(--overlay-foreground-5);
@@ -223,7 +209,7 @@ info:hover, code:hover {
 }
 info::before, code::before {
 	display: block;
-	content: attr(title) " ";
+	content: attr(title);
 
 	padding-bottom: var(--min-padding);
 }
@@ -233,13 +219,10 @@ info[type=error]::before, code[type=error]::before
 { color: var(--sussy-red-50); }
 info.standWithUkraine {
 	background-color: #0057B7;
-	color: var(--background-10);
-}
-info.standWithUkraine::before {
-	content: '#StandWithUkraine';
-
 	color: #FFD700;
 }
+info.standWithUkraine::before
+{ content: '#StandWithUkraine'; }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
@@ -267,7 +250,7 @@ nav[orientation=horizontal] {
 	overflow-x: auto;
 }
 nav[orientation=vertical] {
-	display: inline;
+	display: inline-block;
 
 	line-height: var(--vertical-nav-padding);
 
@@ -297,7 +280,7 @@ nav[position=top] {
 /***
 	Interactive user controls: buttons, inputs and forms
 ***/
-button, input[type=submit] {
+button, .button, input[type=submit] {
 	display: inline-block;
 	vertical-align: top;
 
@@ -306,7 +289,6 @@ button, input[type=submit] {
 	border: none;
 	border-radius: var(--control-corner-radius);
 
-	font-family: var(--monospace);
 	font-size: var(--button-text-size);
 
 	background-color: var(--foreground-20);
@@ -317,7 +299,10 @@ button, input[type=submit] {
 	will-change: transition;
 	transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
-button:hover, input[type=submit]:hover, main button, main > form input[type=submit] {
+button, .button
+{ font-family: var(--monospace); }
+button:hover, .button:hover, input[type=submit]:hover,
+main button, main > form input[type=submit] {
 	padding: var(--max-padding);
 
 	font-weight: var(--bold);
@@ -337,7 +322,6 @@ main > form input:is([type=text], [type=url], [type=email], [type=search])
 input[type=submit] {
 	padding: var(--max-padding);
 
-	font-family: var(--icon);
 	font-size: var(--icon-button-size);
 	font-weight: var(--bold);
 }

@@ -25,7 +25,7 @@
 
 :root {
 	--window-margin: var(--page-padding);
-	--control-margin: var(--min-padding);
+	--control-margin: var(--min-padding) 0;
 	--inline-control-margin: 0 var(--min-padding);
 	--element-margin: var(--min-padding) 0;
 	--inline-element-margin: 0 var(--min-padding);
@@ -41,6 +41,8 @@
 	--size-offset-20: 8px;
 	--responsive-width: max(100%, 50%);
 	--responsive-height: max(100%, 50%);
+	--max-line-width: 60ch;
+	--min-line-width: 10ch;
 
 	--behind-content: -5;
 	--in-content: 0;
