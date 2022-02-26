@@ -229,6 +229,8 @@ info, code {
 	color: var(--overlay-foreground-5);
 	opacity: var(--min-opacity);
 
+	overflow-wrap: break-word;
+
 	will-change: transition;
 	transition: opacity var(--style-animation);
 }
