@@ -61,7 +61,7 @@ function setUI(device) {
 }
 
 /* Get the user's current working page */
-let section =()=> { return window.location.hash; };
+let section =()=> window.location.hash.replace('#', '');
 
 /* The page's header */
 let header =()=> $('header').first();
