@@ -25,7 +25,7 @@ changeUI();
 $(window).on('resize', changeUI);
 
 /* Dynamic theming based on user's system preferences */
-setTheme('auto');
+setTheme('_auto');
 
 /* Automatically move to the user's preferred home page */
 moveTo(settings.ux.home);

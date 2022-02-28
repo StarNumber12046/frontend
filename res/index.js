@@ -25,7 +25,10 @@ const res = {
 	},
 	"themes": {
 		"dark": "./src/css/theme/dark.css",
-		"light": "./src/css/theme/light.css"
+		"light": "./src/css/theme/light.css",
+		"_auto": matchMedia('(prefers-color-scheme: light)').matches
+		? this.light
+		: this.dark
 	},
 	"js": {
 		"utils": "./src/js/utils.js",
@@ -37,5 +40,3 @@ const res = {
 		"defaults": "./content/byUser/defaults.json"
 	}
 };
-
-res.themes["auto"] = window.matchMedia("(prefers-color-scheme: light)").matches ? res.themes.light : res.themes.dark;
