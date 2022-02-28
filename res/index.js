@@ -33,8 +33,8 @@ const res = {
 		"pageload": "./src/js/pageload.js"
 	},
 	"data": {
-		"settings": "./src/user/settings.json",
-		"defaults": "./src/user/defaults.json"
+		"settings": "./content/byUser/settings.json",
+		"defaults": "./content/byUser/defaults.json"
 	}
 };
 
