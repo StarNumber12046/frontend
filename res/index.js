@@ -6,6 +6,13 @@ const res = {
 		"index": "./index.html",
 		"navbar": "#navbar"
 	},
+	"pages": {
+		"_home": $('main > section').attr('id'),
+		"newLink": "#newLink",
+		"dashboard": "#dashboard",
+		"settings": "#settings",
+		"news": "#news"
+	},
 	"css": {
 		"colorScheme": "#colorscheme",
 		"style": "./src/css/style.css",
