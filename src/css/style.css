@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?date=20220226_7");
+@import url("./static.css?date=20220228_1");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -292,7 +292,7 @@ footer nav {
 /***
 	Interactive user controls: buttons, inputs and forms
 ***/
-button, .button, input[type=submit] {
+button, input[type=submit] {
 	display: inline-block;
 	vertical-align: top;
 
@@ -311,8 +311,9 @@ button, .button, input[type=submit] {
 	will-change: transition;
 	transition: padding var(--layout-animation), font-weight var(--style-animation), border-radius var(--style-animation), background-color var(--style-animation);
 }
-button, .button
+button
 { font-family: var(--monospace); }
+
 button:hover, .button:hover, input[type=submit]:hover,
 main button, main > form input[type=submit] {
 	padding: var(--max-padding);
@@ -329,6 +330,7 @@ main button:hover, main > form input[type=submit]:hover {
 
 	background-color: var(--charmga-accent-80);
 }
+
 main > form input:is([type=text], [type=url], [type=email], [type=search])
 { border-color: var(--accent); }
 input[type=submit] {
@@ -339,8 +341,6 @@ input[type=submit] {
 }
 
 input:is([type=text], [type=url], [type=email], [type=search]) {
-	display: inline;
-
 	padding: var(--standard-padding);
 
 	border: var(--max-border) solid var(--foreground-20);
