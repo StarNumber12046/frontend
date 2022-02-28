@@ -28,4 +28,4 @@ $(window).on('resize', changeUI);
 setTheme('_auto');
 
 /* Automatically move to the user's preferred home page */
-moveTo(settings.ux.home);
+moveTo('_home');

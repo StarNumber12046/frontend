@@ -7,7 +7,6 @@ const res = {
 		"navbar": "#navbar"
 	},
 	"pages": {
-		"_home": $('main > section').attr('id'),
 		"newLink": "#newLink",
 		"dashboard": "#dashboard",
 		"settings": "#settings",
@@ -25,10 +24,7 @@ const res = {
 	},
 	"themes": {
 		"dark": "./src/css/theme/dark.css",
-		"light": "./src/css/theme/light.css",
-		"_auto": matchMedia('(prefers-color-scheme: light)').matches
-		? this.light
-		: this.dark
+		"light": "./src/css/theme/light.css"
 	},
 	"js": {
 		"utils": "./src/js/utils.js",

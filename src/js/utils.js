@@ -70,7 +70,11 @@ let header =()=> $('header').first();
 let footer =()=> $('footer').last();
 
 /* Move to a specific section of the website */
-function moveTo(path) {
+function moveTo(page) {
+	let path = page;
+	// Check if the page exists in the pages list
+	// If so, move to the associated path
+	if (page in res.pages) { path = res.pages[page]; }
 	// Add a leading # hash to the given string if not already present
 	if (!path.startsWith("#")) { path = `#${path}`; }
 	// Move to the specified section; it just adds #section to the URL
