@@ -6,7 +6,6 @@ const defaults = {
 		"colorScheme": "auto"
 	},
 	"ux": {
-		"home": "#newLink",
 		"interface": "auto",
 		"mobileScreen": 800,
 		"tabletScreen": 801,
