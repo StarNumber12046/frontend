@@ -218,10 +218,10 @@ info, code {
 	max-width: var(--max-line-width);
 
 	border-radius: var(--element-corner-radius);
+	box-shadow: var(--section-shadow) var(--background-20);
 
-	background-color: var(--overlay-background-5);
+	background-color: var(--background-10);
 	color: var(--overlay-foreground-5);
-	opacity: var(--min-opacity);
 
 	overflow-wrap: break-word;
 
