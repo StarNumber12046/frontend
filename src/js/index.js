@@ -26,9 +26,7 @@ shortenLink.on('submit', (event) => {
 	$('info')
 	.attr('type', 'info')
 	.attr('title', 'This is the URL you entered:')
-	.html(`<a href='${urlBox.val()}'>${urlBox.val()}</a>
-<i>This demo is not connected to production APIs.</i>
-`);
+	.html(`<a href='${urlBox.val()}'>${urlBox.val()}`);
 });
 
 urlBox.on('invalid', (event) => {
@@ -38,8 +36,20 @@ urlBox.on('invalid', (event) => {
 debug.on('submit', (event) => {
 	event.preventDefault();
 	try {
+		if (
+			(';;' in repl.val() || 'while' in repl.val())
+			&& ($('code').attr('type') != 'warning')
+		) {
+			$('code')
+			.attr('type', 'warning')
+			.attr('title', 'Infinite loop')
+			.text(`This code may lead to potentially infinite loops.
+The webpage might completely freeze afterwards. Press enter again if you
+are really sure you want to continue.`);
+		}
 		let result = eval(repl.val());
 		$('code')
+		.attr('type', 'info')
 		.attr('title', repl.val())
 		.text(result);
 	} catch (error) {
