@@ -13,7 +13,7 @@
 */
 
 /*** Imports ***/
-@import url("./static.css?date=20220228_2");
+@import url("./static.css?date=20220301_1");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap");
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
@@ -218,7 +218,7 @@ info, code {
 	max-width: var(--max-line-width);
 
 	border-radius: var(--element-corner-radius);
-	box-shadow: var(--section-shadow) var(--background-20);
+	box-shadow: var(--element-shadow) var(--background-20);
 
 	background-color: var(--background-10);
 	color: var(--overlay-foreground-5);
@@ -226,13 +226,13 @@ info, code {
 	overflow-wrap: break-word;
 
 	will-change: transition;
-	transition: opacity var(--style-animation);
+	transition: box-shadow var(--style-animation);
 }
 info:hover, code:hover {
-	opacity: var(--max-opacity);
+	box-shadow: var(--element-shadow) var(--background-30);
 
 	will-change: transition;
-	transition: opacity var(--style-animation);
+	transition: box-shadow var(--style-animation);
 }
 info::before, code::before {
 	display: block;
