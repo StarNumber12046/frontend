@@ -36,17 +36,6 @@ urlBox.on('invalid', (event) => {
 debug.on('submit', (event) => {
 	event.preventDefault();
 	try {
-		if (
-			(';;' in repl.val() || 'while' in repl.val())
-			&& ($('code').attr('type') != 'warning')
-		) {
-			$('code')
-			.attr('type', 'warning')
-			.attr('title', 'Infinite loop')
-			.text(`This code may lead to potentially infinite loops.
-The webpage might completely freeze afterwards. Press enter again if you
-are really sure you want to continue.`);
-		}
 		let result = eval(repl.val());
 		$('code')
 		.attr('type', 'info')
