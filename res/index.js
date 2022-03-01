@@ -3,6 +3,7 @@
 */
 const res = {
 	"html": {
+		"_index": "index.html",
 		"index": "./index.html",
 		"navbar": "#navbar"
 	},
