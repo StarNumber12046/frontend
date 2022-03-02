@@ -338,7 +338,7 @@ main button:hover, main > form input[type=submit]:hover {
 	background-color: var(--charmga-accent-80);
 }
 
-main > form input:is([type=text], [type=url], [type=email], [type=search])
+main > form input:is([type=text], [type=url], [type=email], [type=search], [type=password])
 { border-color: var(--accent); }
 input[type=submit] {
 	padding: var(--max-padding);
@@ -347,7 +347,7 @@ input[type=submit] {
 	font-weight: var(--bold);
 }
 
-input:is([type=text], [type=url], [type=email], [type=search]) {
+input:is([type=text], [type=url], [type=email], [type=search], [type=password]) {
 	padding: var(--standard-padding);
 
 	border: var(--max-border) solid var(--foreground-20);
@@ -364,7 +364,7 @@ input:is([type=text], [type=url], [type=email], [type=search]) {
 	will-change: transition;
 	transition: border var(--style-animation), font-weight var(--style-animation), color var(--style-animation);
 }
-input:is([type=text], [type=url], [type=email], [type=search]):hover {
+input:is([type=text], [type=url], [type=email], [type=search], [type=password]):hover {
 	border: var(--max-border) solid var(--accent);
 
 	color: var(--accent);
