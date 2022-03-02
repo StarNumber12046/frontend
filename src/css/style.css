@@ -148,31 +148,6 @@ section[title]::before
 section[subtitle]::before
 { content: attr(subtitle); }
 
-header, footer
-{
-	display: block;
-
-	padding: var(--standard-padding);
-	z-index: var(--on-top);
-
-	background-color: var(--background-10);
-
-	will-change: transition;
-	transition: box-shadow var(--style-animation);
-}
-header
-{ box-shadow: var(--section-shadow) var(--background-20); }
-footer
-{	box-shadow: var(--section-shadow-upward) var(--background-20); }
-@media only screen and (min-width: 801px) {
-	header:hover,
-	footer:hover {
-		box-shadow: var(--section-shadow) var(--background-30);
-
-		transition: box-shadow var(--style-animation);
-	}
-}
-
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
 /***
@@ -256,6 +231,31 @@ info.standWithUkraine::before
 /***
 	Sections and semantics, parts of the webpage
 ***/
+header, footer
+{
+	display: block;
+
+	padding: var(--standard-padding);
+	z-index: var(--on-top);
+
+	background-color: var(--background-10);
+
+	will-change: transition;
+	transition: box-shadow var(--style-animation);
+}
+header
+{ box-shadow: var(--section-shadow) var(--background-20); }
+footer
+{	box-shadow: var(--section-shadow-upward) var(--background-20); }
+@media only screen and (min-width: 801px) {
+	header:hover,
+	footer:hover {
+		box-shadow: var(--section-shadow) var(--background-30);
+
+		transition: box-shadow var(--style-animation);
+	}
+}
+
 nav
 {
 	padding: var(--standard-padding);
