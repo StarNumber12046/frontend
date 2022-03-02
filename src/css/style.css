@@ -120,8 +120,10 @@ section {
 	grid-column-gap: var(--standard-padding);
 	grid-row-gap: var(--standard-padding);
 	place-items: center;
+	place-self: center;
 
-	padding: clamp(var(--min-padding), var(--standard-padding), var(--max-padding));
+	margin: var(--section-margin);
+	padding: var(--min-padding);
 
 	overflow: auto;
 
@@ -147,6 +149,11 @@ section[title]::before
 { content: attr(title); }
 section[subtitle]::before
 { content: attr(subtitle); }
+
+section.hidden
+{ display: none; }
+section.hidden::before
+{ display: block; }
 
 /*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***//*** —————————————————— ***/
 
