@@ -91,7 +91,9 @@
 		</header>
 
 		<main>
-			<section id='newLink' title='Shorten a link'>
+			<section id='newLink'
+				title='Shorten a link'
+			>
 				<main>
 					<form id='shortenlink'>
 						<input id='urlbox'
@@ -105,16 +107,47 @@
 					</form>
 				</main>
 
-				<details>
-				</details>
-
-				<info id='standwithukraine'
-					class='standWithUkraine'
+				<!-- <section id='customizeLink' class='hidden'
+					subtitle='Customize'
 				>
+					<form id='customize'>
+						<input id='urlslug'
+							type='text' name='slug'
+							placeholder='Custom URL slug' />
+						<br/>
+						<info>
+							You can set a custom URL slug for your shortened link.
+							<i>e.g. <a href>fga.sh/github</a></i>
+						</info>
+
+						<br/>
+
+						<input id='password'
+							type='password' name='password'
+							placeholder='Optional password' />
+						<br/>
+						<info>
+							You can protect your private links by setting a password.
+						</info>
+
+						<br/>
+
+						<input id='nsfw'
+							type='checkbox' name='isnsfw' />
+						<br/>
+						<info>
+							If your link leads to NSFW content, check this box.
+						</info>
+					</form>
+				</section> -->
+
+				<info id='standwithukraine' class='standWithUkraine'>
 					Fasm.ga stands with the Ukranian people against the Russian invasions.
 				</info>
 
-				<section id='debugging' subtitle='Debug'>
+				<section id='debugging'
+					subtitle='Debug'
+				>
 					<form id='debug'>
 						<input id='repl'
 							type='text' name='repl'
@@ -132,7 +165,9 @@
 			</section>
 		</main>
 
-		<section id='dashboard' title='Dashboard'>
+		<section id='dashboard'
+			title='Dashboard'
+		>
 			<main>
 				<info title='Test for Long Pages'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -156,7 +191,9 @@
 			</main>
 		</section>
 
-		<section id='settings' title='Settings'>
+		<section id='settings'
+			title='Settings'
+		>
 			<nav orientation='vertical'>
 				<a
 					icon='person' title='Account'
