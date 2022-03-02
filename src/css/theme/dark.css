@@ -19,10 +19,10 @@
 	--accent: #04877C;
 
 	--background-10: #202B38;
-	--background-20: #293747;
-	--background-30: #324357;
-	--background-40: #3C4F68;
-	--background-50: #455C78;
+	--background-20: #161E27;
+	--background-30: #090D10;
+	--background-40: #06070A;
+	--background-50: #040506;
 
 	--overlay-background-5: var(--background-20);
 	--overlay-background-10: var(--background-30);
